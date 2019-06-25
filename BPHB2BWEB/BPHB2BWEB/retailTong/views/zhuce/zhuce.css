@@ -1,0 +1,99 @@
+
+/* 头部 */
+#hade .rw-lst-header .rw-lst-header-bar {
+    width: 1160px;
+}
+#hade .rw-lst-header-search {
+    width: 1160px;
+}
+#hade .rw-lst-header-search .header-search-brand {
+    width: 240px;
+}
+#hade .rw-lst-header-search .rw-lst-header-search-box {
+    width: 605px;
+}
+#hade .rw-lst-header-search-box .rw-lst-header-search-box-input {
+    width: 520px;
+}
+#hade .rw-lst-header-search {
+    display: none;
+}
+
+
+/* 注册 */
+.member-steps {
+    width: 100%;
+    border-bottom: 1px solid #e6e6e6;
+}
+.active-step {
+    width: 240px;
+    height: 47px;
+    margin: 0 auto;
+    font-size: 16px;
+    text-align: center;
+    line-height: 47px;
+    border-bottom: 1px solid #ff7300;
+    color: #ff7300;
+}
+.member-sumary {
+    color: #000;
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.schema-form {
+    width: 600px;
+    height: 650px;
+    margin: 0 auto;
+    padding: 0 50px;
+    border-bottom: 3px solid #FF7300;
+}
+.next-form-item {
+    width: 430px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.before {
+    display: inline-block;
+    margin-right: 4px;
+    font-family: SimSun;
+    color: red;
+    font-size: 14px;
+}
+.next-col-8 {
+    color: #666;
+    font-size: 14px;
+}
+.next-input-large {
+    width: 260px;
+    height: 35px;
+    padding: 0 12px;
+    border: 1px solid #ddd;
+}
+.next-form-item p {
+    color: red;
+    margin-top: 10px;
+    margin-left: 100px;
+    display: none;
+}
+.press {
+    width: 16px;
+    height: 46px;
+}
+.next-row {
+    width: 530px;
+}
+.next-btn-primary {
+    border-style: solid;
+    background-color: #ff6000;
+    border-color: transparent;
+    padding: 10px 20px;
+    margin-left: 230px;
+    color: #fff;
+}
+
+.bdred {
+    border: 1px solid red !important;
+}

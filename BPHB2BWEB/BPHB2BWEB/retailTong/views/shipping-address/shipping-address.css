@@ -1,0 +1,375 @@
+/* header 头部 */
+
+#hade {
+    height: 117px;
+    border-bottom: 1px solid #DF2211;
+}
+#hade .rw-lst-header .rw-lst-header-bar {
+    width: 1160px;
+}
+#hade .rw-lst-header-search {
+    width: 1160px;
+}
+#hade .rw-lst-header-search .header-search-brand {
+    width: 240px;
+}
+#hade .rw-lst-header-search .rw-lst-header-search-box {
+    width: 605px;
+}
+#hade .rw-lst-header-search-box .rw-lst-header-search-box-input {
+    width: 520px;
+}
+
+
+/* 收货地址 */
+#shipping-address .wk-menu-theme-for-sellerBaseNew {
+    width: 200px;
+    height: 654px;
+    background: #555
+}
+#shipping-address .sub-nav-title {
+    width: 180px;
+    height: 42px;
+    line-height: 42px;
+    padding-left: 20px;
+}
+#shipping-address .item {
+    padding-left: 40px;
+    width: 160px;
+    height: 32px;
+    line-height: 32px;
+    background: #fff;
+}
+#shipping-address .item a {
+    color: #333;
+}
+.grid-main {
+    width: 913px;
+    height: 630px;
+    background: #e8e8e8;
+    padding: 10px;
+}
+.fd-clr {
+    margin: 10px 0 8px 0;
+    height: 32px;
+    border-bottom: 1px solid #555;
+}
+.f-tab-t {
+    width: 97px;
+    height: 30px;
+    line-height: 30px;
+    background: #fff;
+}
+.mod-receiveaddress {
+    width: 900px;
+    /* background: red; */
+}
+.contain {
+    margin: 10px 0;
+    height: 32px;
+    line-height: 32px;
+}
+.saved-label {
+    height: 32px;
+    line-height: 32px;
+    color: #333;
+}
+.operations button{
+    background-color: #fff;
+    color: #027cff!important;
+    border-color: #027cff;
+    height: 30px;
+    border-radius: 3px;
+    padding: 0 15px;
+    text-align: center;
+    cursor: pointer;
+}
+.td-checkbox {
+    width: 58px;
+    height: 41px; 
+}
+.td-name {
+    width: 95px;
+    height: 40px;
+    line-height: 40px;
+    font-weight:bold 
+}
+.td-area {
+    width: 95px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 30px;
+    font-weight:bold 
+}
+.td-street {
+    width: 135px;
+    height: 40px;
+    line-height: 40px;
+    font-weight:bold 
+}
+.td-phone {
+    width: 135px;
+    height: 40px;
+    line-height: 40px;
+    font-weight:bold;
+    margin-left: 132px;
+}
+.td-operations {
+    width: 155px;
+    height: 40px;
+    line-height: 40px;
+    font-weight:bold;
+}
+.unit-dropdown {
+    height: 18px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 66px;
+    padding: 5px 5px 10px 10px;
+}
+.mod-batch-bar {
+    padding-bottom: 20px;
+    border-bottom:  1px solid #ccc;
+}
+.batch-select-all-checkbox {
+    width: 18px;
+    height: 18px;
+    margin-right: 20px;
+}
+.unit-dropdown i {
+    font-size: 16px;
+    color: #ccc;
+}
+.col-batch-delete {
+    margin-left: 20px;
+}
+.col-batch-delete button {
+    height: 35px;
+}
+.ui-dialog-overlay {
+    top: 0;
+    left: 0;
+    width: 99%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.3;
+    display: none;
+}
+.ui-dialog {
+    width: 700px;
+    height: 500px;
+    background: #fff;
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    margin-left: -350px;
+    margin-top: -250px;
+    display: none;
+}
+
+.bth4 {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #e8e8e8;
+}
+.bth4 h4 {
+    margin: 0 auto;
+    font-weight:bold;
+    display: inline-block;
+}
+.ui-dialog .contente {
+    padding: 15px 25px 0;
+    width: 650px;
+    height: 431px;
+    margin-top: 2px;
+}
+.zone-editaddress {
+    width: 530px;
+    padding-left: 120px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d1d6e1;
+}
+.unit-line {
+    margin-bottom: 10px;
+    font-weight:bold;
+    line-height: 34px;
+}
+.input-username {
+    padding: 5px;
+    width: 120px;
+    border: 1px solid #e8e8e8;
+}
+.input-address-chooser {
+    padding: 5px;
+    width: 180px;
+    border: 1px solid #e8e8e8;
+}
+.zone-editaddress ul li:nth-child(3) span {
+    vertical-align:top
+}
+.input-address {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #e8e8e8;
+    padding: 10px;
+}
+.setdefault-block {
+    margin-top: 20px;
+    width: 400px;
+    height: 30px;
+    margin-left: 60px;
+}
+.input-issetdefault {
+    width: 15px;
+    height: 15px;
+}
+.prompt {
+    color: #999;
+}
+.footer {
+    padding: 0 25px 15px;
+}
+
+.footer .containerz {
+    clear: both;
+    border-top: 1px solid #e8e8e8;
+    padding-top: 15px;
+}
+.footer .panel {
+    width: 600px;
+    text-align: right;
+    
+}
+.footer .button {
+    margin-left: 8px;
+}
+.button-important {
+    height: 28px;
+    width: 30px;
+    float: right;
+    background-color: #027cff;
+    color: #fff!important;
+    border-color: #027cff;
+    border-radius: 3px;
+    padding: 5px 15px;
+    line-height: 26px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 28px;
+}
+.cancel {
+    float: right;
+    border-radius: 3px;
+    padding: 5px 15px;
+    background-color: #fff;
+    cursor: pointer;
+    line-height: 26px;
+    font-size: 14px;
+    text-align: center;
+    color: #666!important;
+    border: 1px solid #666;
+}
+.single-address {
+    width: 900px;
+    height: 40px;
+    padding: 20px 0;
+    border-bottom:  1px solid#e8e8e8;
+    background: #fff;
+    margin-bottom: 10px;
+}
+.td-checkboxs {
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+}
+.td-checkboxs input {
+    width: 18px;
+    height: 18px;
+    margin-left: 20px;
+}
+.td-names {
+    width: 97px;
+    height: 40px;
+    line-height: 40px;
+}
+.td-areas {
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+}
+.td-streets {
+    width: 200px;
+    height: 40px;
+    margin-left: 20px;
+    line-height: 40px;
+}
+.td-postcodes {
+    width: 117px;
+    height: 40px;
+    margin-left: 42px;
+    line-height: 40px;
+}
+.td-phones {
+    line-height: 40px;
+}
+.btn-del-address,.btn-modify-address {
+    color: #027cff;
+    cursor: pointer;
+}
+.modify-address {
+    height: 28px;
+    width: 30px;
+    float: right;
+    background-color: #027cff;
+    color: #fff!important;
+    border-color: #027cff;
+    border-radius: 3px;
+    padding: 5px 15px;
+    line-height: 26px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 28px;
+}
+
+
+/* 地址选择 */
+
+.td115{
+    width: 115px;
+    margin-left: 3px;
+}
+.city {
+    display: none;
+    float: right;
+}
+.district {
+    display: none;
+}
+.there {
+    width: 900px;
+    height: 400px;
+    background: #fff;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 22px;
+    color: #999;
+}
+.boxb {
+    color: #027cff;
+}
+.moRen, .p-text {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+}
+.btn-modify-address, .btn-del-address {
+    float: right;
+}
+.btn-modify-address {
+    margin-left: 20px;
+}
+.moRen{
+    display: none;
+    float: left;
+}

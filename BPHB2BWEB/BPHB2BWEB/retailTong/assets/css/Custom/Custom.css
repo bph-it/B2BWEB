@@ -1,0 +1,72 @@
+/* 公公样式 */
+
+.container {
+    width: 1160px !important;
+    margin: 0 auto;
+}
+
+/*定位*/
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+
+/* 居中 */
+.takeCenter {
+    margin: 0 auto;
+}
+
+/* 对齐方式 */
+
+.t-c-f {
+    text-align: center !important;
+}
+
+/* 字体样式 */
+.f12 {
+    font-size: 12px !important;
+}
+
+.f14 {
+    font-size: 14px !important;
+}
+
+/* 块 转 行内快 */
+.disib {
+    display: inline-block;
+}
+/* 去除下划线 */
+.a-none {
+    text-decoration:none;
+}
+.clr333{
+    color: #333;
+}
+.clr555{
+    color: #555;
+}
+/* 低边框 */
+.bor1 {
+    border-bottom: 1px solid #DCDEE3;
+}
+
+
+/* 试练 */
+.h900 {
+    height: 900px;
+    background: red;
+}
+
+/* 显示 */
+.dsblock {
+    display: block !important;
+}
+

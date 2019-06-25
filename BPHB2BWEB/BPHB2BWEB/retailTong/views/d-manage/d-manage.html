@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>上架商品管理</title>
+    <!-- 初始化样式 -->
+    <link rel="stylesheet" href="../../assets/css/Custom/reset.css">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="../../assets/css/Custom/base.css">
+    <!-- 外链 头部 样式 -->
+    <link rel="stylesheet" href="../../public/hade/css/hade.css">
+    <!-- 外链 css -->
+    <link rel="stylesheet" href="./d-manage.css">
+</head>
+<body>
+    <!-- hade 头部 模板 -->
+    <header class="headerpage"></header>
+
+    <!-- 商品管理 开始 -->
+    <div id="d-manage">
+        <div class="o-rwd-main-content cl">
+            <!-- 左边 列表 -->
+            <script src="../../public/sidebar/sidebar.js"></script>
+            <!-- 右边信息 -->
+            <div class="next-loading-component f-l">
+                <!-- 商品标题 -->
+                <div class="manage-container-filter">
+                    <div class="manage-catlist">
+                        <ul class="cl">
+                            <li class="f-l queryTitle-sell-hoc">
+                                <span class="sellhoc-label c6">商品标题</span>
+                                <span class="next-input-s">
+                                    <input type="text">
+                                </span>
+                            </li>
+                            <li class="f-l queryTitle-sell-hoc">
+                                <span class="sellhoc-label c6">商品ID</span>
+                                <span class="next-input-s">
+                                    <input type="text">
+                                </span>
+                            </li>
+                            <li class="f-l queryTitle-sell-hoc">
+                                <span class="sellhoc-label c6">商家编码</span>
+                                <span class="next-input-s">
+                                    <input type="text">
+                                </span>
+                            </li>
+                            <br></br>
+                            <li class="f-l queryTitle-sell-hoc queryTitle-sell-hoc-t">
+                                <span class="sellhoc-label c6">一级类目</span>
+                                <span class="next-input-s">
+                                    <input type="text">
+                                </span>
+                            </li>
+                            <li class="f-l queryTitle-sell-hoc">
+                                <span class="sellhoc-label c6">店铺分类</span>
+                                <span class="next-input-s">
+                                    <input type="text">
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 查询 / 重置 -->
+                    <div class="filter-footer">
+                        <button class="z-next-bt c6">查询</button>
+                        <button class="z-next-bt c6">重置</button>
+                    </div>
+                </div>
+                <!-- 发布商品 -->
+                <div class="next-affix-top cl">
+                    <div class="list-page-operator f-l">
+                        <button class="z-next-bt-a t-c-f z-next-bt-red c6">发布商品</button>
+                        <button class="z-next-bt-a t-c-f c6">批量下架</button>
+                        <button class="z-next-bt-a t-c-f c6">批量删除</button>
+                    </div>
+                    <div class="f-r com-struct f12 c6">
+                        共( <span>30</span> ) 件商品
+                    </div>
+                </div>
+                <!-- 商品列表 -->
+                <div class="sell-newtable-container">
+                    <!-- 商品标题 -->
+                    <div class="next-table-header">
+                        <ul class="cl">
+                            <li class="first next-table-header-node f-l">
+                                <input type="checkbox">
+                            </li>
+                            <li class="next-table-header-node f-l">
+                                <strong class="f12 c6" >商品标题</strong>
+                            </li>
+                            <li class="next-table-header-node header-node-a f-l">
+                                <strong class="f12 c6" >价格</strong>
+                            </li>
+                            <li class="next-table-header-node header-node-a f-l">
+                                <strong class="f12 c6" >库存</strong>
+                            </li>
+                            <li class="next-table-header-node header-node-a f-l">
+                                <strong class="f12 c6" >总销量</strong>
+                            </li>
+                            <li class="next-table-header-node header-node-a f-l">
+                                <strong class="f12 c6" >创建时间</strong>
+                            </li>
+                            <li class="next-table-header-node header-node-a f-l">
+                                <strong class="f12 c6" >操作</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 商品信息 -->
+                    <div class="only-bottom-border">
+                        <ul class="cl">
+                            <li>
+                                <ul class="cl next-table-row">
+                                    <li class="first next-table-cell f-l">
+                                        <input type="checkbox">
+                                    </li>
+                                    <li class="list-table-desc-extend-cell f-l cl">
+                                        <img src="../../assets/image/bjimg/33.jpg" alt="" class="f-l">
+                                        <div class="product-desc product-desc-hasImg f-l">
+                                            <span class="f14 c6">comotomo/可么多么奶瓶新生婴儿硅胶韩国美版官方正品150ml/250ml</span>
+                                            <p class="f14 c6">ID : 556411493065</p>
+                                        </div>
+                                    </li>
+                                    <li class="next-table-cell-wrapper f-l">
+                                        <span class="f14 product-desc-span">￥ 188.00</span>    
+                                    </li>
+                                    <li class="next-table-cell-wrapper f-l">
+                                        <span class="f14 c6 product-desc-span">11610</span>    
+                                    </li>
+                                    <li class="next-table-cell-wrapper f-l">
+                                        <span class="f14 c6 product-desc-span">120552</span>    
+                                    </li>
+                                    <li class="next-table-cell-wrapper f-l">
+                                        <span class="f14 c6 product-desc-span">2017-08-02 19:57</span>    
+                                    </li>
+                                    <li class="next-table-cell-wrapper f-l">
+                                        <span class="f14">编辑商品</span>    
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                            <ul class="cl next-table-row">
+                                <li class="first next-table-cell f-l">
+                                    <input type="checkbox">
+                                </li>
+                                <li class="list-table-desc-extend-cell f-l cl">
+                                    <img src="../../assets/image/bjimg/33.jpg" alt="" class="f-l">
+                                    <div class="product-desc product-desc-hasImg f-l">
+                                        <span class="f14 c6">comotomo/可么多么奶瓶新生婴儿硅胶韩国美版官方正品150ml/250ml</span>
+                                        <p class="f14 c6">ID : 556411493065</p>
+                                    </div>
+                                </li>
+                                <li class="next-table-cell-wrapper f-l">
+                                    <span class="f14 product-desc-span">￥ 188.00</span>    
+                                </li>
+                                <li class="next-table-cell-wrapper f-l">
+                                    <span class="f14 c6 product-desc-span">11610</span>    
+                                </li>
+                                <li class="next-table-cell-wrapper f-l">
+                                    <span class="f14 c6 product-desc-span">120552</span>    
+                                </li>
+                                <li class="next-table-cell-wrapper f-l">
+                                    <span class="f14 c6 product-desc-span">2017-08-02 19:57</span>    
+                                </li>
+                                <li class="next-table-cell-wrapper f-l">
+                                    <span class="f14">编辑商品</span>    
+                                </li>
+                            </ul>
+                            </li>
+                            <li>
+                                <ul class="cl next-table-row">
+                                    <li class="first next-table-cell f-l">
+                                        <input type="checkbox">
+                                    </li>
+                                    <li class="list-table-desc-extend-cell f-l cl">
+                                        <img src="../../assets/image/bjimg/33.jpg" alt="" class="f-l">
+                                        <div class="product-desc product-desc-hasImg f-l">
+                                            <span class="f14 c6">comotomo/可么多么奶瓶新生婴儿硅胶韩国美版官方正品150ml/250ml</span>
+                                            <p class="f14 c6">ID : 556411493065</p>
+                                        </div>
+                                    </li>
+                                    <li class="next-table-cell-wrapper f-l">
+                                        <span class="f14 product-desc-span">￥ 188.00</span>    
+                                    </li>
+                                    <li class="next-table-cell-wrapper f-l">
+                                        <span class="f14 c6 product-desc-span">11610</span>    
+                                    </li>
+                                    <li class="next-table-cell-wrapper f-l">
+                                        <span class="f14 c6 product-desc-span">120552</span>    
+                                    </li>
+                                    <li class="next-table-cell-wrapper f-l">
+                                        <span class="f14 c6 product-desc-span">2017-08-02 19:57</span>    
+                                    </li>
+                                    <li class="next-table-cell-wrapper f-l">
+                                        <span class="f14">编辑商品</span>    
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 分页 -->
+            </div>
+        </div>
+    </div>
+
+</body>
+    <!-- heade 头部 模板 -->
+    <script  src="../../public/hade/hadeOrder/order.js" defer></script>
+    <!-- jquery 插件 -->
+    <script src="../../assets/js/jquery.js" defer></script>
+    <!-- 外链js -->
+    <script src="./d-manage.js" defer></script>
+</html>

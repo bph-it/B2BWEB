@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>收货地址</title>
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="../../assets/css/Custom/Custom.css">
+    <!-- 初始化样式 -->
+    <link rel="stylesheet" href="../../assets/css/library/H-ui.reset.css">
+    <!-- H-ui 插件 -->
+    <link rel="stylesheet" href="../../assets/css/library/H-ui.css">
+    <!-- 图标字体库 -->
+    <link rel="stylesheet" href="../../assets/font/Hui-iconfont/1.0.8/iconfont.css">
+    <!-- 外链 头部 样式 -->
+    <link rel="stylesheet" href="../../public/hade/css/hade.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="./shipping-address.css">
+</head>
+<body>
+    <!-- hade 头部 模板 -->
+    <header class="headerpage"></header>
+    <!-- 收获地址 -->
+    <div id="shipping-address">
+        <div class="container dior-container-wrap  cl">
+            <!-- 左侧管理 -->
+            <div class="wk-menu-theme-for-sellerBaseNew f-l">
+                <div class="sub-nav">
+                    <div class="sub-nav-title f14">账号管理
+                        <i class="Hui-iconfont">&#xe6d6;</i>
+                    </div>
+                    <ul class="context">
+                        <li class="item f14">
+                            <a href="">收货地址管理</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 右侧地址 -->
+            <div class="grid-main f-l relative">
+                <div class="mod-tablist">
+                    <!-- tab 切换 -->
+                    <ul class="fd-clr cl">
+                        <li class="f-tab-t t-c-f f-l">
+                            <a href="">收货地址</a>
+                        </li>
+                        <li class="f-tab-t t-c-f f-l">
+                            <a href="">发货地址</a>
+                        </li>
+                        <li class="f-tab-t t-c-f f-l">
+                            <a href="">退货地址</a>
+                        </li>
+                    </ul>
+                    <div class="mod-receiveaddress">
+                        <!-- 新增收货地址 -->
+                        <div class="header">
+                            <div class="contain cl">
+                                <div class="saved-label f-l">已保存的收货地址:</div>
+                                <div class="operations f-r">
+                                    <button class="receiving">新增收货地址</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 收货标题 -->
+                        <div class="content">
+                          <ul class="table-address cl">
+                              <li class="td-checkbox t-c-f f-l"></li>
+                              <li class="td-name f14 f-l">收货人</li>
+                              <li class="td-area f14 f-l">所在地区</li>
+                              <li class="td-street f14 t-c-f f-l">详细地址</li>
+                              <li class="td-phone f14 f-l">电话/手机</li>
+                              <li class="td-operations f14 t-c-f f-l">操作</li>
+                          </ul>
+                        </div>
+                        <!-- 批量删除 -->
+                        <div class="mod-batch-bar cl">
+                            <div class="unit-dropdown f-l">
+                                <input type="checkbox" class="batch-select-all-checkbox" type="checkbox">
+                                <i class="Hui-iconfont">&#xe6d6;</i>
+                            </div>
+                            <div class="operations col-batch-delete f-l">
+                                <button>批量删除</button>
+                            </div>
+                        </div>
+
+
+                        <div class="grid-main-he-box">
+                            <!-- 地址列表 -->
+                            <!-- <div class="tiandi">
+                                <div class="grid-main-he">
+                                    <div class="single-address">
+                                        <ul class="cl">
+                                            <li class="f-l td-checkboxs">
+                                                <input type="checkbox">
+                                            </li>
+                                            <li class="f-l td-names">
+                                                <span data-type="123">erlangshen</span>
+                                            </li>
+                                            <li class="f-l td-areas">
+                                                <span>河南省</span>
+                                                <span>鹤壁市</span>
+                                                <span>淇滨区</span>
+                                            </li>
+                                            <li class="f-l td-streets">
+                                                <span>福田六区,630号楼202室</span>
+                                            </li>
+                                            <li class="f-l td-postcodes">
+                                                <span>13073710147</span>
+                                            </li>
+                                            <li class="f-l td-phones">
+                                                <span class="moRen">默认收货地址 &nbsp;&nbsp;&nbsp;&nbsp;</span> 
+                                                <span class="moRen">设置为默认地址 &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                                <span class="btn-modify-address">修改 &nbsp;</span>
+                                                <span class="btn-del-address">删除</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                            <div class="there">
+                                暂无数据
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                    <!-- 添加地址 / 遮罩层 -->
+                <div class="ui-dialog">
+                    <div class="bth4">
+                        <h4>新增收货地址</h4>
+                    </div> 
+                    <div class="contente">
+                        <div class="containerws">
+                            <div class="zone-editaddress">
+                                <ul>
+                                    <li class="unit-line">
+                                        <span>&nbsp;&nbsp;&nbsp;收 货 人 :</span>
+                                        <input class="input-username huojao1" type="text" data-type="consignee">
+                                    </li>
+
+                                    <li class="unit-line cl">
+                                        <span class="cl f-l">所 在 地 区:</span>
+                                        <span class="select-box size-MINI td115 province f-l">
+                                            <select nullmsg="请选择所在城市！" datatype="*" name="" size="1" class="select provinces" onchange="province()">
+                                                <option selected="" value="">请选择城市</option>
+                                                <!-- <option value="1">北京</option>
+                                                <option value="2">上海</option>
+                                                <option value="3">广州</option> -->
+                                            </select>
+                                        </span>
+                                        <span class="select-box size-MINI td115 city f-l">
+                                            <select nullmsg="请选择所在城市！" datatype="*" name="" size="1" class="select citys" onchange="city()">
+                                                <!-- <option value="1">北京</option>
+                                                <option value="2">上海</option>
+                                                <option value="3">广州</option> -->
+                                            </select>
+                                        </span>
+                                        <span class="select-box size-MINI td115 district f-l">
+                                            <select nullmsg="请选择所在城市！" datatype="*" name="" size="1" class="select selects">
+                                                <!-- <option value="1">北京</option>
+                                                <option value="2">上海</option>
+                                                <option value="3">广州</option> -->
+                                            </select>
+                                        </span>
+                                    </li>
+
+                                    <li class="unit-line">
+                                        <span>详 细 地 址:</span>
+                                        <textarea class="input-address huojao2" data-type="detailed"></textarea>
+                                    </li>
+
+                                    <!-- <li class="unit-line">
+                                        <span>&nbsp;用&nbsp;&nbsp;户&nbsp;&nbsp;名 &nbsp;&nbsp;  : </span>
+                                        <input class="input-username huojao3" type="text">
+                                    </li> -->
+
+                                    <li class="unit-line">
+                                        <span>手 机 号 码:</span>
+                                        <input class="input-username huojao4" type="text" data-type="cellphone">
+                                    </li>
+
+                                    <li class="setdefault-block">
+                                        <input type="checkbox" class="input-issetdefault huojao5">
+                                        <span>设置为默认收货地址</span>
+                                        <span class="prompt">&nbsp;&nbsp; 设置后系统将在下单时自动选中该收货地址</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="footer">
+                            <div class="containerz">
+                                <div class="panel cl buttons">
+                                    <a href="javascript:void(0)" class="button modify-address ok">确定</a>&nbsp;&nbsp;
+                                    <a class="button button-important ok" href="javascript:void(0)">确认</a>&nbsp;&nbsp;
+                                    <a class="button cancel" href="javascript:void(0)">取消</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- 遮罩层 -->
+                <div class="ui-dialog-overlay absolute"></div>
+            </div>
+        </div>
+    </div>
+    <!-- jquery 插件 -->
+    <script  src="../../assets/js/jquery.js"></script>
+    <!-- 头部 模板 -->
+    <script  src="../../public/hade/hadeOrder/order.js"></script>
+    <!-- 获取cookie -->
+    <script src="../../assets/js/cookie.js"></script>
+    <!-- 外链 js -->
+    <script src="./shipping-address.js"></script>
+</body>
+</html>
