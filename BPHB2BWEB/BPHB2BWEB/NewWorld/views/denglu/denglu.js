@@ -27,8 +27,8 @@ $(document).ready(function () {
                         // 存cookie
                         $.cookie('token',account,{ path: '/' });
                         // 存账号信息
-                        window.location.href = "../home/home.html";
-
+                        // window.location.href = "../home/home.html";
+                        history.go(-1)
                     }else{
                         alert('登陆失败')
                     }
