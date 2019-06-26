@@ -1,0 +1,212 @@
+/* 轮播 css 代码 */
+.slider{position:relative;text-align:center; margin:0 auto;z-index:1;height: 410px;}
+.slider .bd,.slider .bd li,.slider .bd img{width:100%; height:410px}/*请给每个幻灯片套个div并设置id，通过id重置这个地方的宽度，达到自定义效果*/
+.slider .bd{z-index:2;overflow:hidden}
+.slider .bd li{float:left;width: 100%;overflow:hidden; background-position:center; background-repeat:no-repeat}
+.slider .bd li a{ display:block; width: 100%; height: 100%}
+.slider .bd li img{display:block; width: 100%; height: 410px;}
+.slider .hd{ position: absolute; z-index: 3; left: 0; right: 0; bottom:10px; padding: 0 10px; text-align: center}
+.slider .hd li{display:inline-block;text-align:center;margin-right:10px;cursor:pointer;background-color:#C2C2C2}
+.slider .hd li.active{background-color:#222}
+/*圆点*/
+.dots li{width:10px; height:10px;font-size:0px;line-height:0px;border-radius:50%}
+/*数字*/
+.numbox li{width:20px; height:20px; line-height:20px; font-size:13px;font-family:Arial;font-weight:bold; text-indent:inherit}
+.numbox li.active{color:#fff}
+/*长方条*/
+.rectangle li{width:40px; height:10px;font-size:0px;line-height:0px}
+#home {
+    margin-top: -6px;
+}
+/* 轮播 结束 */
+
+/* 三级导航开始 */
+#home {
+    border-bottom: 1px solid #DCDEE3;
+    height: 40px;
+}
+#home .rw-lst-header-nav-header {
+    width: 240px;
+    height: 40px;
+    background: red;
+    border-radius: 6px 6px 0px 0px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.4);
+}
+#home .rw-lst-header-nav-header-text {
+    font-size: 18px;
+    line-height: 40px;
+    color: #fff;
+}
+#home .rw-lst-header-nav-fixed-header {
+    height: 409px;
+    width: 240px;
+    background: red;
+    margin-top: 1px;
+    z-index: 999;
+}
+#home .rw-lst-header-nav-first {
+    padding: 5px 0px 5px 10px;
+}
+#home .first-item {
+    width: 210px;
+    height: 40px;
+    padding-left: 20px;
+    line-height: 40px;
+    color: #fff;
+}
+#home .first-item:hover {
+    border-radius: 20px 0px 0px 20px;
+    background-color: #F54300;
+    cursor: pointer;
+}
+#home .rw-lst-header-nav-second {
+    width: 430px;
+    height: 410px;
+    left: 240px;
+    background: #fff;
+    top: 0;
+    display: none;
+}
+#home .rw-lst-header-nav-second:hover {
+    display: block;
+}
+#home .second-category-item {
+    width: 205px;
+    height: 43px;
+    border-bottom: 1px dashed #EBEBEB;
+    margin-left: 5px;
+    color: #666;
+}
+/* 导航结束 */
+
+
+
+/* 样式 */
+#home .slide-item {
+    margin-top: 20px !important;
+}
+#home .heading-block {
+    /* background: #F5F5F5; */
+    padding: 20px 0 !important;
+}
+#home .sub-tit {
+    color: #F54300;
+}
+/* 商品列表 */
+#home .topics-box {
+    background: #F5F5F5;
+}
+#home .product-box .product-list{
+    margin-left: -10px;
+}
+#home .product-box .product-list li {
+    width: 232px;
+    height: 350px;
+    margin: 10px 0 0 10px;
+    background-color: #FFFFFF;
+}
+
+#home .content-outer .content-inner {
+    top: 0;
+    left: 0;
+    border: 1px solid #fff;
+    background-color: #fff;
+    transition-duration: 0.2s;
+    padding: 10px 15px;
+}
+#home .product-list li:hover .content-outer .content-inner {
+    transition-duration: 0.2s;
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border: 1px #DDD solid;
+    z-index: 1000;
+}
+
+#home .popup_buy_view:hover {
+    background-color: #ED5831!important;
+    color: #FFFFFF!important;
+    transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -webkit-transition: all .25s ease;
+    -o-transition: all .25s ease;
+}
+
+#home .content-inner .img-box {
+    width: 202px;
+    height: 162px;
+    margin-bottom: 3px;
+}
+#home .content-inner .img-box img {
+    width: 162px;
+    height: 162px;
+    vertical-align: top;
+}
+
+#home  .img-box .store-num {
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.6);
+    height: 20px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+#home  .content-inner .txt-box {
+    color: #999;
+    height: 50px;
+}
+#home .content-inner .txt-box .price-xj {
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+}
+#home .unit-price {
+    color: #787878;
+}
+#home .product-list li .content-inner .tit-box {
+    margin-bottom: 5px;
+}
+#home .product-list li .content-inner .tit-box a {
+    line-height: 18px;
+    height: 36px;
+    display: -webkit-box;
+    overflow: hidden;
+    color: #666;
+}
+#home .product-list li .content-inner .tag-box {
+    height: 26px;
+    overflow: hidden;
+}
+#home .content-inner .tag-box span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 188px;
+    display: inline-block;
+    color: #fff;
+    background-color: #EB5A41;
+    border: 1px solid #EB5A41;
+    font-size: 12px;
+    line-height: 16px;
+    height: 16px;
+    padding: 0 2px;
+    margin: 0 1px 3px 0;
+}
+
+#home .popup_buy_view {
+    display: block;
+    border: 1px solid #ED5831;
+    border-radius: 3px;
+    color: #ED5831;
+    height: 32px;
+    line-height: 32px;
+    background-color: #FFFFFF;
+    font-size: 16px;
+    margin: 8px 0 0 0!important;
+    transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -webkit-transition: all .25s ease;
+    -o-transition: all .25s ease;
+}
+

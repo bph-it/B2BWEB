@@ -1,0 +1,123 @@
+#header .rw-lst-header-bar-container {
+    height: 32px;
+    background: #f5f5f5;
+}
+.rw-link {
+    line-height: 32px;
+    color: #333;
+}
+.rw-lst-header-bar-text {
+    border-right: 1px solid #A0A2AD;
+    line-height: 32px;
+    height: 14px;
+    padding: 0px 10px;
+    font-size: 12px;
+    color: #333;
+}
+#header .rw-lst-header-bar-link {
+    border-right: 1px solid transparent;
+}
+.rw-lst-header-search {
+    padding: 20px 0px;
+}
+.header-search-brand {
+    width: 316px;
+}
+.header-search-brand-logo {
+    width: 72px;
+    height: 57px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/image/bjimg/logo.jpg);
+}
+.header-search-brand-link {
+    width: 83px;
+    color: #000;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #d0d0d0;
+}
+.rw-lst-header-search-box {
+    width: 598px;
+    height: 44px;
+}
+.che-q {
+    font-size: 35px;
+    color: #333;
+    top: -8px;
+    left: 45px;
+}
+.wrap {
+    width: 253px;
+    height: 33px;
+    border: 1px solid #DCDEE3;
+    left: 3px;
+    top: 1px;
+    padding-top: 5px;
+    border-radius: 3px
+}
+.rw-dropdown-wrapper {
+    width: 520px;
+    height: 28px;
+    border: 2px solid #df2211;
+    border-radius: 0px;
+    padding: 4px 11px;
+}
+.rw-lst-header-search-box-button {
+    width: 52px;
+    height: 40px;
+    background:#df2211;
+}
+
+
+.fangda {
+    color: #fff;
+    font-size: 25px;
+}
+.rw-lst-header-search-addcart-box {
+    width: 255px;
+    height: 40px;
+    margin-left: 20px;
+}
+.rw-lst-header-cart-trigger {
+    height: 40px;
+    width: 260px;
+}
+.rw-lst-header-cart-trigger .head {
+    background-color: #DF2211;
+    height: 1px;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    width: 260px;
+}
+.rw-lst-header-cart-trigger .head:after{
+    background-color: #DF2211;
+    height: 6px;
+    width: 6px;
+    display: inline-block;
+    position: absolute;
+    right: -4px;
+    top: 0px;
+    content: "";
+    border-radius: 0px 50% 50% 0px;
+
+}
+.rw-lst-header-cart-trigger .head:before {
+    background-color: #DF2211;
+    height: 6px;
+    width: 6px;
+    display: inline-block;
+    position: absolute;
+    left: -4px;
+    top: 0px;
+    content: "";
+    border-radius: 50% 0px 0px 50%;
+}
+
+.num {
+    color: #DF2211;
+    margin-left: 8px;
+    padding-left: 8px;
+    border-left: 1px solid #DCDEE3;
+}

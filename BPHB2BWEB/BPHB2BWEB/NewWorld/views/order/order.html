@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>管理详情页</title>
+    <!-- 初始化样式 -->
+    <link rel="stylesheet" href="../../assets/css/Custom/reset.css">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="../../assets/css/Custom/reset.css">
+    <!-- ui 插件 -->
+    <link rel="stylesheet" href="../../assets/css/library/H-ui.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="./order.css"/>
+</head>
+<body>
+    <script src="../../public/hade/hade.js"></script>
+    <!-- 订单 开始 -->
+    <div id="order">
+        <div class="o-rwd-main-content cl">
+            <!-- 左边 列表 -->
+            <script src="../../public/sidebar/sidebar.js"></script>
+            <!-- 右边 信息 -->
+            <div class="p-voucherhistory f-l">
+                <div class="next-tabs-bar">
+                    <div class="next-tabs-nav">
+                        <ul class="cl">
+                            <li class="f-l next-tabs-tab-inner djbd">全部订单
+                                <span class="sn"></span>
+                            </li>
+                            <li class="f-l next-tabs-tab-inner">待付款
+                                <span></span>
+                            </li>
+                            <li class="f-l next-tabs-tab-inner">待收货
+                                <span></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 日期 -->
+                    <div class="next-tabs-content">
+                        <ul class="table cl">
+                            <li class="next-table-header-node f-l">
+                                <span>下单时间</span>
+                            </li>
+                            <li class="next-table-header-node f-l">
+                                <span>商品信息</span>
+                            </li>
+                            <li class="next-table-header-node f-l">
+                                <span>售价 ( 元 )</span>
+                            </li>
+                            <li class="next-table-header-node f-l kuan">
+                                <span>数量</span>
+                            </li>
+                            <li class="next-table-header-node f-l kuan">
+                                <span>订单状态</span>
+                            </li>
+                            <li class="next-table-header-node f-l kuan">
+                                <span>操作</span>
+                            </li>
+                        </ul>
+                        <!-- 订单列表 -->
+                        <div class="member-grid">
+                            <div class="member-orders-list">
+                                <div class="tit-member-grid cl">
+                                    <div class="tit-total">
+                                        <span>2019-06-20 13:21</span>
+                                        <span class="ding">订单号：190620132161922</span>
+                                    </div>
+
+                                    <div class="f-l qiand cl">
+                                        <ul class="f-l">
+                                            <li class="member-piclist">
+                                                <strong class="shop-title">
+                                                    百品汇自营 
+                                                </strong>
+                                                <div class="cl">
+                                                    <div class="col01 f-l">
+                                                        <img src="../../assets/image/bjimg/33.jpg" alt="">
+                                                    </div>
+                                                    <div class="col02 f-l">
+                                                        <span class="text-primary">
+                                                            【预售10个工作日发货】Tumi 塔米/途明 Alpha系列 Tumi ID Lock™ 拉链旅行钱包 103537-6618&nbsp;颜色:Anthracite/Black
+                                                        </span>
+                                                    </div>
+                                                    <div class="f-l co103">
+                                                        <span>￥1119.0</span>
+                                                    </div>
+                                                    <div class="f-l co104">
+                                                        <span>2</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="f-r actions">
+                                        <a href="#" class="btn-red">再次购买</a>
+                                        <a href="../orderDetails/orderDetails.html" class="btn-simple">查看订单</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 没有数据 -->
+                        <!-- <div class="next-table-empty">
+                            <span>没有数据</span>
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jquery 插件 -->
+    <script src="../../assets/js/jquery.js" defer></script>
+    <!-- cookie 插件 -->
+    <script src="../../assets/js/cookie.js" defer></script>
+    <!-- 自定义 js -->
+    <script src="./order.js" defer></script>
+</body>
+</html>
