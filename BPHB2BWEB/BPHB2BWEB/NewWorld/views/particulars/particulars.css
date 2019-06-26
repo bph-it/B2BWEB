@@ -57,6 +57,9 @@
 .a-base-info-warp {
     padding: 30px 0 10px 0;
 }
+.header-search-brand-link {
+    height: 40px !important;
+}
 
 /*图片放大板块开始*/
 .imgwarp {

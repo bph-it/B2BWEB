@@ -1,13 +1,11 @@
 function Category () {
 //===============================================获取路径================================
-	
 	function getParameter(name) { 
 		var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
 		var r = window.location.search.substr(1).match(reg); 
 		if (r!=null) return unescape(r[2]); return null;
 	}
-
-
+	
 	$(document).ready(function () {
 //===============================================一级菜单================================
 
