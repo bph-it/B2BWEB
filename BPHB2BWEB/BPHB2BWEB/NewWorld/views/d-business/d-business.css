@@ -30,6 +30,7 @@
 /* 商家中心开始 */
 .text-catpath {
     margin-top: 20px !important;
+    width: 1000px !important;
 }
 .select {
     width: 120px;
@@ -42,6 +43,7 @@
 }
 .d-unit-line {
     padding: 10px 0;
+    padding-left: 20px ;
     border-bottom:  1px solid #eee;
 }
 .product-card-title {
@@ -54,7 +56,7 @@
     content: "*";
     font-family: SimSun;
     color: #f33;
-    margin-left: 25px;
+    margin-left: 35px;
 }
 .next-col::before {
     position: absolute;
@@ -65,6 +67,12 @@
 } 
 .sell-catProp {
     padding: 20px 10px;
+    margin-left: 15px;
+}
+.next-col {
+    width: 295px;
+    margin-bottom: 10px;
+    display: inline-block;
 }
 .next-col span {
     margin-left: 15px;
@@ -73,4 +81,100 @@
     border: none;
     border: 1px solid #ccc;
     padding: 5px 10px;
+}
+.oly-row-container {
+    margin: 20px 0 5px 15px;
+}
+.oly-row-container input {
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    height: 30px;
+    width: 650px;
+}
+.sell-o-rich-text {
+    width: 540px;
+    margin-left: 115px;
+    line-height: 18px;
+}
+.sell-o-rich-text span{
+    color:  #0088cb;
+}
+.com-struct {
+    padding: 20px 15px;
+}
+.sell-card-title {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+.sequential-checkbox-wrap {
+    width: 900px;
+    padding: 20px;
+    margin-top: 10px;
+}
+.next-icon-xs {
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+.fusion-input {
+    width: 100px;
+    height: 25px;
+    padding-left:  10px;
+    margin-left: 5px;
+}
+.sell-sequential-checkbox-content {
+    width: 185px;
+    margin-bottom: 15px;
+}
+.tm-sku-table-wrap {
+    border: 1px solid #c6d1db;
+    width: 910px;
+    border-right: none;
+    border-bottom: none;
+}
+.tm-sku-head-cell {
+    padding: 5px 10px;
+    width: 70px;
+    height: 20px;
+    border-right: 1px solid #c6d1db;
+    border-bottom: 1px solid #c6d1db;
+}
+.com-struct-t {
+    margin-bottom: 20px;
+    display: none;
+}
+.tm-sku-cell {
+    margin: 0;
+    padding: 0;
+    width: 70px;
+    height: 30px;
+    border-right: 1px solid #c6d1db;
+    border-bottom: 1px solid #c6d1db;
+    padding: 5px 10px;
+}
+.tm-sku-table-wrap table {
+    border-spacing: 0 !important;
+}
+.desc-card {
+    padding-left: 20px;
+}
+.result {
+    color: #333;
+    margin-top: 10px;    
+    margin-left: 60px;
+}
+.c00 {
+    color: #0088cb !important;
+}
+.tmall-o-image-preview {
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    border: 1px solid #eee;
+}
+.oly-row-container {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
 }

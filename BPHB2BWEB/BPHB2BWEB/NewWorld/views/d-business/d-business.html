@@ -1,60 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>商家中心</title>
     <!-- 初始化样式 -->
-    <link rel="stylesheet" href="../../assets/css/Custom/base.css">
+    <link rel="stylesheet" href="../../assets/css/Custom/base.css" />
     <!-- 公共样式 -->
-    <link rel="stylesheet" href="../../assets/css/Custom/reset.css">
+    <link rel="stylesheet" href="../../assets/css/Custom/reset.css" />
     <!-- 外链 css -->
-    <link rel="stylesheet" href="./d-business.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./d-business.css" />
+  </head>
+  <body>
     <!-- 头部 -->
     <script src="../../public/hade/hade.js"></script>
     <!-- 商家中心 -->
     <div id="business">
-        <div class="text-catpath container">
-            <!-- 当前类目 -->
-            <li class="d-unit-line cl">
-                <strong class="cl f-l f14">当 前 类 目  &nbsp;:&nbsp;</strong>
-                <!-- 省 -->
-                <span class="select-box f-l">
-                    <select name="" id="" class="select" onchange="province('sheng',value)" >
-                        <option class="" value="">请选择城市</option>
-                    </select>
-                </span>
-                <!-- 市 -->
-                <span class="select-box f-l">
-                    <select name="" class="select">
-                        <option class="" value="">请选择城市</option>
-                    </select>
-                </span>
-                <!-- 区 -->
-                <span class="select-box f-l">
-                    <select class="select">
-                        <option class="" value="">请选择城市</option>
-                    </select>
-                </span>
-            </li>
-            <!-- 产品信息 -->
-            <div class="product-card-title">
-                <strong class="f14">产品信息</strong>
-                <span class="xing c6 f12" > 产品参数 注：请确保您填写的产品信息准确无误，类目、品牌、卖点、SKU名称、图片等信息的修改详见</span>
-            </div>
-            <!-- 信息框 -->
-            <div class="sell-catProp">
-                <span class="next-col relative">
-                    <span class="c6 f14">品牌</span>
-                    <input type="text">
-                </span>
-            </div>
-
+      <div class="text-catpath container">
+        <!-- 当前类目 -->
+        <li class="d-unit-line cl">
+          <strong class="cl f-l f14">当 前 类 目 &nbsp;:&nbsp;</strong>
+          <!-- 省 -->
+          <span class="select-box f-l">
+            <select
+              name=""
+              id=""
+              class="select"
+              onchange="province('sheng',value)"
+            >
+              <option class="" value="">请选择商品</option>
+            </select>
+          </span>
+          <!-- 市 -->
+          <span class="select-box f-l">
+            <select name="" class="select">
+              <option class="" value="">请选择商品</option>
+            </select>
+          </span>
+          <!-- 区 -->
+          <span class="select-box f-l">
+            <select class="select">
+              <option class="" value="">请选择商品</option>
+            </select>
+          </span>
+        </li>
+        <!-- 产品信息 -->
+        <div class="product-card-title">
+          <strong class="f14">产品信息</strong>
+          <span class="xing c6 f12">
+            产品参数
+            注：请确保您填写的产品信息准确无误，类目、品牌、卖点、SKU名称、图片等信息的修改详见</span
+          >
         </div>
+        <!-- 信息框 -->
+        <div class="sell-catProp">
+          <span class="next-col relative">
+            <span class="c6 f14">品牌</span>
+            <input type="text" placeholder="thinkbaby/辛克宝贝" />
+          </span>
+
+          <span class="next-col relative">
+            <span class="c6 f14">货号</span>
+            <input type="text" placeholder="餐具四件套" />
+          </span>
+
+          <span class="next-col relative">
+            <span class="c6 f14">功能</span>
+            <input type="text" />
+          </span>
+
+          <span class="next-col relative">
+            <span class="c6 f14">型号</span>
+            <input type="text" />
+          </span>
+
+          <div class="oly-row-container">
+            <span class="c6 f14">生产许可证编号</span>
+            <input type="text" />
+          </div>
+
+          <span class="c6 sell-o-rich-text dis-block f12"
+            >百品汇将提醒消费者购买带有
+            <span>工业产品生产许可证编号的商品</span>
+            ，请完整填写生产许可证证号信息， 如XK01-012-01234，浙XK01-012-01234
+            或 (浙)XK01-012-01234</span
+          >
+        </div>
+        <!-- 选择添加 -->
+        <div class="com-struct">
+          <div class="sell-card-title">
+            <strong class="f14">商品价格库存</strong>
+          </div>
+          <span class="f12 c6"
+            >颜色分类
+            请尽量选择已有的颜色，如果自定义也请选择相近的颜色进行自定义，否则会被搜索降权。</span
+          >
+          <ul class="sequential-checkbox-wrap cl">
+            <li class="sell-sequential-checkbox-content f-l">
+              <input class="next-icon-xs" type="checkbox" />
+              <input type="text" value="绿色" class="fusion-input" />
+            </li>
+            <li class="sell-sequential-checkbox-content f-l">
+              <input class="next-icon-xs" type="checkbox" />
+              <input type="text" value="蓝色" class="fusion-input" />
+            </li>
+            <li class="sell-sequential-checkbox-content f-l">
+              <input class="next-icon-xs" type="checkbox" />
+              <input type="text" value="黄色" class="fusion-input" />
+            </li>
+            <li class="sell-sequential-checkbox-content f-l">
+              <input class="next-icon-xs" type="checkbox" />
+              <input type="text" value="红色" class="fusion-input" />
+            </li>
+            <li class="sell-sequential-checkbox-content f-l">
+              <input class="next-icon-xs" type="checkbox" />
+              <input type="text" value="紫色" class="fusion-input" />
+            </li>
+            <li class="sell-sequential-checkbox-content f-l">
+              <input class="next-icon-xs" type="checkbox" />
+              <input type="text" value="粉色" class="fusion-input" />
+            </li>
+            <li class="sell-sequential-checkbox-content f-l">
+              <input class="next-icon-xs" type="checkbox" />
+              <input type="text" value="青色" class="fusion-input" />
+            </li>
+            <li class="sell-sequential-checkbox-content f-l">
+              <input class="next-icon-xs" type="checkbox" />
+              <input type="text" value="黑色" class="fusion-input" />
+            </li>
+            <li class="sell-sequential-checkbox-content f-l">
+              <input class="next-icon-xs" type="checkbox" />
+              <input type="text" value="白色" class="fusion-input" />
+            </li>
+
+            <li class="sell-sequential-checkbox-content f-l">
+              <input class="next-icon-xs" type="checkbox" />
+              <input type="text" value="军绿色" class="fusion-input" />
+            </li>
+            <li class="sell-sequential-checkbox-content f-l">
+              <input class="next-icon-xs" type="checkbox" />
+              <input type="text" value="军绿色" class="fusion-input" />
+            </li>
+            <li class="sell-sequential-checkbox-content f-l">
+              <input class="next-icon-xs" type="checkbox" />
+              <input type="text" value="军绿色" class="fusion-input" />
+            </li>
+          </ul>
+        </div>
+        <!-- 展示添加 -->
+        <div class="com-struct-t">
+          <div class="tm-sku-table-wrap">
+            <ul class="cl">
+              <li class="f-l tm-sku-head-cell f12">颜色分类</li>
+              <li class="f-l tm-sku-head-cell f12">颜色图</li>
+              <li class="f-l tm-sku-head-cell f12">HS海关代码</li>
+              <li class="f-l tm-sku-head-cell f12">价格（元）</li>
+              <li class="f-l tm-sku-head-cell f12">数量</li>
+              <li class="f-l tm-sku-head-cell f12">商家编码</li>
+              <li class="f-l tm-sku-head-cell f12">条形码</li>
+              <li class="f-l tm-sku-head-cell f12">预扣数量</li>
+              <li class="f-l tm-sku-head-cell f12">关联货品</li>
+              <li class="f-l tm-sku-head-cell f12">操作</li>
+            </ul>
+            <table>
+              <tbody class="tm-sku-body-table">
+                <!-- <tr class="sku-table-row">
+                  <td class="tm-sku-cell f12 c6">
+                    天蓝色 四件套
+                  </td>
+                  <td class="tm-sku-cell f12 c6">
+                    颜色
+                  </td>
+                  <td class="tm-sku-cell f12 c6">
+                    7323930000
+                  </td>
+                  <td class="tm-sku-cell f12 c6">
+                        399.00
+                  </td>
+                  <td class="tm-sku-cell f12 c6">
+                        61
+                  </td>
+                  <td class="tm-sku-cell f12 c6">
+                        Thinkbaby-cj-blue
+                  </td>
+                  <td class="tm-sku-cell f12 c6">
+                  </td>
+                  <td class="tm-sku-cell f12 c6">
+                    0
+                  </td>
+                  <td class="tm-sku-cell f12 c6">
+                        Thinkbaby-cj-blue
+                  </td>
+                  <td class="tm-sku-cell f12 c6">
+                    	已启用
+                  </td>
+                </tr>
+                <tr class="sku-table-row">
+                    <td class="tm-sku-cell f12 c6">
+                        天蓝色 四件套
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                        颜色
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                        7323930000
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                            399.00
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                            61
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                            Thinkbaby-cj-blue
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                        0
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                            Thinkbaby-cj-blue
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                            已启用
+                    </td>
+                </tr>
+                <tr class="sku-table-row">
+                    <td class="tm-sku-cell f12 c6">
+                        天蓝色 四件套
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                        颜色
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                        7323930000
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                            399.00
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                            61
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                            Thinkbaby-cj-blue
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                        0
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                            Thinkbaby-cj-blue
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                            已启用
+                    </td>
+                </tr>
+                <tr class="sku-table-row">
+                    <td class="tm-sku-cell f12 c6">
+                        天蓝色 四件套
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                        颜色
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                        7323930000
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                            399.00
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                            61
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                            Thinkbaby-cj-blue
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                        0
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                            Thinkbaby-cj-blue
+                    </td>
+                    <td class="tm-sku-cell f12 c6">
+                            已启用
+                    </td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- 商品描述 -->
+        <div class="desc-card">
+            <div class="sell-card-title">
+                <strong class="f14">商品描述</strong>
+            </div>
+            <div class="oly-row-container">
+                <span class="c6 f14">商品标题</span>
+                <input type="text" value="美国thinkbaby不锈钢儿童餐具四件套婴儿套装304碗餐盘辛克宝贝">
+                <p class="result dis-block f12">展示效果：美国thinkbaby不锈钢儿童餐具四件套婴儿套装304碗餐盘辛克宝贝</p>
+                <p class="result dis-block f12">查看 <span class="c00">标题词语使用规范</span></p>
+            </div>
+        </div>
+        <!-- 商品图片-->
+        <div class="com-struct">
+            <span class="relative cl">
+                <span class="c6 f14 f-l">商品图片</span>
+                <img class="tmall-o-image-preview" src="../../assets/image/img/d1.img" alt="">
+                <img class="tmall-o-image-preview" src="../../assets/image/img/d2.img" alt="">
+                <img class="tmall-o-image-preview" src="../../assets/image/img/5.jpg" alt="">
+                <img class="tmall-o-image-preview" src="../../assets/image/img/d3.img" alt="">
+                <img class="tmall-o-image-preview" src="../../assets/image/img/5.jpg" alt="">
+            </span>
+        </div>
+      </div>
     </div>
-    
-</body>
+  </body>
+  <!-- jquery  -->
+  <script src="../../assets/js/jquery.js"></script>
+  <!-- 外链 js  -->
+  <script src="./d-business.js"></script>
 </html>
