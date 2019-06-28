@@ -178,3 +178,103 @@
     border-bottom: 1px solid #eee;
     padding-bottom: 20px;
 }
+
+
+
+
+/* 上传图片插件 */
+
+*{
+    margin:0;padding:0;
+}
+html,body{
+     font-family:Arial,Helvetica,sans-serif;
+}
+li{
+    list-style: none;
+}
+img{
+    border:none;display: block
+}
+.box{
+    overflow: hidden;
+}
+.box2,.box3,.box4 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    float: left;
+    border:dashed 1px #ccc;
+    z-index: 100;
+    margin-left: 15px;
+}
+.imgFileUploade{
+    padding: 10px;
+    height: 80px;
+    width: 80px;
+}
+.tianjia {
+    font-size: 12px;
+    color: #666;
+}
+.imgFileUploade .header{
+    width: 100%;line-height:40px;
+    margin-left: 5px;
+}
+.imgFileUploade .header span{
+    display: block;float:left;
+}
+.imgFileUploade .header span.imgTitle{
+    line-height:50px;
+}
+.imgFileUploade .header span.imgTitle b{
+    color:red;margin:0 5px;line-height: 57px;display: block;float: right;font-size: 20px;
+}
+.imgClick{
+    margin-left: 18px;cursor: pointer;
+    font-size: 35px;
+    color: red;
+}
+.imgFileUploade .header span.imgcontent{
+    color:#999;margin-left:120px;line-height: 50px;
+}
+.imgFileUploade .imgAll{
+    margin-top: 5px;
+    position: absolute;
+    top: -14px;
+    left: -6px;
+}
+.imgFileUploade .imgAll ul:after{ 
+        visibility: hidden;  display: block; font-size: 0; content: ".";  clear: both; height: 0
+} 
+.imgFileUploade .imgAll li{
+    transition: all .3s ease;
+    width: 100px;height: 100px;border:solid 1px #ccc;margin:8px 5px;float: left;position: relative;box-shadow: 0 0 10px #eee;
+}
+.imgFileUploade .imgAll li img{
+    position: absolute;top:0;left:0;width: 100%;height: 100%;display: block;
+}
+.imgFileUploade .imgAll li:hover .delImg{
+    transition: all .3s ease;
+    display: block;
+}
+.delImg{
+    transition: all .3s ease;
+    display: none;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-color: rgba(0,0,0,.6);
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.1);
+}
+.delImg i {
+    font-size: 25px;
+    color: #fff;
+    transition: all .3s ease;
+}
+.imgClick  {
+    font-size: 35px !important;
+}
