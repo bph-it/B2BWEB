@@ -64,10 +64,7 @@
     width: 600px;
     font-size: 16px;
 }
-#goodsOrder .unit-line {
-    margin-top: 20px;
-    font-size: 14px;
-}
+
 #goodsOrder .unit-line input {
     width: 295px;
     height: 28px;
@@ -325,7 +322,7 @@
     height: 60px;
 }
 #goodsOrder .checkout-due-total {
-    width: 220px;
+    width: 335px;
     height: 60px;
     line-height: 60px;
     font-size: 14px;
@@ -444,12 +441,13 @@
     color: #999;
 }
 .lang-input {
-    width: 100px;
+    width: 145px;
     border: none;
     border: 1px solid #ddd;
     height: 22px;
     padding-left: 10px;
 }
+
 .letter-2 {
     margin-right: 20px;
 }
@@ -460,9 +458,10 @@
     width: 150px;
 }
 .p-input-address {
-    width: 250px;
-    height: 50px;
+    width: 230px;
+    height: 30px;
     border: 1px solid #ddd;
+    padding: 10px;
 }
 /* 临时地址隐藏 */
 .g-address-temp-block {
@@ -538,15 +537,17 @@
     width: 120px;
     border: 1px solid #e8e8e8;
 }
+.xiang3 {
+    margin-bottom: 5px;
+}
 /* 选择地区 */
 .unit-line {
     margin-bottom: 10px;
-    font-weight: bold;
     line-height: 34px;
 }
 .select-box {
     padding: 0px 5px;
-    width: 115px;
+    width: 180px;
     margin-left: 5px;
     border: solid 1px #ddd;
     box-sizing: border-box;
@@ -554,4 +555,26 @@
 }
 .select {
     border: none;
+}
+
+
+.shou2 {
+    top: 0;
+    left: 250px;
+    color: red;
+}
+.zhi2 {
+    top: 0;
+    left: 271px;
+    color: red;
+}
+.xiang2 {
+    top: 0;
+    left: 345px;
+    color: red;
+}
+.ji2 {
+    top: 0;
+    left: 260px;
+    color: red;
 }

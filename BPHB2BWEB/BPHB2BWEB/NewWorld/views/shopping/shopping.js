@@ -19,7 +19,8 @@ $(document).ready(function () {
                 console.log(data)
                 var htmls = ""
                 data.forEach(function (val,index) {
-                    var qty = val.qty * val.price   //数量 * 价格
+                    var qtyx = val.qty * val.price   //数量 * 价格
+                    var qty = qtyx.toFixed(2)
                     htmls += `
                     <ul class="order_lists" data="${val.ShoppingCartItemId}">
                         <li class="list_chk">
@@ -190,13 +191,13 @@ function fun ()  {
                 $all_sum = $('.sum');
             $plus.click(function () {
                 var $inputVal = $(this).prev('input'),
-                    $count = parseInt($inputVal.val())+1,
+                    $count = parseInt($inputVal.val())+1,                               //数量
                     $obj = $(this).parents('.amount_box').find('.reduce'),
                     $priceTotalObj = $(this).parents('.order_lists').find('.sum_price'),
                     $price = $(this).parents('.order_lists').find('.price').html(),  //单价
-                    $priceTotal = $count*parseInt($price.substring(1));
-                $inputVal.val($count);
-                $priceTotalObj.html('￥'+$priceTotal);
+                    $priceTotal = $count*$price.substr(1,Number.POSITIVE_INFINITY)
+                    $inputVal.val($count);
+                    $priceTotalObj.html('￥'+$priceTotal.toFixed(2));
 
                 var count = $count                                  //数量
                 var dataId = $(this).parent().attr("data-type")     //商品id
@@ -213,10 +214,10 @@ function fun ()  {
                     $count = parseInt($inputVal.val())-1,
                     $priceTotalObj = $(this).parents('.order_lists').find('.sum_price'),
                     $price = $(this).parents('.order_lists').find('.price').html(),  //单价
-                    $priceTotal = $count*parseInt($price.substring(1));
+                    $priceTotal = $count*$price.substr(1,Number.POSITIVE_INFINITY)
                 if($inputVal.val()>1){
                     $inputVal.val($count);
-                    $priceTotalObj.html('￥'+$priceTotal);
+                    $priceTotalObj.html('￥'+$priceTotal.toFixed(2));
                     var count = $count                                  //数量
                     var dataId = $(this).parent().attr("data-type")     //商品id
                     update (dataId,count)                               //请求更改数量    
@@ -239,9 +240,9 @@ function fun ()  {
                 }
                 $(this).val($(this).val().replace(/\D|^0/g,''));
                 $count = $(this).val();
-                $priceTotal = $count*parseInt($price.substring(1));
+                $priceTotal = $count*$price.substr(1,Number.POSITIVE_INFINITY)
                 $(this).attr('value',$count);
-                $priceTotalObj.html('￥'+$priceTotal);
+                $priceTotalObj.html('￥'+$priceTotal.toFixed(2));
 
                 var count = $(this).val()                                  //数量
                 var dataId = $(this).parent().attr("data-type")     //商品id
@@ -313,13 +314,13 @@ function fun ()  {
                 var calBtn = $('.calBtn a');
                 $sonCheckBox.each(function () {
                     if ($(this).is(':checked')) {
-                        var goods = parseInt($(this).parents('.order_lists').find('.sum_price').html().substring(1));
+                        var goods = ($(this).parents('.order_lists').find('.sum_price').html().substr(1,Number.POSITIVE_INFINITY));
                         var num =  parseInt($(this).parents('.order_lists').find('.sum').val());
-                        total_money += goods;
+                        total_money += Number(goods);
                         total_count += num;
                     }
                 });
-                $('.total_text').html('￥'+total_money);
+                $('.total_text').html('￥'+total_money.toFixed(2));
                 $('.piece_num').html(total_count);
         
                 // console.log(total_money,total_count);

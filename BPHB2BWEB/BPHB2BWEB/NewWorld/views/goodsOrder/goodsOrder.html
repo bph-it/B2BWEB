@@ -110,8 +110,8 @@
 
                                 </ul>
                                 <div class="op-bar-bottom">
-                                    <a href="#" class="p-button-stress">确认收货信息</a>
-                                    <a href="" class="p-cancel">取消</a>
+                                    <a href="" class="p-button-stress">取消</a>
+                                    <!-- <a href="" class="p-cancel">取消</a> -->
                                 </div>
 
                                 <!-- 收货修改 -->
@@ -125,39 +125,43 @@
                                 <div class="show-copy-area">
                                     <div class="p-zone-editaddress">
                                         <ul class="edit-area edit-areA">
-                                            <li class="p-fd-clr cl">
+                                            <li class="p-fd-clr cl relative">
                                                 <div class="f-l letter-2">收 &nbsp; 货 &nbsp; 人 &nbsp;:</div>
-                                                <div class="f-l"> <input type="text" class="lang-input"> </div>
+                                                <div class="f-l"> <input type="text" class="lang-input shou1 ya"></div>
+                                                <p class="absolute shou2 dis-none ya1"> 必填信息</p>
                                             </li>
 
                                             <!-- 所有地区 -->
-                                            <li class="unit-line cl">
-                                                <span class="cl f-l">所 有 地 区 &nbsp;:&nbsp;</span>
+                                            <li class="unit-line relative cl">
+                                                <span class="cl f-l">所 有 地 区 &nbsp;:&nbsp;&nbsp;&nbsp;</span>
                                                 <!-- 省 -->
                                                 <span class="select-box f-l">
-                                                    <select name="" id="" class="select provinces sheng-a yan-z" onchange="provincea('sheng',value)" >
+                                                    <select name="" id="" class="select ya provinces sheng-a yan-z" onchange="provincea('sheng',value)" >
                                                         <option class="sheng1" value="">请选择城市</option>
                                                     </select>
                                                 </span>
                                                 <!-- 市 -->
                                                 <span class="select-box dis-none city f-l">
-                                                    <select name="" class="select" onchange="provincea('shi',value)">
+                                                    <select name="" class="select citys" onchange="provincea('shi',value)">
                                                     </select>
                                                 </span>
                                                 <!-- 区 -->
                                                 <span class="select-box dis-none region  f-l">
-                                                    <select class="select" onchange="provincea('qu',value)">
+                                                    <select class="select selects" onchange="provincea('qu',value)">
                                                     </select>
                                                 </span>
+                                                <p class="absolute zhi2 dis-none ya1">必填信息</p>
                                             </li>
 
-                                            <li class="cl">
+                                            <li class="cl xiang3 relative">
                                                 <div class="f-l letter-2">详 细 地 址 :</div>
-                                                <div><textarea name="" id="" cols="30" rows="10" class="p-input-address"></textarea></div>
+                                                <textarea name="" id="" cols="30" rows="10" class="p-input-address ya"></textarea>
+                                                <p class="absolute xiang2 dis-none ya1">必填信息</p>
                                             </li>
-                                            <li class="p-fd-clr cl">
+                                            <li class="p-fd-clr relative cl">
                                                 <div class="f-l letter-2"> 手 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机 :</div>
-                                                <div class="f-l"> <input type="text" class="lang-input p-address-chooser"></div>
+                                                <div class="f-l"> <input type="text" class="lang-input p-address-chooser ya"></div>
+                                                <p class="absolute ji2 dis-none ya1">必填信息</p>
                                             </li>
                                         </ul>
                                         <div class="op-bar-bottom">
@@ -272,12 +276,6 @@
                     <div class="screene cl">
                         <div class="cell-header f-l">总计 :</div>
                         <div class="contents f-l cl">
-                            <div class="f-l">
-                                <span>货品分类 : </span>
-                                <span> 1 种</span>
-                                <span>数量总计 :</span>
-                                <span>4 件</span>
-                            </div>
                             <div class="summary-cash f-r cl">
                                 <div>
                                     <div class="item-goods-total f-r an">货品总金额 : <span>25.00</span>元</div>
@@ -286,7 +284,7 @@
                                     <div class="item-rebate-total f-r an">运费共计 : <span>6.00</span>元</div>
                                 </div>
                                 <div>
-                                    <div class="item-due-total f-r">应付总额 (含运费) : <strong class="p-nbe"></strong>元</div>
+                                    <div class="item-due-total f-r">应付总额 (含运费) : <strong class="p-nbe">0</strong>元</div>
                                 </div>
                                 <div class="item-order-anonymous f-r">
                                     <input type="checkbox">
@@ -309,7 +307,7 @@
                                         <strong>元</strong>
                                     </span>
                                 </div>
-                                <div class="make-order f-r">提交订单</div>
+                                <div class="make-order c-p f-r">提交订单</div>
                             </div>
                         </div>
                     </div>
@@ -317,10 +315,6 @@
             </div>
         </div>
     </div>
-    <!-- jquery 插件 -->
-    <script  src="../../assets/js/jquery.js"></script>
-    <!-- cookie 插件 -->
-    <script src="../../assets/js/cookie.js"></script>
     <!-- ajax -->
     <script src="../../assets/js/ajax.js"></script>
     <!-- 自定义 js -->

@@ -1,4 +1,7 @@
 /* 头部 */
+#header .rw-lst-header-bar-container {
+    height: 45px !important;
+}
 #header {
     width: 100%;
     position: fixed;
@@ -14,6 +17,10 @@
 
 .p-voucherhistory {
     margin-left: 10px;
+}
+.shouhuo a{
+    background: red;
+    color: #fff !important;
 }
 /* 右边信息 */
 .next-tabs-tab-inner {
@@ -290,4 +297,10 @@
 }
 .td-phones span{
     color: #027cff
+}
+.wu0 {
+    font-size: 30px;
+    width: 150px;
+    margin-top: 40px !important;
+    color: #999 !important
 }

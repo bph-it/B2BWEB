@@ -5,9 +5,9 @@ document.writeln("<meta charset='UTF-8'></meta>");
 document.writeln("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");   
 document.writeln("<meta http-equiv='X-UA-Compatible' content='ie=edge'>");   
 document.writeln("<title>Document</title>");   
-document.writeln("<link rel='stylesheet' href='../../assets/css/Custom/base.css'>");   
-document.writeln("<link rel='stylesheet' href='../../assets/css/Custom/reset.css'>");   
 document.writeln("<link rel='stylesheet' href='../../assets/font/font-al.css'>")
+document.writeln("<link rel='stylesheet' href='../../assets/css/Custom/base.css'>")
+document.writeln("<link rel='stylesheet' href='../../assets/css/Custom/reset.css'>")
 document.writeln("<link rel='stylesheet' href='../../public/hade/hade.css'>")
 document.writeln("</head>");
 document.writeln("<body>");
@@ -15,14 +15,14 @@ document.writeln("<header id='header'>");
 document.writeln("<div class='rw-lst-header'>");      
 document.writeln("<div class='rw-lst-header-bar-container'>");            
 document.writeln("<div class='container cl'>");        
-document.writeln("<div class='rw-view f-l'>"); 
+document.writeln("<div class='ro-view f-l'>"); 
 document.writeln("<a href='../../views/denglu/denglu.html' class='f12 rw-link'>请登录</a>&nbsp;");     
 document.writeln("<a href='../../views/zhuce/zhuce.html' class='f12 rw-link'>注册</a>");    
 document.writeln("</div>");
 document.writeln("<div class='rw-view f-r'>");
 document.writeln("<a href='../../views/order/order.html' class='f12 rw-lst-header-bar-text'>我的订单</a>");    
 document.writeln("<a href='../../views/home/home.html' class='f12 rw-lst-header-bar-text'>返回首页</a>");    
-document.writeln("<a href='' class='f12 rw-lst-header-bar-text'>进货单</a>");   
+document.writeln("<a href='../../views/shipping-address/shipping-address.html' class='f12 rw-lst-header-bar-text'>收货地址</a>");   
 document.writeln("<a href='' class='f12 rw-lst-header-bar-text'>常买清单</a>");   
 document.writeln("<a href='' class='f12 rw-lst-header-bar-text rw-lst-header-bar-link'>联系客服</a>");   
 document.writeln("</div>");
@@ -56,4 +56,7 @@ document.writeln("<div class='rw-lst-header-nav'></div>");
 document.writeln("</div>");      
 document.writeln("</header>");  
 document.writeln("</body>");
+document.writeln("<script src='../../assets/js/jquery.js'></script>")
+document.writeln("<script src='../../assets/js/cookie.js'></script>")
+document.writeln("<script src='../../public/hade/hadex.js'></script>")
 document.writeln("</html>");

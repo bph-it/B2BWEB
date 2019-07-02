@@ -24,3 +24,9 @@
     color: #333;
     font-size: 14px;
 }
+.item :hover {
+    background: red;
+}
+.item a:hover {
+    color: #fff !important;
+}

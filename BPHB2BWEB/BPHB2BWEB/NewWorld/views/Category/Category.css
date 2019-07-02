@@ -277,7 +277,7 @@
 }
 #kkpager_btn_go {
 	width:44px;
-	height:18px;
+	height:20px;
 	border:0px;
 	overflow:hidden;
 	line-height:140%;
@@ -288,19 +288,18 @@
 	background-color:#FF6600;
 	color:#FFF;
 	position:absolute;
-	left:0px;
-	top:-2px;
+	top:1px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	display:none;
 }
 #kkpager_btn_go_input{
 	width:36px;
-	height:14px;
+	height:18px;
 	color:#999;
 	text-align:center;
-	margin-left:1px;
-	margin-right:1px;
+	margin-left:8px;
+	margin-right:8px;
 	border:1px solid #DFDFDF;
 	position:relative;
 	-moz-border-radius: 3px;

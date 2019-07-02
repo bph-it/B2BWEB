@@ -1,8 +1,14 @@
-if (cookie) {
 
+if (cookie && cookie !== 'null') {
+    function getParameter(name) { 
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
+        var r = window.location.search.substr(1).match(reg); 
+        if (r!=null) return unescape(r[2]); return null;
+    }
+    
+    var tid = getParameter('tid')
     // ================================地区选择=====================================
     function province (dizhi,hao) {
-        console.log(111)
         _mm.request({
             data : {
                 method   : 'GetAreaByparentID',
@@ -164,14 +170,21 @@ if (cookie) {
                 },
                 success  : function (src) {
                     console.log(src)
+                    if (src.length == 0 ) {
+                        var html1 = ''
+                        html1 = `
+                            <div class="c6 wu0 takeCenter">数据为空</div>
+                        `
+                        $(".tiandi").html(html1)
+                    }else {
+
+                        
                     var html = ''
                     src.forEach(function (val,index) {
-                        console.log(val)
                         html += `
                         <table>
                             <tr class="tdx">
                                 <td>
-                                    <input type="checkbox">
                                 </td>
                                 <td>${val.receiver_name}</td>
                                 <td>
@@ -183,7 +196,7 @@ if (cookie) {
                                 <td>${val.mobile}</td>
                                 <td class="td-phones-z moren-n" data-type="${val.is_default}">
                                     <span class="moRen dis-none">默认收货地址 &nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                    <span class="p-text" data-type="${val.addressid}">设置为默认地址 &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                    <span class="p-text c-p" data-type="${val.addressid}">设置为默认地址 &nbsp;&nbsp;&nbsp;&nbsp;</span>
                                 </td>
                                 <td class="td-phones">
                                     <span class="gai-g" data-type="${val.addressid}">修改 &nbsp;&nbsp;&nbsp;</span>
@@ -194,6 +207,8 @@ if (cookie) {
                         `
                     })
                     $(".tiandi").html(html)
+                }
+
                     for( var i = 0; i < $(".moren-n").length; i++) {
                         // 确定 字符串还是布尔值 - 在判断
                     if($(".moren-n").eq(i).attr("data-type") == "true") {
@@ -204,6 +219,7 @@ if (cookie) {
                         }
                     }
                     shippingAddress ()
+
                 }
             })
         } 
@@ -237,9 +253,18 @@ if (cookie) {
                 var address       = $(".input-address").val()                        //详细地址
                 var mobile        = $(".mobile").val()                                //手机号
                 // 判断输入内容是否为空             ///没有写 未写
+
+                console.log(iSdefault       , '是否默认')
+                console.log(receiver_name   , '名称')
+                console.log(state           , '省')
+                console.log(city            , '市')
+                console.log(district        , '区')
+                console.log(address         , '详细地址')
+                console.log(mobile          , '手机号')
         
                 //发起请求
                 if (!bbs) {
+                    console.log(iSdefault)
                     _uu.request({
                         url : 'method=AddCusAddress',
                         data : {
@@ -249,15 +274,18 @@ if (cookie) {
                             'district'      : district,                         //区
                             'address'       : address,                          //详细地址
                             'mobile'        : mobile,                           //电话号
-                            'default'       : true,                             //是否默认
+                            'is_default'    : iSdefault,                             //是否默认
                             'uid'           : cookie                            //个人凭证
                         },
                         success : function (src) {
+                            console.log(src)
                             if(src.ErrorMsg == 0) {
                                 update()
                                 $(".ui-dialog-overlay").addClass("dis-none")
                                 $(".ui-dialog").addClass("dis-none")
-                                alert ('成功')
+                                if(tid == "zhi") {
+                                    window.location.href = "../goodsOrder/goodsOrder.html";
+                                }
                             }else {
                                 alert('添加失败')
                             }
@@ -276,14 +304,14 @@ if (cookie) {
                             'district'      : district,                         //区
                             'address'       : address,                          //详细地址
                             'mobile'        : mobile,                           //电话号
-                            'default'       : true,                             //是否默认
+                            'is_default'    : iSdefault,                             //是否默认
                             'uid'           : cookie                            //个人凭证
                         },
                         success : function (src) {
+                            console.log(src)
                             if(src.ErrorMsg == 0) {
                                 $(".ui-dialog-overlay").addClass("dis-none")
                                 $(".ui-dialog").addClass("dis-none")
-                                alert ('成功')
                                 update()
                             }else {
                                 alert('添加失败')

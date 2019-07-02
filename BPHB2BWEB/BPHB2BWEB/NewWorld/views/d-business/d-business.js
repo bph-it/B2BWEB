@@ -1,3 +1,14 @@
+
+// KindEditor.ready(function(K) {
+//     K.create('textarea[name="content"]', {
+//         autoHeightMode : true,
+//         afterCreate : function() {
+//             this.loadPlugin('autoheight');
+//         }
+//     });
+// });
+
+
 function business () {
     // =====================判断是否选中=======================================
     $(".next-icon-xs").change(function() { 

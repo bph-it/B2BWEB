@@ -28,7 +28,11 @@
     width: 1160px;
     height: 600px;
     margin: 0 auto;
+}
 
+.dingred a{
+    color: #fff !important;
+    background: red;
 }
 
 /* 左边列表 */

@@ -114,11 +114,7 @@ _mm.request({
             <p>${res.product.title}</p>
         `
         $(".o-base-info-detail-title").html(html5)
-        // 价格
-        html6 = `
-            <span class="font-big">${res.product.jdPrice}</span>
-        `
-        $(".font-normal").after(html6)
+
         //海外直邮
         html7 = `
         <span class="c6">${res.product.partermodel}</span>
@@ -129,12 +125,14 @@ _mm.request({
         html8 = ""
         res.skus.forEach(function (val,index) {
             html8 += `
-                <div class="next-tag-body dis-inBlock" data="${val.ID}" data-product="${val.productID}" data-type="${val.jdPrice}">
+                <div class="next-tag-body c-p dis-inBlock" data="${val.ID}" data-product="${val.productID}" data-type="${val.jdPrice}">
                     <p>${val.skuName}</p>
                 </div>
             `
             $(".o-rwd-col-main-wrap").html(html8)
+
         })
+
         particulars1 ()
         particulars2 ()
     }
@@ -144,6 +142,17 @@ function particulars2 () {
     parzg ()
     // 选择单位
     $(".o-rwd-col-main-wrap").children().eq(0).addClass("p-main-wrap")
+
+    // 价格
+    var jdPrice = $(".p-main-wrap").attr("data-type")
+    console.log(jdPrice)
+    html6 = `
+        <span class="font-big">${jdPrice}</span>
+    `
+    $(".font-normal").after(html6)
+    parzg ()
+
+
     $(".next-tag-body").click(function () {
         $(".next-tag-body").removeClass("p-main-wrap")
         $(this).addClass("p-main-wrap")
@@ -182,7 +191,8 @@ function particulars2 () {
         var parj = $(".font-big").text()
         var pars = $(".next-number-picker-input-wrap").val()
         var parz = parj * pars
-        $(".par-zonia").html(parz)
+        var parx = parz.toFixed(2)
+        $(".par-zonia").html(parx)
     }
 }
 //===============================================加入购物车================================
@@ -190,7 +200,7 @@ $('.next-btn-large').click(function () {
     var productID = $('.next-tag-body').attr('data-product')
     var skuid = $(".p-main-wrap").attr('data')
     var qty = $('.next-number-picker-input-wrap').val()
-    if (cookie) {
+    if (cookie && cookie !== 'null') {
         _uu.request({
             url : 'method=AddShoppingCart',
             data : {

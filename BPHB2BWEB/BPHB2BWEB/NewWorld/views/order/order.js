@@ -82,6 +82,18 @@ if (cookie) {
         
         }
         order()
+
+        $(document).on("click",".btn-red",function () {
+            _uu.request({
+                url  : "method=AddShoppingCart",
+                data : {
+                    'uid'       :   cookie,
+                    'productID' :   123
+                }
+            }) 
+        })
+
+
     }
     order ()
     

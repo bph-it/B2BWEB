@@ -26,6 +26,11 @@ if (cookie) {
                     <li class="n-cao n-bx f-l">-</li>
                 `
                 $('.tid-z').html(html)
+                html5 = `
+                  <em>￥${src.payment}</em>
+                `
+                $(".price-z").html(html5)
+
                 html1 = `
                     <li class="f-l">${src.receivername}</li>
                     <li class="f-l">${src.modified}</li>

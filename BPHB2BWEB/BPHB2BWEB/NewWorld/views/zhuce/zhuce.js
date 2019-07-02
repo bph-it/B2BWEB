@@ -164,7 +164,7 @@ $(".next-btn-primary").click(function () {
                         data: JSON.stringify(datas),
                         success : function (data) {
                             if (data.ErrorMsg) {
-                                window.location.href = "../home/home.html";
+                                window.location.href = "../denglu/denglu.html?tid=zhu";
                             } else {
                                 alert ("注册异常")
                             }

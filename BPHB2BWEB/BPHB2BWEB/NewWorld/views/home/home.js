@@ -40,8 +40,8 @@ function home () {
                             <div class="content-outer relative">
                                 <div class="content-inner absolute">
                                     <div class="img-box relative t-c-f">
-                                        <a href="">
-                                            <img src="${val.logo}" alt="">
+                                        <a href="../particulars/particulars.html?id=${val.ID}">
+                                            <img src="${val.logo}" alt="#">
                                             <div class="store-num fz12 t-c-f absolute">${val.wareLocation}</div>
                                         </a>
                                     </div>
@@ -54,7 +54,7 @@ function home () {
                                     </div>
         
                                     <div class="tit-box">
-                                        <a href="">${val.title}</a>
+                                        <a href="javascript:void(0);">${val.title}</a>
                                     </div>
                                     <div class="tag-box">
                                         <span class="not-self">${val.partermodel}</span>
