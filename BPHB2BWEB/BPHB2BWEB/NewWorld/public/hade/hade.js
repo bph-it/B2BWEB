@@ -45,8 +45,8 @@ document.writeln("<div class='rw-lst-header-search-addcart-box f-l'>");
 document.writeln("<a href='' class='rw-lst-header-cart-trigger relative'>");        
 document.writeln("<div class='head absolute'></div>");                    
 document.writeln("<div class='wrap absolute t-c-f'>");
-document.writeln("<i class='iconfont che-q absolute'>&#xe666;</i>")
-document.writeln("<span class='f16'>进货单</span>");                       
+document.writeln("<i class='iconfont che-q c6 absolute'>&#xe666;</i>")
+document.writeln("<span class='f16 c6'>进货单</span>");                       
 document.writeln("<span class='num f14'>0</span>");                        
 document.writeln("</div>");                  
 document.writeln("</a>");                

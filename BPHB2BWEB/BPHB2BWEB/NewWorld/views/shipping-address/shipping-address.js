@@ -133,6 +133,9 @@ if (cookie && cookie !== 'null') {
         })
         // ================================删除收货地址==================================
         $(document).on('click','.shan-g',function () {
+
+            
+
             var shan = $(this).attr('data-type')
             _mm.request({
                 data : {

@@ -1,12 +1,18 @@
 .ocms-component-member-login-1-0-17 {
-    width: 100%;
+    width: 1920px;
     height: 610px;
     background:url(../../assets/image/bjimg/deng.jpg);
+}
+.b2b {
+    color: #eee !important;
+    top: 210px;
+    left: 250px;
+    font-size: 100px;
 }
 .page2 {
     width: 360px;
     height: 360px;
-    margin-right: 100px;
+    margin-right: 200px;
     margin-top: 130px;
     background: #fff;
 }
