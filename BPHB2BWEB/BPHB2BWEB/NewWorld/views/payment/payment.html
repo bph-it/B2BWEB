@@ -19,14 +19,15 @@
 <body>
     <script src="../../public/hade/hade.js"></script>
     <!-- 支付页开始 -->
-    <div id="payment">
-        <div class="z-screen">
+    <div id="payment" class="container">
+        <!-- 跳转支付 -->
+        <!-- <div class="z-screen">
             <div class="z-mod-alipay-level-warning">
                 <div class="z-content">
                     根据监管部门要求，在完善身份信息后您的支付宝账户余额才能付款，麻烦您尽快
                 </div>
             </div>
-            <!-- 订单信息 -->
+
             <div class="z-layout-line">
                 <div class="z-mod-order">
                     <ul class="z-unit-goods cl">
@@ -58,10 +59,10 @@
                     </ul>
                 </div>
             </div>
-            <!-- 付款方式选择 -->
+
             <div class="z-layout-line">
                 <ul class="mod-payment cl">
-                    <!-- 支付宝 -->
+
                     <li class="unit-pay-card f-l">
                         <div class="pay-container relative">
                             <div class="summary">
@@ -72,7 +73,7 @@
                             </div>
                         </div>
                     </li>
-                    <!-- 银行转账 -->
+
                     <li class="unit-pay-card f-l">
                         <div class="pay-container relative">
                             <div class="summary">
@@ -83,7 +84,7 @@
                             </div>
                         </div>
                     </li>
-                    <!-- 对公转账 -->
+
                     <li class="unit-pay-card f-l">
                         <div class="pay-container relative">
                             <div class="summary">
@@ -96,9 +97,36 @@
                     </li>
                 </ul>
             </div>
-            <!-- 付款按钮 -->
+
             <div class="l-layout">
                 <button class="l-button-larger">去付款</button>
+            </div>
+        </div> -->
+        <!-- 支付成功 -->
+        <div class="trade-success">
+            <div class="trade-info">
+                <p class="status">
+                    <i class="iconfont">&#xe60c;</i>
+                    您已成功付款 <span>4.70</span>  元
+                </p>
+                <div class="delivery f14">
+                    <strong>货物寄送至 :</strong>
+                    <span>上海 &nbsp; </span> 
+                    <span>上海市 &nbsp;</span> 
+                    <span>浦东新区 &nbsp;</span> 
+                    <span>航头镇鹤驰路99弄恒福家园42号楼 &nbsp; &nbsp;</span> 
+                    <span >某某某 &nbsp;</span>收 
+                    <span class="c69">13073710147</span>  
+                    <span  class="c69">默认地址</span>
+                </div>
+                <button class="btn btn-success fans size-L radius">返回首页</button>
+                <div class="tisi cl">
+                    <i class="iconfont f-l tsc">&#xe6e3;</i>
+                    <div class="f-l tsc1">
+                        <p>安全提醒：下单后，<span class="chb">用QQ给您发送链接办理退款的都是骗子！</span> </p>
+                        <p>淘宝天猫不存在 <span class="chb"> 系统升级，订单异常等问题，</span>谨防假冒客服电话诈骗</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

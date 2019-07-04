@@ -1,6 +1,6 @@
 // 获取窗口地址
 
-if (cookie) {
+if (cookie && cookie !== 'unll') {
     function getParameter(name) { 
         var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
         var r = window.location.search.substr(1).match(reg); 
