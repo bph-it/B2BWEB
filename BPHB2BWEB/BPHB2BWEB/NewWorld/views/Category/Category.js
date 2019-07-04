@@ -33,8 +33,8 @@ function Category () {
 								</div>
 							</li>
 							`
-							$(".rw-lst-header-nav-first").html(html1)
 						})
+						$(".rw-lst-header-nav-first").html(html1)
 						category2 ()
 					}
 				})
@@ -71,14 +71,13 @@ function Category () {
 					success      : function (res) {
 						var html2 = ""
 						res.forEach(function (val,index) {
-							console.log(111)
 							html2 += `
 									<li class="f-l second-category-item">
 										<a href="../Category/Category.html?id=${val.ID}">${val.cname}</a>
 									</li>
 							`
-							$(".p-rw-lst-header").html(html2)
 						})
+						$(".p-rw-lst-header").html(html2)
 					}
 				})
 			},function () {
@@ -98,10 +97,8 @@ function Category1 (pageNumber) {
 		},
 		success      : function (res) {
 			var _count = Math.ceil(res.count / 8)
-			console.log(_count)
 			html = "",
 			res.products.forEach(function (val,index) {
-				console.log(val)
 				html += `
 					<div class="c-offerlist-wrap f-l relative">
 						<a href="../particulars/particulars.html?id=${val.ID}" class="o-image-thumb-container dis-inBlock">
@@ -122,9 +119,8 @@ function Category1 (pageNumber) {
 						<div class="c-offer-img-mask-bg absolute t-c-f">库存1962包</div>
 					</div>
 				`
-				
-				$(".c-offerlist").html(html)
 			})
+			$(".c-offerlist").html(html)
 			//===============================================分页插件================================
 
 	

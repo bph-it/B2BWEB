@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>弹出框</title>
+</head>
+<body>
+        <p>
+            <button class="" onclick="layer_demo()">打开弹窗</button>
+        </p>
+</body>
+<script src=''></script>
+<script src="./NewWorld/assets/js/jquery.js"></script>
+<script src="./NewWorld/assets/js/layer.js"></script>
+<script>
+    function layer_demo () {
+        layer.open({
+            title: '提示信息',
+            content: '您确定要执行此操作吗',
+            icon : 0,
+            btn: ['确认', '取消',],
+            yes: function(index, layero){
+                console.log(111)
+            },
+            btn2: function(index, layero){
+                console.log(222)
+            },
+        });
+    }
+</script>
+</html>

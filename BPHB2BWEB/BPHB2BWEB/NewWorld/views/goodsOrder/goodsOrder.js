@@ -267,61 +267,6 @@ if(cookie && cookie !== 'null') {
                 }
             }
             
-            // 点击修改
-            // $(document).on("click",".p-xg",function () {
-            //     $(".select").removeClass("btbt")
-            //     $(".g-default").removeClass("p-xin")
-            //     $(".g-default").removeClass("s-panel")
-            //     $(this).parent().parent().parent().children(".show-copy-area").removeClass("g-address-temp-block")
-            //     $(this).parent().parent().removeClass("g-mo").addClass("g-address-temp-block")
-            //     $(this).parent().parent().parent().addClass("p-xin")
-            //     $(this).parent().parent().parent().find(".select").addClass("btbt")
-            // })
-            
-            // 点击确认修改
-            // $(document).on("click",".p-button-stress",function () {
-            //     var receiver_name = $(".p-xin").find(".lang-input").val()//收货人姓名
-            //     var state = $(".p-xin").find(".provinces option:selected").text(); //省
-            //     var city = $(".p-xin").find(".shia option:selected").text();//市
-            //     var district = $(".p-xin").find(".qua option:selected").text();//区
-            //     var addressa = $(".p-xin").find(".xiangzhi").children().text() //详细地址
-            //     var mobile = $(".p-xin").find(".p-address-chooser").val() //手机号
-            //     var addressid = $(".p-xin").attr("data-id")
-            //     var a = $(".p-input-address").text()
-
-            //     console.log(receiver_name)
-            //     console.log(state)
-            //     console.log(city)
-            //     console.log(district)
-            //     console.log(addressa)
-            //     console.log(mobile)
-            //     console.log(a)
-            
-                // datas = {
-                //     "state"         :  state,           //省
-                //     "addressid"     :  addressid,       //id
-                //     "city"          :  city,            //市
-                //     "district"      :  district,        //区
-                //     "address"       :  address,         //详细地址
-                //     "receiver_name" :  receiver_name,    //收货人
-                //     "mobile"        :  mobile,          //手机号码
-                //     "is_default"    :  false,       //默认是否选择
-                //     "uid"           :  cookie,             //用户名
-                // }
-            
-            
-                // $.ajax({
-                //     type : "post",
-                //     url  :  "http://192.168.2.254:9000/interface/B2BAPI.ashx?method=UpdateAddress",
-                //     data : JSON.stringify(datas),
-                //     dataType : "json",
-                //     success : function (data) {
-                //         // window.location.reload()
-                //     }
-                // })
-            
-            // })
-            
             // 设为默认地址
             $(document).on("click",".cl00",function () {
                 var addid = $(this).parent().attr("data-id")

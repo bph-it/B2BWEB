@@ -31,8 +31,8 @@ $(document).ready(function () {
                             </div>
                         </li>
                         `
-                        $(".rw-lst-header-nav-first").html(html1)
                     })
+                    $(".rw-lst-header-nav-first").html(html1)
                     particulars1 ()
                 }
             })
@@ -129,9 +129,8 @@ _mm.request({
                     <p>${val.skuName}</p>
                 </div>
             `
-            $(".o-rwd-col-main-wrap").html(html8)
-
         })
+        $(".o-rwd-col-main-wrap").html(html8)
 
         particulars1 ()
         particulars2 ()

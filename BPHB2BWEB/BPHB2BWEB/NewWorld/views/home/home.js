@@ -20,8 +20,8 @@ function home () {
                             </div>
                         </li>
                         `
-                        $(".rw-lst-header-nav-first").html(html1)
                     })
+                    $(".rw-lst-header-nav-first").html(html1)
                 }
             })
         //=============================================== 商品列表渲染==========================
@@ -102,14 +102,13 @@ function home () {
                     success      : function (res) {
                         var html2 = ""
                         res.forEach(function (val,index) {
-                            console.log(111)
                             html2 += `
                                     <li class="f-l second-category-item">
                                         <a href="../Category/Category.html?id=${val.ID}">${val.cname}</a>
                                     </li>
                             `
-                            $(".p-rw-lst-header").html(html2)
                         })
+                        $(".p-rw-lst-header").html(html2)
                     }
                 })
             })
