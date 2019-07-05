@@ -1,5 +1,6 @@
 //===============================================分页插件================================
 $(function(){
+
     // var totalPage = _count;						//总页码
     var totalRecords = 1;					    //条码数
     // var pageNo = getParameter('pno');		    //获取窗口id
@@ -25,4 +26,7 @@ $(function(){
         }
         
     });
+
+
+
 });

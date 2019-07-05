@@ -28,6 +28,7 @@ if (cookie) {
                     src.forEach(function (val,index) {
                         html2 = []
                         val.details.forEach(function (val,index){
+                            console.log(val)
                             html3 = `
                             <ul class="f-l">
                                 <li class="member-piclist">
@@ -67,9 +68,12 @@ if (cookie) {
                             <div class="f-l qiand cl">
                                ${html2.join("")}
                             </div>
+
+                            <div class="f-l status c6 f14">
+                                <span>${val.status}</span>
+                            </div>
         
                             <div class="f-r actions">
-                                <a href="#" class="btn-red">再次购买</a>
                                 <a href="../orderDetails/orderDetails.html?tid=${val.tid}" class="btn-simple">查看订单</a>
                             </div>
                         `

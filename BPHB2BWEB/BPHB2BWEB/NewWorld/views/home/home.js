@@ -1,6 +1,7 @@
 function home () {
     $(document).ready(function () {
         //=============================================== 一级菜单渲染==========================
+            console.log(111) 
             _mm.request({
                 data:{
                     method     : "GetCategoy",
@@ -8,6 +9,7 @@ function home () {
                     type       : 1
                 },
                 success : function (res) {
+                    console.log(res)
                     var html1 = ""
                     res.forEach(function (val,index) {
                         html1 += `
@@ -55,11 +57,6 @@ function home () {
         
                                     <div class="tit-box">
                                         <a href="javascript:void(0);">${val.title}</a>
-                                    </div>
-                                    <div class="tag-box">
-                                        <span class="not-self">${val.partermodel}</span>
-                                        <span class="tax_allowance">${val.periodDate}</span>
-                                        <span class="shipping">包邮</span>
                                     </div>
         
                                     <a href="../particulars/particulars.html?id=${val.ID}" class="popup_buy_view t-c-f">立即选购</a>

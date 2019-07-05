@@ -306,3 +306,11 @@
 #kkpager .infoTextAndGoPageBtnWrap{
 	padding-top:5px;
 }
+/* 导入xhl */
+.exceltable{
+    margin-top: 20px;
+    border-collapse:collapse;
+}
+.exceltable th,td{
+    border:1px solid #bdbdbd;
+}

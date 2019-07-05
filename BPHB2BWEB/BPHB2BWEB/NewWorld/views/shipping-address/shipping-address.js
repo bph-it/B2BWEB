@@ -5,11 +5,7 @@ if (cookie && cookie !== 'null') {
         var r = window.location.search.substr(1).match(reg); 
         if (r!=null) return unescape(r[2]); return null;
     }
-    
     var tid = getParameter('tid')
-
-
-
 
     // ================================地区选择=====================================
     function province (dizhi,hao) {
@@ -323,7 +319,6 @@ if (cookie && cookie !== 'null') {
                         }
                     })
                 }
-        
             }
         }
     }

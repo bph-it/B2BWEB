@@ -173,12 +173,14 @@
     text-align: center;
     font-size: 14px;
     border: 1px solid #DDD;
+    color: #FFF !important;
     border-radius: 3px;
-    color: #666;
+    /* color: #666; */
+    background: #ED5831;
     height: 24px;
     line-height: 24px;
     display: block;
-    margin: 2px auto;
+    margin: 15px auto;
 }
 .shop-title {
     padding: 10px 20px;
@@ -190,7 +192,7 @@
     width: 138px;
 }
 .col02 {
-    padding: 20px 10px 20px 20px;
+    padding: 35px 10px 20px 20px;
     width: 200px;
     color: #666;
 }
@@ -212,5 +214,11 @@
     border-bottom: 1px solid #eee;
 }
 .qiand {
-    width: 780px;
+    width: 675px;
+}
+.status {
+    margin-top: 82px !important;
+    display: block;
+    font-weight: bold;
+    margin-left: 10px;
 }

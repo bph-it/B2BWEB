@@ -122,6 +122,9 @@ function business () {
     })
     $(".tm-sku-body-table").html(html)
     }
+
+
+
 }
 
 
