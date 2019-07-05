@@ -1,10 +1,6 @@
-#orderdetails {
-    padding-top: 40px;
-}
 .page-article {
     width: 1200px;
     padding: 20px;
-    height: 900px;
     margin: 0 auto;
 }
 .member-tabs {
@@ -86,7 +82,7 @@
     width: 190px;
 }
 .order-section-content li:nth-child(4) {
-    width: 550px;
+    width: 325px;
 }
 .order-section-content-2 {
     background-color: #efefef;

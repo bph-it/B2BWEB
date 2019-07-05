@@ -41,7 +41,11 @@
     font-weight: bold;
     margin: 20px 0;
 }
-
+.wu {
+    font-size: 20px !important;
+    font-weight: bold;
+    vertical-align:-1px
+}
 .schema-form {
     width: 600px;
     height: 650px;

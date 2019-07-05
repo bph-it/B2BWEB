@@ -97,30 +97,42 @@ function Category1 (pageNumber) {
 		},
 		success      : function (res) {
 			var _count = Math.ceil(res.count / 8)
-			html = "",
-			res.products.forEach(function (val,index) {
-				html += `
-					<div class="c-offerlist-wrap f-l relative">
-						<a href="../particulars/particulars.html?id=${val.ID}" class="o-image-thumb-container dis-inBlock">
-							<img src="${val.logo}" alt="">
-						</a>
-						<div class="c-offer-info-box">
-							<div class="c-offer-price-con">
-								<span class="c-offer-price"> ￥ </span>
-								<span class="c-offer-price">${val.jdPrice}元</span>
+			if (res.count !== 0) {
+				html = "",
+				res.products.forEach(function (val,index) {
+					html += `
+						<div class="c-offerlist-wrap f-l relative">
+							<a href="../particulars/particulars.html?id=${val.ID}" class="o-image-thumb-container dis-inBlock">
+								<img src="${val.logo}" alt="">
+							</a>
+							<div class="c-offer-info-box">
+								<div class="c-offer-price-con">
+									<span class="c-offer-price"> ￥ </span>
+									<span class="c-offer-price">${val.jdPrice}元</span>
+								</div>
+								<p class="c-offer-prop-b dis-inBlock">
+									${val.title}
+								</p>
 							</div>
-							<p class="c-offer-prop-b dis-inBlock">
-								${val.title}
-							</p>
-							<div class="spec-wrap c6">
-								<span>5包起订</span>
-							</div>
+							<div class="c-offer-img-mask-bg absolute t-c-f">库存1962包</div>
 						</div>
-						<div class="c-offer-img-mask-bg absolute t-c-f">库存1962包</div>
+					`
+				})
+				$(".c-offerlist").html(html)
+
+			}else {
+				html1 = `
+					<img class="t-c-f tuwu" src="../../assets/image/bjimg/wu.jpg" alt="">
+
+					<div class="shang t-c-f">
+						商品未上架
 					</div>
 				`
-			})
-			$(".c-offerlist").html(html)
+				$(".c-offerlist").html(html1)
+
+			}
+			
+
 			//===============================================分页插件================================
 
 	

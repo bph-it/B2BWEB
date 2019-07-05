@@ -387,10 +387,6 @@ if(cookie && cookie !== 'null') {
                             </ul>
             
                             <div class="summary">
-                            <div class="f-l data-spm-anchol">
-                                <span class="f-l">给卖家留言 : </span>  
-                                <textarea class="f-l z-text" value="你猜猜"></textarea>
-                            </div>
                             <div class="f-r data-spm-anchor">
                                 <div class="cl">
                                     <div class="f-r">
@@ -398,12 +394,6 @@ if(cookie && cookie !== 'null') {
                                         <strong class="control">${pricex}</strong>
                                     </div>
             
-                                </div>
-                                <div class="cl">
-                                    <div class="f-r">
-                                        <span class="labele">运费共计 :</span>
-                                        <strong class="controli">6.00</strong>元
-                                    </div>
                                 </div>
                                 <div class="box-remind-lumptip">
                                     <div>
