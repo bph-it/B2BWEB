@@ -1,7 +1,6 @@
 function home () {
     $(document).ready(function () {
         //=============================================== 一级菜单渲染==========================
-            console.log(111) 
             _mm.request({
                 data:{
                     method     : "GetCategoy",
@@ -37,7 +36,6 @@ function home () {
                 success : function (res) {
                     var html3 = ""
                     res.products.forEach(function (val,index) {
-                        console.log(val)
                         html3 += `
                         <li class="f-l">
                             <div class="content-outer relative">

@@ -18,4 +18,10 @@ $(".delect").click(function () {
     $(".ro-view").html(name)
     window.location.reload()
 })
-
+//hover 购物车弹窗
+$(".wrap").hover(function () {
+    // hoverDuring: 1000, 
+    $(".next-icon-xl").stop(true,true).slideDown(600)
+},function () {
+    $(".next-icon-xl").stop(true,true).slideUp(600);
+})

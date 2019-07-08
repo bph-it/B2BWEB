@@ -119,10 +119,23 @@
     content: "";
     border-radius: 50% 0px 0px 50%;
 }
-
 .num {
     color: #DF2211;
     margin-left: 8px;
     padding-left: 8px;
     border-left: 1px solid #DCDEE3;
+}
+
+.next-icon-xl {
+    width: 252px;
+    height: 100px;
+    border: 1px solid #DCDEE3;
+    top: 39px;
+    left: 0;
+    display: none;
+    z-index: 999;
+    background: #fff;
+}
+.next-icon-xl span{
+    line-height: 70px;
 }

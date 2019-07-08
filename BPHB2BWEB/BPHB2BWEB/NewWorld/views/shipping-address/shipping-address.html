@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="./shipping-address.css">
     <!-- 外链头部 -->
     <script src="../../public/hade/hade.js"></script>
+    <!-- 弹窗 -->
+    <script src="./dialog.css"></script>
 </head>
 <body>
     <!-- 收货地址 -->
@@ -180,6 +182,9 @@
             </div>
         </div>
     </div>
+
+	<!-- <input type="button" id="confim-default" value="confim默认" /> -->
+
 </body>
     <!-- jqurey -->
     <script src="../../assets/js/jquery.js"></script>
@@ -189,6 +194,18 @@
     <script src="../../assets/js/layer.js"></script>
     <!-- cookie -->
     <script src="../../assets/js/cookie.js"></script>
+    <!-- 弹窗 -->
+    <script src="./jquery.dialog.js"></script>
     <!-- 外链 js -->
     <script src="./shipping-address.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#confim-default").click(function(){
+                $.dialog.confirm({content:"你确定要删除吗",callback:"callback();"});
+            });
+        });
+        function callback(){
+            alert('这是回调函数');
+        }
+    </script>
 </html>

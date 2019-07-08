@@ -31,7 +31,7 @@ document.writeln("</div>");
 document.writeln("<div class='container rw-lst-header-search cl'>"); 
 document.writeln("<div class='header-search-brand cl f-l'>");    
 document.writeln("<div class='header-search-brand-logo f-l'></div>");         
-document.writeln("<a href='' class='header-search-brand-link f12 t-c-f f-l'>");         
+document.writeln("<a href='../../views/home/home.html' class='header-search-brand-link f12 t-c-f f-l'>");         
 document.writeln("<span class='header-search-brand-title'>迅销B2B全球供应链贸易(金融)平台</span>");              
 document.writeln("</a>");           
 document.writeln("</div>");      
@@ -42,12 +42,15 @@ document.writeln("<i class='iconfont fangda'>&#xe69d;</i>");
 document.writeln("</div>");        
 document.writeln("</div>");   
 document.writeln("<div class='rw-lst-header-search-addcart-box f-l'>");
-document.writeln("<a href='' class='rw-lst-header-cart-trigger relative'>");        
+document.writeln("<a href='../../views/shopping/shopping.html' class='rw-lst-header-cart-trigger relative'>");        
 document.writeln("<div class='head absolute'></div>");                    
 document.writeln("<div class='wrap absolute t-c-f'>");
 document.writeln("<i class='iconfont che-q c6 absolute'>&#xe666;</i>")
 document.writeln("<span class='f16 c6'>进货单</span>");                       
-document.writeln("<span class='num f14'>0</span>");                        
+document.writeln("<span class='num f14'>0</span>");     
+document.writeln("<div class='absolute next-icon-xl'>")                   
+document.writeln("<span class='f12 c6'>当前进货单为空，您还未添加任何商品</span>")                   
+document.writeln("</div>");                  
 document.writeln("</div>");                  
 document.writeln("</a>");                
 document.writeln("</div>");            
