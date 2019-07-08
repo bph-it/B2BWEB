@@ -22,6 +22,9 @@
     background: red;
     color: #fff !important;
 }
+.dialog_body {
+    text-align: center;
+}
 /* 右边信息 */
 .next-tabs-tab-inner {
     width: 54px;

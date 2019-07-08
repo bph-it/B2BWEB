@@ -16,9 +16,45 @@
     <!-- 外链 css -->
     <link rel="stylesheet" href="./shipping-address.css">
     <!-- 外链头部 -->
-    <script src="../../public/hade/hade.js"></script>
-    <!-- 弹窗 -->
-    <script src="./dialog.css"></script>
+    <script src="../../public/hade/hade.js"></script>   
+    <style>
+        .dialog {
+            width: 400px;
+            height: 200px;
+            background: #fff;
+        }
+        .dialog_top {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .dialog_body {
+            padding: 25px;
+        }
+        .dialog_bottom span input:nth-child(1) {
+            border: none;
+            background: #52a0e5;
+            color: #fff;
+            padding: 7px 12px;
+            border: 1px solid #52a0e5;
+            margin-right: 5px;
+            border-radius: 3px;
+        }
+        .dialog_bottom span input:nth-child(2) {
+            border: none;
+            background: #fff;
+            color: #3c3c3c;
+            padding: 7px 12px;
+            border: 1px solid #d9d9d9;
+            margin-right: 5px;
+            border-radius: 3px;
+        }
+        .dialog_main {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
     <!-- 收货地址 -->
@@ -182,30 +218,13 @@
             </div>
         </div>
     </div>
-
-	<!-- <input type="button" id="confim-default" value="confim默认" /> -->
-
 </body>
     <!-- jqurey -->
     <script src="../../assets/js/jquery.js"></script>
     <!-- ajax -->
     <script src="../../assets/js/ajax.js"></script>
-    <!-- 弹窗 -->
-    <script src="../../assets/js/layer.js"></script>
     <!-- cookie -->
     <script src="../../assets/js/cookie.js"></script>
-    <!-- 弹窗 -->
-    <script src="./jquery.dialog.js"></script>
     <!-- 外链 js -->
     <script src="./shipping-address.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#confim-default").click(function(){
-                $.dialog.confirm({content:"你确定要删除吗",callback:"callback();"});
-            });
-        });
-        function callback(){
-            alert('这是回调函数');
-        }
-    </script>
 </html>
