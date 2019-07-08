@@ -16,7 +16,7 @@
 html,body{
     position: relative;
     width: 100%;
-    min-height: 950px;
+    min-height: 650px;
 }
 input[type="checkbox"]{
     display: none;
@@ -46,7 +46,7 @@ a:hover{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0px 0px 100px;
-    min-height: 210px;
+    min-height: 100px;
 }
 /*购物车头部*/
 .cartMain_hd{
@@ -78,6 +78,22 @@ a:hover{
 .cartMain_hd .cartTop .list_con{
     text-indent: 140px;
 }
+
+/* 没有东西 */
+.c-offerlist {
+    margin-left: -20px;
+}
+.tuwu {
+    margin-left: 460px;
+}
+.shang {
+    font-size: 50px;
+    color: #999;
+    height: 200px;
+    margin-top: 50px;
+}
+
+
 
 
 .cartBox{
@@ -117,8 +133,7 @@ a:hover{
 
 /*商品列表*/
 .cartBox .order_content{
-    min-height: 600px;
-    border: 1px solid #ccc;
+    min-height: 100px;
 }
 .cartBox .order_content a{
     display: block;

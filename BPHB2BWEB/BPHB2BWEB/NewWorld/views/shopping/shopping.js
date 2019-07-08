@@ -3,8 +3,9 @@
  */
 // hade 头部 模板
 // 获取购物车
-$(document).ready(function () {
 
+
+$(document).ready(function () {
     // 初始化获取购物车
     function ready () {
         $.ajax({
@@ -16,52 +17,64 @@ $(document).ready(function () {
             },
             datatype  :  "json",
             success   :   function (data) {
-                console.log(data)
-                var htmls = ""
-                data.forEach(function (val,index) {
-                    var qtyx = val.qty * val.price   //数量 * 价格
-                    var qty = qtyx.toFixed(2)
-                    htmls += `
-                    <ul class="order_lists" data="${val.ShoppingCartItemId}">
-                        <li class="list_chk">
-                            <input type="checkbox" id="${index}" class="son_check">
-                            <label for="${index}"></label>
-                        </li>
-                        <li class="list_con">
-                            <div class="list_img"><a href="javascript:;"><img src="${val.picurl}" alt=""></a></div>
-                            <div class="list_text"><a href="javascript:;">${val.title}</a></div>
-                        </li>
-                        <li class="list_info">
-                            <p>规格：${val.skuName}</p>
-                            <p>尺寸：16*16*3(cm)</p>
-                        </li>
-                        <li class="list_price">
-                            <p class="price">￥${val.price}</p>
-                        </li>
-                        <li class="list_amount">
-                            <div class="amount_box" data-type="${val.ShoppingCartItemId}">
-                                <a href="javascript:;" class="reduce reSty">-</a>
-                                <input type="text" value="${val.qty}" class="sum">
-                                <a href="javascript:;" class="plus">+</a>
+                console.log(data.length)
+                if (data.length == 0) {
+                    console.log('gogogo')
+                    var html = `
+                        <div class="c-offerlist cl">
+                            <img class="t-c-f tuwu" src="../../assets/image/bjimg/wu.jpg" alt="">
+                            <div class="shang t-c-f">
+                                购物车数量为空
                             </div>
-                        </li>
-                        <li class="list_sum">
-                            <p class="sum_price">￥${qty}</p>
-                        </li>
-                        <li class="list_op">
-                            <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
-                        </li>
-                    </ul>
+                        </div>
                     `
-                })
-                $(".order_content").html(htmls)
-                fun ()
+                    $(".order_content").html(html)
+                }else {
+                    var htmls = ""
+                    data.forEach(function (val,index) {
+                        var qtyx = val.qty * val.price   //数量 * 价格
+                        var qty = qtyx.toFixed(2)
+                        htmls += `
+                        <ul class="order_lists" data="${val.ShoppingCartItemId}">
+                            <li class="list_chk">
+                                <input type="checkbox" id="${index}" class="son_check">
+                                <label for="${index}"></label>
+                            </li>
+                            <li class="list_con">
+                                <div class="list_img"><a href="javascript:;"><img src="${val.picurl}" alt=""></a></div>
+                                <div class="list_text"><a href="javascript:;">${val.title}</a></div>
+                            </li>
+                            <li class="list_info">
+                                <p>规格：${val.skuName}</p>
+                                <p>尺寸：16*16*3(cm)</p>
+                            </li>
+                            <li class="list_price">
+                                <p class="price">￥${val.price}</p>
+                            </li>
+                            <li class="list_amount">
+                                <div class="amount_box" data-type="${val.ShoppingCartItemId}">
+                                    <a href="javascript:;" class="reduce reSty">-</a>
+                                    <input type="text" value="${val.qty}" class="sum">
+                                    <a href="javascript:;" class="plus">+</a>
+                                </div>
+                            </li>
+                            <li class="list_sum">
+                                <p class="sum_price">￥${qty}</p>
+                            </li>
+                            <li class="list_op">
+                                <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+                            </li>
+                        </ul>
+                        `
+                    })
+                    $(".order_content").html(htmls)
+                    fun ()
+                }
             }
         })
     }
     ready ()
 })
-
 
 function fun ()  {
     $(function () {

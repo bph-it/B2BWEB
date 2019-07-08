@@ -15,7 +15,7 @@ document.writeln("<header id='header'>");
 document.writeln("<div class='rw-lst-header'>");      
 document.writeln("<div class='rw-lst-header-bar-container'>");            
 document.writeln("<div class='container cl'>");        
-document.writeln("<div class='ro-view f-l'>"); 
+document.writeln("<div class='ro-view f12 f-l'>"); 
 document.writeln("<a href='../../views/denglu/denglu.html' class='f12 rw-link'>请登录</a>&nbsp;");     
 document.writeln("<a href='../../views/zhuce/zhuce.html' class='f12 rw-link'>注册</a>");    
 document.writeln("</div>");

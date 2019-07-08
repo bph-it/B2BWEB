@@ -37,6 +37,7 @@ function home () {
                 success : function (res) {
                     var html3 = ""
                     res.products.forEach(function (val,index) {
+                        console.log(val)
                         html3 += `
                         <li class="f-l">
                             <div class="content-outer relative">
@@ -44,7 +45,7 @@ function home () {
                                     <div class="img-box relative t-c-f">
                                         <a href="../particulars/particulars.html?id=${val.ID}">
                                             <img src="${val.logo}" alt="#">
-                                            <div class="store-num fz12 t-c-f absolute">${val.wareLocation}</div>
+                                            <div class="store-num fz12 t-c-f absolute">${val.periodDate}</div>
                                         </a>
                                     </div>
                                     <div class="txt-box fz12">
@@ -52,7 +53,8 @@ function home () {
                                             <span>￥</span>
                                             <i>${val.jdPrice}</i>
                                         </div>
-                                        <div class="unit-price">单件￥39.50</div>
+                                        <span class="unit-price">${val.partermodel}</span>
+                                        <span class="unit-price">${val.wareLocation}</span>
                                     </div>
         
                                     <div class="tit-box">

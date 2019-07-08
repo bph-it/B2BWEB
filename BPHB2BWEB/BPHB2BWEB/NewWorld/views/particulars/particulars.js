@@ -98,7 +98,7 @@ _mm.request({
         productid : productid,
     },
     success : function (res) {
-        console.log(res.skus)
+        console.log(res.product)
         // 放大镜原图
         html = `
             <img src="${res.product.logo}" alt="">
@@ -117,7 +117,8 @@ _mm.request({
 
         //海外直邮
         html7 = `
-        <span class="c6">${res.product.partermodel}</span>
+            <span class="c6 unit-price">${res.product.partermodel}</span>
+            <span class="c6 unit-price">${res.product.wareLocation}</span>
         `
         $(".p-peisg").after(html7)
 

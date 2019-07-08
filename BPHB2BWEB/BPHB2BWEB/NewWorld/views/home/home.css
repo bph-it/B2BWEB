@@ -162,7 +162,11 @@
     font-size: 16px;
 }
 #home .unit-price {
-    color: #787878;
+    color: #ED5831;
+    border: 1px solid #ED5831;
+    padding: 0 3px;
+    font-size: 10px;
+    margin-right: 5px;
 }
 #home .product-list li .content-inner .tit-box {
     margin-bottom: 5px;

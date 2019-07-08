@@ -155,9 +155,25 @@
     border-left: 1px solid #DCDEE3 !important;
     border-right: 1px solid #DCDEE3 !important;
 }
+
+
+/* 没有东西 */
 .c-offerlist {
     margin-left: -20px;
 }
+.tuwu {
+    margin-left: 460px;
+}
+.shang {
+    font-size: 50px;
+    color: #999;
+    height: 200px;
+    margin-top: 50px;
+}
+
+
+
+
 .c-offerlist-wrap {
     width: 280px;
     border: 1px solid #E6E7EB;
@@ -239,16 +255,8 @@
 	color:#999;
 }
 
-.shang {
-    font-size: 50px;
-    color: #999;
-    height: 200px;
-    margin-top: 50px;
-    
-}
-.tuwu {
-    margin-left: 460px;
-}
+
+
 
 #kkpager span.disabled{
 	float: left;
