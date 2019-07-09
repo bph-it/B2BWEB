@@ -20,11 +20,9 @@ document.writeln("<a href='../../views/denglu/denglu.html' class='f12 rw-link'>�
 document.writeln("<a href='../../views/zhuce/zhuce.html' class='f12 rw-link'>注册</a>");    
 document.writeln("</div>");
 document.writeln("<div class='rw-view f-r'>");
-document.writeln("<a href='../../views/order/order.html' class='f12 rw-lst-header-bar-text'>我的订单</a>");    
 document.writeln("<a href='../../views/home/home.html' class='f12 rw-lst-header-bar-text'>返回首页</a>");    
-document.writeln("<a href='../../views/shipping-address/shipping-address.html' class='f12 rw-lst-header-bar-text'>收货地址</a>");   
-document.writeln("<a href='' class='f12 rw-lst-header-bar-text'>常买清单</a>");   
-document.writeln("<a href='' class='f12 rw-lst-header-bar-text rw-lst-header-bar-link'>联系客服</a>");   
+document.writeln("<a href='../../views/order/order.html' class='f12 rw-lst-header-bar-text'>我的订单</a>");    
+document.writeln("<a href='../../views/shipping-address/shipping-address.html' class='f12 rw-lst-header-bar-text rw-lst-header-bar-link'>收货地址</a>");   
 document.writeln("</div>");
 document.writeln("</div>");
 document.writeln("</div>");

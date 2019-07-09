@@ -20,6 +20,7 @@ $(document).ready(function () {
                     type       : 1
                 },
                 success : function (res) {
+                    console.log(1111)
                     var html1 = ""
                     res.forEach(function (val,index) {
                         html1 += `
@@ -52,8 +53,9 @@ $(document).ready(function () {
 
     // 当鼠标移入 展开 / 收起 一级菜单  1 / 2
     $(".rw-lst-header-nav-header").hover(function () {
-        category.areveal()      //展开  
+        Timeout = setTimeout(function(){category.areveal()},300);
     },function () {
+        clearTimeout(Timeout);
         category.shut()         //收起  
     })
     //===============================================二级菜单================================

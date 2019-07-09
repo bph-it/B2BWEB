@@ -1,5 +1,7 @@
 //判断是否登录
 if (cookie !== 'null' && cookie) {
+    console.log(111)
+
     var name = `
         <p class="rw-link f-l">您好，<span class="c6">${cookie}</span></p>
         <a class="rw-link delect f-l">退出</a>
@@ -21,8 +23,39 @@ $(".delect").click(function () {
 
 //hover 购物车弹窗
 $(".wrap").hover(function () {
-    // hoverDuring: 1000, 
-    $(".next-icon-xl").stop(true,true).slideDown(200)
+
+    //防抖
+    Timeout = setTimeout(function(){zhan()},300);
+},function () {
+    clearTimeout(Timeout);
+    $(".next-icon-xl").stop(true,true).slideUp(200);
+})
+
+// 购物车数量
+function hadenum () {
+    if (cookie !== 'null' && cookie) {
+        _mm.request({
+            data:{
+                 method: 'GetCart',
+                 uid :  cookie,
+            },
+            success :  function (res) {
+                var hadenu = 0
+                res.forEach(function (val,index) {
+                    hadenu += val.qty
+                })
+                $(".hadenum").html(hadenu)
+
+            }
+        })
+    }else {
+        $(".hadenum").html(0)
+    }
+}
+
+// 配合防抖 性能优化
+function zhan () {
+    $(".next-icon-xl").stop(true,true).slideDown(150)
     if (cookie && cookie !== 'null') {
         var html3 = ''
         _mm.request({
@@ -31,6 +64,7 @@ $(".wrap").hover(function () {
                 uid :  cookie,
            },
            success :  function (res) {
+               console.log(111)
                if (res.length == 0) {
                 var html1 = `
                     <span class="f12 c6">当前进货单为空，您还未添加任何商品!</span>
@@ -56,30 +90,5 @@ $(".wrap").hover(function () {
             <span class="f12 c6">您还未登陆，请先登录在查看</span>
         `
         $(".next-icon-xl").html(html)
-    }
-
-},function () {
-    $(".next-icon-xl").stop(true,true).slideUp(200);
-})
-
-// 购物车数量
-function hadenum () {
-    if (cookie !== 'null' && cookie) {
-        _mm.request({
-            data:{
-                 method: 'GetCart',
-                 uid :  cookie,
-            },
-            success :  function (res) {
-                var hadenu = 0
-                res.forEach(function (val,index) {
-                    hadenu += val.qty
-                })
-                $(".hadenum").html(hadenu)
-
-            }
-        })
-    }else {
-        $(".hadenum").html(0)
     }
 }

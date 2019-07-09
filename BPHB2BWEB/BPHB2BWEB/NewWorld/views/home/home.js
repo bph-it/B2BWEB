@@ -9,7 +9,6 @@ function home () {
                     type       : 1
                 },
                 success : function (res) {
-                    console.log(res)
                     var html1 = ""
                     res.forEach(function (val,index) {
                         html1 += `
