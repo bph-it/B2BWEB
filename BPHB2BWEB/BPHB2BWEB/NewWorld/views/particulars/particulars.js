@@ -107,6 +107,7 @@ _mm.request({
             <img src="${res.product.logo}" alt="">
         `
         $(".magnify").before(html)
+        $(".lunt1").html(html)
         // 放大镜器
         html4 = `
             <img src="${res.product.logo}" alt="" class="absolute">

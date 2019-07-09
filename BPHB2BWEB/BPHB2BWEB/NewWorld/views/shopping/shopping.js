@@ -18,9 +18,8 @@ if (cookie && cookie !== 'null') {
                 },
                 datatype  :  "json",
                 success   :   function (data) {
-                    console.log(data.length)
+                    console.log(data)
                     if (data.length == 0) {
-                        console.log('gogogo')
                         var html = `
                             <div class="c-offerlist cl">
                                 <img class="t-c-f tuwu" src="../../assets/image/bjimg/wu.jpg" alt="">
@@ -38,8 +37,8 @@ if (cookie && cookie !== 'null') {
                             htmls += `
                             <ul class="order_lists" data="${val.ShoppingCartItemId}">
                                 <li class="list_chk">
-                                    <input type="checkbox" id="${index}" class="son_check">
-                                    <label for="${index}"></label>
+                                    <input type="checkbox" type-ma="${val.ShoppingCartItemId}" id="${index}" class="son_check">
+                                    <label type="${val.selected}" for="${index}"></label>
                                 </li>
                                 <li class="list_con">
                                     <div class="list_img"><a href="javascript:;"><img src="${val.picurl}" alt=""></a></div>
@@ -47,7 +46,6 @@ if (cookie && cookie !== 'null') {
                                 </li>
                                 <li class="list_info">
                                     <p>规格：${val.skuName}</p>
-                                    <p>尺寸：16*16*3(cm)</p>
                                 </li>
                                 <li class="list_price">
                                     <p class="price">￥${val.price}</p>
@@ -69,6 +67,12 @@ if (cookie && cookie !== 'null') {
                             `
                         })
                         $(".order_content").html(htmls)
+                        for (var i = 0; i< $(".order_lists").length ; i++) {
+                            if ($('.order_lists').eq(i).children('.list_chk').children("label").attr('type') == 'true') {
+                                $('.order_lists').eq(i).children('.list_chk').children().eq(1).addClass('mark')
+                                $('.order_lists').eq(i).children('.list_chk').children().eq(0).attr('checked',true);
+                            }   
+                        }
                         fun ()
                     }
                 }
@@ -97,6 +101,7 @@ if (cookie && cookie !== 'null') {
     //===============================================全局全选与单个商品的关系================================
                 $wholeChexbox.click(function () {
                     var $checkboxs = $cartBox.find('input[type="checkbox"]');
+                    var quan = $(this).is(':checked')
                     if ($(this).is(':checked')) {
                         $checkboxs.prop("checked", true);
                         $checkboxs.next('label').addClass('mark');
@@ -105,11 +110,12 @@ if (cookie && cookie !== 'null') {
                         $checkboxs.next('label').removeClass('mark');
                     }
                     totalMoney();
+                    quanxuan (quan)
                 });
-            
-            
-                $sonCheckBox.each(function () {
-                    $(this).click(function () {                  
+
+
+                function box () {
+                    $sonCheckBox.each(function () {
                         if ($(this).is(':checked')) {
                             //判断：所有单个商品是否勾选
                             var len = $sonCheckBox.length;
@@ -128,6 +134,40 @@ if (cookie && cookie !== 'null') {
                             $wholeChexbox.prop("checked", false);
                             $wholeChexbox.next('label').removeClass('mark');
                         }
+                    })
+                    totalMoney();
+
+                }
+                box ()
+
+            
+                $sonCheckBox.each(function () {
+                    $(this).click(function () {  
+                        var trfs = ($(this).is(':checked'))
+                        var ma = ($(this).attr('type-ma'))
+                        if ($(this).is(':checked')) {
+                            //判断：所有单个商品是否勾选
+                            var len = $sonCheckBox.length;
+                            var num = 0;
+                            $sonCheckBox.each(function () {
+                                if ($(this).is(':checked')) {
+                                    num++;
+                                }
+                            });
+
+                            if (num == len) {
+                                $wholeChexbox.prop("checked", true);
+                                $wholeChexbox.next('label').addClass('mark');
+                                // danxuan ()
+                                console.log(111)
+                            }
+                        } else {
+                            danxuan (trfs,ma)
+                            //单个商品取消勾选，全局全选取消勾选
+                            $wholeChexbox.prop("checked", false);
+                            $wholeChexbox.next('label').removeClass('mark');
+                        }
+                        danxuan (trfs,ma)
                     })
                 })
             
@@ -152,6 +192,7 @@ if (cookie && cookie !== 'null') {
                             //店铺下的checkbox选中状态
                             $(this).parents('.cartBox').find('.son_check').prop("checked", true);
                             $(this).parents('.cartBox').find('.son_check').next('label').addClass('mark');
+                            
                         } else {
                             //否则，全局全选按钮取消对勾
                             $wholeChexbox.prop("checked", false);
@@ -347,12 +388,10 @@ if (cookie && cookie !== 'null') {
             
                     if(total_money!=0 && total_count!=0){
                         if(!calBtn.hasClass('btn_sty')){
-                            console.log(11)
                             calBtn.addClass('btn_sty');
                         }
                     }else{
                         if(calBtn.hasClass('btn_sty')){
-                            console.log(22)
                             calBtn.removeClass('btn_sty');
                         }
                     }
@@ -360,18 +399,18 @@ if (cookie && cookie !== 'null') {
             });
     //======================================结算==================================================
             $(document).on("click",".btn_sty",function () {
-    
-                if($("#all").is(':checked') == true) {
-                    console.log("全选")
-                    quanxuan ()
-                }else {
-                    var box = $(".mark")
-                    // var box = $(".tue").parent().parent().Children(".list_amount").Children().attr("data-type")
-                    for(var j = 0; j < box.length; j++) {
-                        var neb = (box.eq(j).parent().parent().children(".list_amount").children().attr("data-type")) 
-                        danxuan (neb)
-                    }
-                }
+                window.location.href = "../goodsOrder/goodsOrder.html";
+                // if($("#all").is(':checked') == true) {
+                //     console.log("全选")
+                //     quanxuan ()
+                // }else {
+                //     var box = $(".mark")
+                //     // var box = $(".tue").parent().parent().Children(".list_amount").Children().attr("data-type")
+                //     for(var j = 0; j < box.length; j++) {
+                //         var neb = (box.eq(j).parent().parent().children(".list_amount").children().attr("data-type")) 
+                //         danxuan (neb)
+                //     }
+                // }
             })
     
     
@@ -415,19 +454,19 @@ if (cookie && cookie !== 'null') {
     
     //======================================全选选中==========================================
     
-            function quanxuan () {
+            function quanxuan (quan) {
                 $.ajax({
                     type      :  "get",
                     url       :  "http://192.168.2.254:9000/interface/B2BAPI.ashx",
                     data      :  {
                         method: "AllChooseCart",
                         uid   :  cookie,
-                        choose : true
+                        choose : quan
                     },
                     datatype  :  "json",
                     success   :   function (data) {
                         if (data.ErrorMsg == 0) {
-                            window.location.href = "../goodsOrder/goodsOrder.html";
+                            console.log(123)
                         }else {
                             alert ('结算异常')
                         }
@@ -438,19 +477,22 @@ if (cookie && cookie !== 'null') {
     
     //======================================单选选中==========================================
     
-            function danxuan (neb) {
+            function danxuan (trfs,ma) {
+                console.log(111)
+                console.log(trfs, ma)
                 $.ajax({
                     type      :  "get",
                     url       :  "http://192.168.2.254:9000/interface/B2BAPI.ashx",
                     data      :  {
                         method: "ChooseCartItem",
-                        shoppingcartId   : neb,
-                        choose : true
+                        shoppingcartId   : ma,
+                        choose : trfs
                     },
                     datatype  :  "json",
                     success   :   function (data) {
+                        console.log(data , 666)
                         if (data.ErrorMsg == 0) {
-                            window.location.href = "../goodsOrder/goodsOrder.html";
+                            console.log('成功')
                         }else {
                             alert ('结算异常')
                         }

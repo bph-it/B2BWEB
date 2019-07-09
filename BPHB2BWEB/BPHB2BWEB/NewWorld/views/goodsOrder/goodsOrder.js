@@ -93,11 +93,15 @@ if(cookie && cookie !== 'null') {
                     },
                     dataType : "json",
                     success : function (data) {
+                        var bbx = data.length
                         if (data.length == 0) {
-                            alert ("请添加收货地址在进入此页面")
-                            window.location.href = "../shipping-address/shipping-address.html?tid=zhi";
+                            // alert ("请添加收货地址在进入此页面")
+                            $(".g-address-info-block").css("display","none")
+                            $(".g-address-temp-block").slideDown("slow");
+                            // window.location.href = "../shipping-address/shipping-address.html?tid=zhi";
                         }else {
                             data.forEach(function (val,index) {
+                                
                                 var html = `
                                 <dl class="g-unit-line addressid f-l" data-type=${val.addressid}>
                                     <i class="iconfont">&#xe614;</i>
@@ -242,10 +246,6 @@ if(cookie && cookie !== 'null') {
                     }
                 })
             })
-    
-    
-     
-            
             function moren () {
                 for( var i = 0; i < $(".g-default").length; i++) {
                     // 确定 字符串还是布尔值 - 在判断
@@ -267,7 +267,6 @@ if(cookie && cookie !== 'null') {
                     }
                 }
             }
-            
             // 设为默认地址
             $(document).on("click",".cl00",function () {
                 var addid = $(this).parent().attr("data-id")
@@ -342,6 +341,7 @@ if(cookie && cookie !== 'null') {
 
             })
             }
+
             $.ajax({
                 type : "get",
                 url  :  "http://192.168.2.254:9000/interface/B2BAPI.ashx",
@@ -364,7 +364,6 @@ if(cookie && cookie !== 'null') {
                                         <a href="">${val.title}</a>
                                         <div>
                                             <span>颜色 : ${val.skuName} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                                            <span> 尺码 : M</span>
                                         </div>
                                     </div>
                                 </li>
@@ -484,20 +483,35 @@ if(cookie && cookie !== 'null') {
         //======================================点击提交订单==========================================
         $(".make-order").click(function () {
             var addressid = $(".addressid").attr("data-type")
-    
             $.ajax({
-                type      :  "get",
-                url       :  "http://192.168.2.254:9000/interface/B2BAPI.ashx",
-                data      :  {
-                    method           : "CreateOrder",
-                    uid              : cookie,
-                    adressID         : addressid
+                type : "get",
+                url  :  "http://192.168.2.254:9000/interface/B2BAPI.ashx",
+                data : {
+                    method: "GetAddress",
+                    uid : cookie,
+                    isdefaul : 1
                 },
-                datatype  :  "json",
-                success   :   function (data) {
-                    data.forEach(function (val,index) {
-                        window.location.href='../payment/payment.html?tid='+val.tid+'';
-                    })
+                dataType : "json",
+                success : function (data) {
+                    if (data.length == 0) {
+                        $(".shu").removeClass("dis-none")
+                    }else {
+                        $.ajax({
+                            type      :  "get",
+                            url       :  "http://192.168.2.254:9000/interface/B2BAPI.ashx",
+                            data      :  {
+                                method           : "CreateOrder",
+                                uid              : cookie,
+                                adressID         : addressid
+                            },
+                            datatype  :  "json",
+                            success   :   function (data) {
+                                data.forEach(function (val,index) {
+                                    window.location.href='../payment/payment.html?tid='+val.tid+'';
+                                })
+                            }
+                        })
+                    }
                 }
             })
     

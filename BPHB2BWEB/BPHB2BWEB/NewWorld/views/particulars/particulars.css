@@ -71,7 +71,7 @@
 
 /*图片放大板块开始*/
 .imgwarp {
-    width: 460px;
+    width: 540px;
 }
 .imgdet{
     height: 522px;
@@ -280,4 +280,20 @@
 .p-main-wrap {
     background: red;
     color: #fff
+}
+.lunt {
+    height: 80px;
+    width: 400px;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+.lunt1 img {
+    width: 80px;
+    height: 78px;
+}
+.lunt1 {
+    border: 2px solid red;
+    padding: 3px;
+    width:  85px;
+    height: 80px;
 }

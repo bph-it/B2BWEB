@@ -1,7 +1,5 @@
 //判断是否登录
 if (cookie !== 'null' && cookie) {
-    console.log(111)
-
     var name = `
         <p class="rw-link f-l">您好，<span class="c6">${cookie}</span></p>
         <a class="rw-link delect f-l">退出</a>
