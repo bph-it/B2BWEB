@@ -6,6 +6,7 @@
 
 
 $(document).ready(function () {
+    hadenum ()
     // 初始化获取购物车
     function ready () {
         $.ajax({
@@ -220,6 +221,8 @@ function fun ()  {
                     $obj.removeClass('reSty');
                 }
                 totalMoney();
+                hadenum ()
+
             });
         
             $reduce.click(function () {
@@ -240,6 +243,7 @@ function fun ()  {
                 }
 
                 totalMoney();
+                hadenum ()
             });
         
             $all_sum.keyup(function () {
@@ -261,6 +265,8 @@ function fun ()  {
                 var dataId = $(this).parent().attr("data-type")     //商品id
                 update (dataId,count)                               //请求更改数量   
                 totalMoney();
+                hadenum ()
+
             })
         
 //======================================清空购物车商品========================================
@@ -312,6 +318,7 @@ function fun ()  {
                             closeM();
                             $sonCheckBox = $('.son_check');
                             totalMoney();
+                            hadenum ()
                         }else {
                             alert("删除失败")
                         }
@@ -401,7 +408,7 @@ function fun ()  {
                 success   :   function (data) {
                     console.log(data)
                     $(".order_content").html("")
-
+                    hadenum ()
                 }
             }
         )}

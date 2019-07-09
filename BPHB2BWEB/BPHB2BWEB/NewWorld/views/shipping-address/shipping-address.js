@@ -6,6 +6,9 @@ if (cookie && cookie !== 'null') {
         if (r!=null) return unescape(r[2]); return null;
     }
     var tid = getParameter('tid')
+        
+    hadenum ()
+
 
     // ================================地区选择=====================================
     function province (dizhi,hao) {

@@ -1,5 +1,6 @@
 function home () {
     $(document).ready(function () {
+            hadenum ()
         //=============================================== 一级菜单渲染==========================
             _mm.request({
                 data:{

@@ -127,15 +127,32 @@
 }
 
 .next-icon-xl {
-    width: 252px;
-    height: 100px;
+    width: 242px;
     border: 1px solid #DCDEE3;
-    top: 39px;
+    top: 38px;
     left: 0;
     display: none;
     z-index: 999;
     background: #fff;
+    padding: 5px;
 }
 .next-icon-xl span{
     line-height: 70px;
+}
+.loge {
+    height: 40px;
+}
+.loge img {
+    width: 25px;
+    height: 25px;
+}
+.loge .xin {
+    width: 100px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.loge span {
+    line-height: 25px !important;
+    margin-left: 15px;
 }

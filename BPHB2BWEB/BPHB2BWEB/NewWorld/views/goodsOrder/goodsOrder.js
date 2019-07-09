@@ -1,5 +1,6 @@
 // ================================地区选择=====================================
 if(cookie && cookie !== 'null') {
+    hadenum ()
     function provincea (dizhi,hao) {
         _mm.request({
             data : {
@@ -442,6 +443,7 @@ if(cookie && cookie !== 'null') {
             })
             // ============================================更新数量======================================
             function Neb (This) {
+                hadenum ()
                 var su =  Number(This.parent().children(".lang-input").val()) 
                 var ja =  Number(This.parent().parent().children(".unit-price").children().text())
                 var he = su * ja

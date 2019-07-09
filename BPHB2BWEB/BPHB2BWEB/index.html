@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <button id='btn'>按钮</button>
+    <div class='box'></bu>
+<script src="./NewWorld/assets/js/jquery.js"></script>
+<script type="text/javascript">
+function debounce(fn, delay) {
+    // 记录上一次的延时器
+   var timer = null;
+    return function() {
+    // 清除上一次延时器
+    clearTimeout(timer)
+    timer = setTimeout(function() {
+            fn.apply(this)
+        }, delay)
+    }
+}
+document.getElementById('btn').onclick = debounce(function() {
+    console.log('点击事件被触发' + Date.now())
+}, 500)
+
+$(".box").hover(function () {
+    debounce(function () {
+        console.log(111)
+    },500)
+},function () {
+    console.log(222)
+})
+
+</script>
+</body>
+</html>

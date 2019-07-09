@@ -7,6 +7,7 @@ function particulars () {
     }
 //===============================================一级菜单================================
 $(document).ready(function () {
+    hadenum ()
     // 模块化格式
     var tabulation = (function () {
         // 展开一级菜单 1

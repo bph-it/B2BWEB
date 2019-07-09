@@ -8,7 +8,7 @@ function Category () {
 	
 	$(document).ready(function () {
 //===============================================一级菜单================================
-
+		hadenum ()
 		// 模块化格式
 		var tabulation = (function () {
 			// 展开一级菜单 1

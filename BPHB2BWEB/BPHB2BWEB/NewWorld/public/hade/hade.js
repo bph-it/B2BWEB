@@ -47,7 +47,7 @@ document.writeln("<div class='head absolute'></div>");
 document.writeln("<div class='wrap absolute t-c-f'>");
 document.writeln("<i class='iconfont che-q c6 absolute'>&#xe666;</i>")
 document.writeln("<span class='f16 c6'>进货单</span>");                       
-document.writeln("<span class='num f14'>0</span>");     
+document.writeln("<span class='num hadenum f14'>0</span>");     
 document.writeln("<div class='absolute next-icon-xl'>")                   
 document.writeln("<span class='f12 c6'>当前进货单为空，您还未添加任何商品</span>")                   
 document.writeln("</div>");                  
@@ -61,5 +61,6 @@ document.writeln("</header>");
 document.writeln("</body>");
 document.writeln("<script src='../../assets/js/jquery.js'></script>")
 document.writeln("<script src='../../assets/js/cookie.js'></script>")
+document.writeln("<script src='../../assets/js/ajax.js'></script>")
 document.writeln("<script src='../../public/hade/hadex.js'></script>")
 document.writeln("</html>");

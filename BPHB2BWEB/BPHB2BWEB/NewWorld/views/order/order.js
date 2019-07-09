@@ -1,5 +1,6 @@
-if (cookie) {
+if (cookie && cookie !== 'null') {
     function order () {
+        hadenum ()
         function nextNav () {
             $(".next-tabs-tab-inner").click(function () {
                 $(".next-tabs-tab-inner").children().removeClass("sn");

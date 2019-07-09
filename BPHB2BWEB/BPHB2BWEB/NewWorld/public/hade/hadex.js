@@ -6,8 +6,8 @@ if (cookie !== 'null' && cookie) {
     `;
     $(".ro-view").html(name)
 }else {
-    console.log("还没登录")
 }
+
 //点击退出登录
 $(".delect").click(function () {
     $.cookie('token', 'null', { path: '/' });
@@ -18,10 +18,68 @@ $(".delect").click(function () {
     $(".ro-view").html(name)
     window.location.reload()
 })
+
 //hover 购物车弹窗
 $(".wrap").hover(function () {
     // hoverDuring: 1000, 
-    $(".next-icon-xl").stop(true,true).slideDown(600)
+    $(".next-icon-xl").stop(true,true).slideDown(200)
+    if (cookie && cookie !== 'null') {
+        var html3 = ''
+        _mm.request({
+           data:{
+                method: 'GetCart',
+                uid :  cookie,
+           },
+           success :  function (res) {
+               if (res.length == 0) {
+                var html1 = `
+                    <span class="f12 c6">当前进货单为空，您还未添加任何商品!</span>
+                `
+                $(".next-icon-xl").html(html1)
+               }else {
+                   res.forEach(function (val , index) {
+                        html3 += `
+                            <div class="loge cl">
+                                <img class="f-l" src="${val.picurl}" alt="">
+                                <span class="f-l f12 xin">${val.title}</span>
+                                <span class="f-l f12">${val.qty}</span>
+                                <span class="f-l f12">￥${val.price}</span>
+                            </div>
+                        `
+                   })
+                    $(".next-icon-xl").html(html3)
+               }
+           }
+        })
+    }else {
+        var html = `
+            <span class="f12 c6">您还未登陆，请先登录在查看</span>
+        `
+        $(".next-icon-xl").html(html)
+    }
+
 },function () {
-    $(".next-icon-xl").stop(true,true).slideUp(600);
+    $(".next-icon-xl").stop(true,true).slideUp(200);
 })
+
+// 购物车数量
+function hadenum () {
+    if (cookie !== 'null' && cookie) {
+        _mm.request({
+            data:{
+                 method: 'GetCart',
+                 uid :  cookie,
+            },
+            success :  function (res) {
+                var hadenu = 0
+                res.forEach(function (val,index) {
+                    hadenu += val.qty
+                })
+                $(".hadenum").html(hadenu)
+
+            }
+        })
+    }else {
+        $(".hadenum").html(0)
+    }
+}
