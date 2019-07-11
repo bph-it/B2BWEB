@@ -25,7 +25,7 @@ function home () {
                     $(".rw-lst-header-nav-first").html(html1)
                 }
             })
-        //=============================================== 商品列表渲染==========================
+        //=============================================== 奶粉列表渲染==========================
             _mm.request({
                 data:{
                     method:"CategoyProducts",
@@ -65,8 +65,53 @@ function home () {
                         </li>
                         `
                     })
-                    $(".product-list").html(html3)
+                    $(".product-list-a").html(html3)
                     home1 ()
+                }
+            })
+
+        //=============================================== 座椅列表渲染==========================
+            _mm.request({
+                data:{
+                    method:"CategoyProducts",
+                    cateid: 52,     //什么类的商品信息    7,54,55,61,52
+                    pageSize: 10,  //显示多少条
+                    pageNumber: 1,  //多少页
+                },
+                success : function (res) {
+                    console.log(res)
+                    var html5 = ""
+                    res.products.forEach(function (val,index) {
+                        html5 += `
+                        <li class="f-l">
+                            <div class="content-outer relative">
+                                <div class="content-inner absolute">
+                                    <div class="img-box relative t-c-f">
+                                        <a href="../particulars/particulars.html?id=${val.ID}">
+                                            <img src="${val.logo}" alt="#">
+                                            <div class="store-num fz12 t-c-f absolute">${val.periodDate}</div>
+                                        </a>
+                                    </div>
+                                    <div class="txt-box fz12">
+                                        <div class="price-xj">
+                                            <span>￥</span>
+                                            <i>${val.jdPrice}</i>
+                                        </div>
+                                        <span class="unit-price">${val.partermodel}</span>
+                                        <span class="unit-price">${val.wareLocation}</span>
+                                    </div>
+        
+                                    <div class="tit-box">
+                                        <a href="javascript:void(0);">${val.title}</a>
+                                    </div>
+        
+                                    <a href="../particulars/particulars.html?id=${val.ID}" class="popup_buy_view t-c-f">立即选购</a>
+                                </div>
+                            </div>
+                        </li>
+                        `
+                    })
+                    $(".product-list-b").html(html5)
                 }
             })
         })
@@ -90,6 +135,7 @@ function home () {
                 $(this).children(".rw-lst-header-nav-second").css("display","block")
                 var parentid = $(this).attr("data-type")
                 // 鼠标移入二级菜单渲染
+                console.log(parentid)
                 _mm.request({
                     data:{
                         method   : "GetCategoy",

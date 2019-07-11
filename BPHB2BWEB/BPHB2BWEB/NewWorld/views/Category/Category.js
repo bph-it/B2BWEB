@@ -95,7 +95,7 @@ function Category1 (pageNumber) {
 		data:{
 			method     : "CategoyProducts",
 			cateid     : _id,				        //窗口id
-			pageSize   : 8,					        //多少条数据
+			pageSize   : 12,					        //多少条数据
 			pageNumber  : pageNumber || 1		    //第几页
 		},
 		success      : function (res) {

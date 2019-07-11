@@ -101,13 +101,11 @@ _mm.request({
         productid : productid,
     },
     success : function (res) {
-        console.log(res.product)
         // 放大镜原图
         html = `
             <img src="${res.product.logo}" alt="">
         `
         $(".magnify").before(html)
-        $(".lunt1").html(html)
         // 放大镜器
         html4 = `
             <img src="${res.product.logo}" alt="" class="absolute">
@@ -125,7 +123,11 @@ _mm.request({
             <span class="c6 unit-price">${res.product.wareLocation}</span>
         `
         $(".p-peisg").after(html7)
-
+        // 商品详情
+        html9 = `
+            ${res.product.mobileDesc}
+        `
+        $(".next-tabs-content").html(html9)
         //skus 码
         html8 = ""
         res.skus.forEach(function (val,index) {

@@ -1,6 +1,12 @@
 #hade {
     border-bottom: 1px solid red;
 }
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 .z-screen {
     width: 1200px;
     margin: 0 auto;

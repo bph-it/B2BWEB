@@ -4,11 +4,17 @@
     width: 100%;
     min-width: 1200px;
 }
+.footer {
+    height: 190px;
+    margin-top: 0;
+    padding-top: 100px !important; 
+}
 .b2b {
     color: #eee !important;
     top: 210px;
     font-size: 75px;
 }
+
 .gezi {
     width: 1200px;
     height: 600px;

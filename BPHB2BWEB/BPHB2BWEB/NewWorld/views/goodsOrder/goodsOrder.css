@@ -107,7 +107,6 @@
 }
 #goodsOrder .layout {
     width: 1160px;
-    height: 140px;
     /* background: red; */
     margin-top: 20px;
 }
@@ -320,7 +319,6 @@
 }
 #goodsOrder .actions {
     width: 1160px;
-    height: 60px;
 }
 #goodsOrder .checkout-operate {
     width: 500px;
@@ -372,9 +370,6 @@
     color: #999;
 }
 /* 隐藏 */
-.g-address-info-block {
-    /* display: none;    */
-}
 .g-default {
     padding-left: 21px;
     padding-right: 40px;

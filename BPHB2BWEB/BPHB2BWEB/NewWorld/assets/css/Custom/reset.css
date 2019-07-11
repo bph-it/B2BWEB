@@ -37,11 +37,6 @@ s {
     padding: 0;
 }
 
-html,
-body {
-    height: 100%
-}
-
 .container-box {
     min-height: 100%;
     position: relative;
@@ -65,7 +60,7 @@ li {
 }
 
 img {
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 em {

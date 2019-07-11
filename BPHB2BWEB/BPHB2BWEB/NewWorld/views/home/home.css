@@ -21,10 +21,6 @@
 /* 轮播 结束 */
 
 /* 三级导航开始 */
-#home {
-    border-bottom: 1px solid #DCDEE3;
-    height: 40px;
-}
 #home .rw-lst-header-nav-header {
     width: 240px;
     height: 40px;
@@ -101,11 +97,10 @@
 }
 #home .product-box .product-list li {
     width: 232px;
-    height: 350px;
+    height: 315px;
     margin: 10px 0 0 10px;
     background-color: #FFFFFF;
 }
-
 #home .content-outer .content-inner {
     top: 0;
     left: 0;
@@ -213,4 +208,3 @@
     -webkit-transition: all .25s ease;
     -o-transition: all .25s ease;
 }
-
