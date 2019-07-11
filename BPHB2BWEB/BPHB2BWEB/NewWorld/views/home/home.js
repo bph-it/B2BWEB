@@ -43,7 +43,6 @@ function home () {
                                     <div class="img-box relative t-c-f">
                                         <a href="../particulars/particulars.html?id=${val.ID}">
                                             <img src="${val.logo}" alt="#">
-                                            <div class="store-num fz12 t-c-f absolute">${val.periodDate}</div>
                                         </a>
                                     </div>
                                     <div class="txt-box fz12">
@@ -89,7 +88,6 @@ function home () {
                                     <div class="img-box relative t-c-f">
                                         <a href="../particulars/particulars.html?id=${val.ID}">
                                             <img src="${val.logo}" alt="#">
-                                            <div class="store-num fz12 t-c-f absolute">${val.periodDate}</div>
                                         </a>
                                     </div>
                                     <div class="txt-box fz12">

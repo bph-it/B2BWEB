@@ -146,6 +146,11 @@ if(cookie && cookie !== 'null') {
                 $(".g-address-info-block").css("display","none")
                 $(".g-address-temp-block").slideDown("slow");
             })
+
+            $(document).on("click",".p-cancel",function () {
+                $(".g-address-temp-block").css("display","none")
+                $(".g-address-info-block ").slideDown("slow");
+            })
             // 点击更改
             $(document).on("click",".g-edit-temp-address",function () {
                 $(".g-address-info-block").css("display","none")
