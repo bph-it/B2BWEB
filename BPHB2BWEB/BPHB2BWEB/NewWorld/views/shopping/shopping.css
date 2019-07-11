@@ -12,7 +12,9 @@
     height: 57px !important;
     line-height: 20px;
 }
-
+html,body {
+    height: 100% !important;
+}
 html,body{
     position: relative;
     width: 100%;
