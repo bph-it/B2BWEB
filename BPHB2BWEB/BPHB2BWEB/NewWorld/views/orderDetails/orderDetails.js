@@ -8,7 +8,7 @@ if (cookie) {
         }
         var tid = getParameter('tid')
         console.log(tid)
-        
+        hadenum ()
         $.ajax({
             type : 'get',
             url  : 'http://192.168.2.254:9000/interface/B2BAPI.ashx',

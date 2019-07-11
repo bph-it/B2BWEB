@@ -10,6 +10,7 @@ if (cookie && cookie !== 'unll') {
     var tid = getParameter('tid')
     
     function payment () {
+        hadenum ()
     // ==================================================切换支付方式=====================================================
         $(".mod-payment").children().eq(0).children().addClass("pay-container-b")
         $(".pay-container").click(function () {
