@@ -23,6 +23,9 @@
     height: 40px;
     font-size: 14px;
 }
+.footer {
+    margin-top: 82px !important;
+}
 .order-detail-table {
     border: 1px solid #E2E2E2;
     height: 82px;

@@ -74,6 +74,9 @@ if (cookie && cookie !== 'null') {
                 $(".ming-a").val('')
                 $(".xiang-a").val('')
                 $(".shou-a").val('')
+                $(".city").addClass("dis-none")
+                $(".region").addClass("dis-none")
+                $(".sheng-a").val('请选择城市')
                 $(".footer1").removeClass("dis-none")
                 $(".footer2").removeClass("dis-none")
                 $(".footer3").addClass("dis-none")
@@ -135,8 +138,30 @@ if (cookie && cookie !== 'null') {
             Verification(bbs)    //调取验证
         })
         // ================================删除收货地址==================================
+
         $(document).on('click','.shan-g',function () {
-            var shan = $(this).attr('data-type')
+            var shan1 = $(this).attr('data-type')
+            $(".box8").removeClass('dis-none')
+            $(".my_model").removeClass('dis-none')
+            $(".dialog-sure").attr('data',shan1)
+        })
+
+        $(document).on('click','.dialog-sure',function () {
+            var shan = $(this).attr('data')
+            shanA(shan)
+        })
+
+        $(document).on('click','.dialog-close',function () {
+            $(".box8").addClass('dis-none')
+            $(".my_model").addClass('dis-none')
+        })
+
+        $(document).on('click','.closeModel',function () {
+            $(".box8").addClass('dis-none')
+            $(".my_model").addClass('dis-none')
+        })
+
+        function shanA (shan) {
             _mm.request({
                 data : {
                     'method'    : 'DelAddress',
@@ -145,10 +170,13 @@ if (cookie && cookie !== 'null') {
                 success         : function (src) {
                     if (src.ErrorMsg == 0) {
                         update()
+                        $(".box8").addClass('dis-none')
+                        $(".my_model").addClass('dis-none')
                     }
                 }
             })
-        })
+        }
+
         // ================================删除收货地址==================================
         $(document).on('click','.p-text',function () {
             var addressid = $(this).attr('data-type')

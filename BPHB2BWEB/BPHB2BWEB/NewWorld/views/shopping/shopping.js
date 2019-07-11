@@ -312,8 +312,12 @@ if (cookie && cookie !== 'null') {
             
     //======================================清空购物车商品========================================
                 $(".list_empty").click(function () {
-                    empty ()
-                    ready ()
+                    // empty ()
+                    // ready ()
+                    $(".dialog-sure").attr('data',true)
+                    $('.model_bg').fadeIn(300);
+                    $('.my_model').fadeIn(300);
+                    $(".ma").html("您确认要清空您的购物车吗？")
                 })
     //======================================移除商品========================================
             
@@ -323,8 +327,11 @@ if (cookie && cookie !== 'null') {
                     console.log(11)
                     $order_lists = $(this).parents('.order_lists');
                     $order_content = $order_lists.parents('.order_content');
+                    $(".dialog-sure").attr('data',false)
                     $('.model_bg').fadeIn(300);
                     $('.my_model').fadeIn(300);
+                    $(".ma").html("您确认要删除该宝贝吗？")
+
                 });
             
                 //关闭模态框
@@ -340,32 +347,35 @@ if (cookie && cookie !== 'null') {
                 }
                 //确定按钮，移除商品
                 $('.dialog-sure').click(function () {
-                    console.log(1)
-                    var dataId = $order_lists.attr("data")
-                    $.ajax({
-                        type      :  "get",
-                        url       :  "http://192.168.2.254:9000/interface/B2BAPI.ashx",
-                        data      :  {
-                            method : "DeleteSC",
-                            shoppingcartId   :  dataId
-                        },
-                        datatype  :  "json",
-                        success   :   function (data) {
-                            if(data.ErrorMsg == 0) {
-                                $order_lists.remove();
-                                console.log(dataId)
-                                if($order_content.html().trim() == null || $order_content.html().trim().length == 0){
-                                    $order_content.parents('.cartBox').remove();
+                    if ($(this).attr('data') == 'false') {
+                        var dataId = $order_lists.attr("data")
+                        $.ajax({
+                            type      :  "get",
+                            url       :  "http://192.168.2.254:9000/interface/B2BAPI.ashx",
+                            data      :  {
+                                method : "DeleteSC",
+                                shoppingcartId   :  dataId
+                            },
+                            datatype  :  "json",
+                            success   :   function (data) {
+                                if(data.ErrorMsg == 0) {
+                                    $order_lists.remove();
+                                    if($order_content.html().trim() == null || $order_content.html().trim().length == 0){
+                                        $order_content.parents('.cartBox').remove();
+                                    }
+                                    closeM();
+                                    $sonCheckBox = $('.son_check');
+                                    totalMoney();
+                                    hadenum ()
+                                }else {
+                                    alert("删除失败")
                                 }
-                                closeM();
-                                $sonCheckBox = $('.son_check');
-                                totalMoney();
-                                hadenum ()
-                            }else {
-                                alert("删除失败")
-                            }
-                        },
-                    })
+                            },
+                        })
+                    }else {
+                        empty ()
+                    }
+
                 })
             
     //======================================总计==========================================
@@ -414,7 +424,6 @@ if (cookie && cookie !== 'null') {
                 // }
             })
     
-    
     //======================================更新购物车数量==========================================
     
             function  update (dataId,nebr) {
@@ -449,15 +458,7 @@ if (cookie && cookie !== 'null') {
                         console.log(data)
                         $(".order_content").html("")
                         hadenum ()
-                        var html = `
-                            <div class="c-offerlist cl">
-                                <img class="t-c-f tuwu" src="../../assets/image/bjimg/wu.jpg" alt="">
-                                <div class="shang t-c-f">
-                                    购物车数量为空
-                                </div>
-                            </div>
-                        `
-                        $(".order_content").html(html)
+                        window.location.reload()
                     }
                 }
             )}
@@ -478,7 +479,7 @@ if (cookie && cookie !== 'null') {
                         if (data.ErrorMsg == 0) {
                             console.log(123)
                         }else {
-                            alert ('结算异常')
+                            // alert ('结算异常')
                         }
                     }
                 })
