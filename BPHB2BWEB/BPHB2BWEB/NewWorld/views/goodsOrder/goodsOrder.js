@@ -384,11 +384,6 @@ if(cookie && cookie !== 'null') {
                                         <span>+</span>
                                     </button>
                                 </li>
-                                <li class="rebate f-l">
-                                    <div class="unit-select">
-                                        省25:一件可拍
-                                    </div>
-                                </li>
                             </ul>
             
                             <div class="summary">

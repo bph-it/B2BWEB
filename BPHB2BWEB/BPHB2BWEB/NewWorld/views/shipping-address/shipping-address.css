@@ -78,6 +78,7 @@ html,body {
     height: 40px;
     background: #EBECF0;
     border-bottom: 1px solid #DCDEE3;
+    margin-bottom: 20px;
 }
 .next-table-header-node {
     height: 40px;
@@ -100,8 +101,8 @@ html,body {
     width: 95px;
 }
 .o-table li:nth-child(5) {
-    margin-left: 100px;
-    width: 95px;
+    margin-left: 53px;
+    width: 40px;
 }
 .mod-batch-bar {
     margin-top: 20px;
@@ -138,6 +139,7 @@ html,body {
     border-radius: 3px;
     padding: 0 15px;
     text-align: center;
+    margin-top: 5px;
 }
 .td-checkboxs input {
     width: 18px;

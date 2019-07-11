@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>商品详情页</title>
+    <style type="text/css">
+        .goTop >img{
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+        .goTop{
+            position: fixed;
+            right : 20px;
+            bottom : 20px;
+        }
+    </style>
+    
     <!-- 公共样式 -->
     <link rel="stylesheet" href="../../assets/css/Custom/base.css">
     <!-- 初始化样式 -->
@@ -94,7 +107,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="moq cl">
+                        <!-- <div class="moq cl">
                             <div class="price-tag f-l">
                                 <span class="o-tag-default">限时促销</span>
                                 <span class="font-little">&nbsp; 活动进行中</span>
@@ -102,7 +115,7 @@
                             <div class="price-endtime f-r">
                                 <span>距结束: 1天 9小时</span>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     
                     <div class="p-base-info-detail-floor-warp"> 
@@ -182,12 +195,33 @@
         </div>
 
     </div>
+    <!-- 返回顶部 -->
+    <div class="goTop c-p" id="js-go_top"><i class="iconfont ding">&#xe605;</i></div>
     <!-- 公共底部 -->
     <script src="../../public/footer/footer.js"></script>
 </body>
 
+<!-- 返回顶部 -->
+<script src="../../assets/js/GoToTop.js"></script>
 <!-- ajax -->
 <script src="../../assets/js/ajax.js"></script>
 <!-- 外链 js -->
 <script src="./particulars.js"></script>
+<script>
+    //示例
+    $('#js-go_top').gotoTop({
+        offset : 500, //距离顶部的位置
+        speed : 300, //移动到顶部的速度
+        /*     iconSpeed : 300, //icon动画样式的速度*/
+        animationShow : {
+            'transform' : 'translate(0,0)',
+            'transition': 'transform .5s ease-in-out'
+        }, //icon动画样式显示时
+        animationHide : {
+            'transform' : 'translate(80px,0)',
+            'transition': 'transform .5s ease-in-out'
+        } //icon动画样式隐藏时
+    });
+</script>
+
 </html>

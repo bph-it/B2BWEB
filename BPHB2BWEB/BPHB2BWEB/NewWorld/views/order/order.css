@@ -29,7 +29,9 @@
     height: 600px;
     margin: 0 auto;
 }
-
+.member-piclist {
+    border-bottom: 1px solid #ebebeb;
+}
 .dingred a{
     color: #fff !important;
     background: red;
@@ -217,7 +219,7 @@
     width: 675px;
 }
 .status {
-    margin-top: 82px !important;
+    margin-top: 25px !important;
     display: block;
     font-weight: bold;
     margin-left: 10px;

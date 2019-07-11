@@ -68,7 +68,9 @@
     font-size: 10px;
     margin-right: 5px;
 }
-
+.ding {
+    font-size: 40px !important;
+}
 /*图片放大板块开始*/
 .imgwarp {
     width: 540px;
