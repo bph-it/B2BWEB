@@ -313,6 +313,7 @@ if (cookie && cookie !== 'null') {
     //======================================清空购物车商品========================================
                 $(".list_empty").click(function () {
                     empty ()
+                    ready ()
                 })
     //======================================移除商品========================================
             
@@ -448,6 +449,15 @@ if (cookie && cookie !== 'null') {
                         console.log(data)
                         $(".order_content").html("")
                         hadenum ()
+                        var html = `
+                            <div class="c-offerlist cl">
+                                <img class="t-c-f tuwu" src="../../assets/image/bjimg/wu.jpg" alt="">
+                                <div class="shang t-c-f">
+                                    购物车数量为空
+                                </div>
+                            </div>
+                        `
+                        $(".order_content").html(html)
                     }
                 }
             )}

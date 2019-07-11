@@ -124,13 +124,24 @@ _mm.request({
         `
         $(".p-peisg").after(html7)
         // 商品详情
-        html9 = `
-            ${res.product.mobileDesc}
-        `
-        $(".next-tabs-content").html(html9)
+        if (res.product.mobileDesc == 'NULL') {
+            html9 = `
+                <div class="c-offerlist cl">
+                    <img class="t-c-f tuwu" src="../../assets/image/bjimg/wu.jpg" alt="">
+                </div>
+            `
+            $(".next-tabs-content").html(html9)
+        }else {
+            html9 = `
+                ${res.product.mobileDesc}
+            `
+            $(".next-tabs-content").html(html9)
+        }
+
         //skus 码
         html8 = ""
         res.skus.forEach(function (val,index) {
+            console.log(111)
             html8 += `
                 <div class="next-tag-body c-p dis-inBlock" data="${val.ID}" data-product="${val.productID}" data-type="${val.jdPrice}">
                     <p>${val.skuName}</p>
@@ -152,11 +163,19 @@ function particulars2 () {
     // 价格
     var jdPrice = $(".p-main-wrap").attr("data-type")
     console.log(jdPrice)
-    html6 = `
+    if (jdPrice == undefined) {
+        html6 = `
+        <span class="font-big">未报价</span>
+        `
+        $(".font-normal").after(html6)
+    }else {
+        html6 = `
         <span class="font-big">${jdPrice}</span>
-    `
-    $(".font-normal").after(html6)
-    parzg ()
+        `
+        $(".font-normal").after(html6)
+        parzg ()
+    }
+
 
 
     $(".next-tag-body").click(function () {
@@ -220,7 +239,7 @@ $('.next-btn-large').click(function () {
                 if (src.ErrorMsg == 0) {
                     window.location.href = "../shopping/shopping.html";
                 }else {
-                    alert ('添加失败')
+                    alert ('商品还未报价')
                 }
             }
         })
