@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="b2b_sysModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="itemnew">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="numiid" Type="bigint" />
+          <Property Name="title" Type="varchar" MaxLength="100" />
+          <Property Name="categoryId" Type="int" />
+          <Property Name="brandId" Type="int" />
+          <Property Name="postageID" Type="int" />
+          <Property Name="prostatus" Type="varchar" MaxLength="50" />
+          <Property Name="outerid" Type="varchar" MaxLength="50" />
+          <Property Name="barCode" Type="varchar" MaxLength="100" />
+          <Property Name="wareLocation" Type="varchar" MaxLength="50" />
+          <Property Name="adWords" Type="varchar" MaxLength="500" />
+          <Property Name="weight" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="periodDate" Type="varchar" MaxLength="50" />
+          <Property Name="props" Type="varchar" MaxLength="200" />
+          <Property Name="logo" Type="varchar" MaxLength="200" />
+          <Property Name="jdPrice" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="poPrice" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="mobileDesc" Type="varchar(max)" />
+          <Property Name="introduction" Type="varchar(max)" />
+          <Property Name="iscrossPro" Type="int" />
+          <Property Name="createdtime" Type="datetime" />
+          <Property Name="modifiedtime" Type="datetime" />
+          <Property Name="creater" Type="varchar" MaxLength="50" />
+          <Property Name="modified" Type="varchar" MaxLength="50" />
+          <Property Name="partermodel" Type="varchar" MaxLength="50" />
+          <Property Name="price130" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="price105" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="HDID" Type="int" />
+          <Property Name="coefficient" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="payOrder">
+          <Key>
+            <PropertyRef Name="tid" />
+          </Key>
+          <Property Name="tid" Type="bigint" Nullable="false" />
+          <Property Name="out_trade_no" Type="varchar" MaxLength="50" />
+          <Property Name="time_start" Type="datetime" />
+          <Property Name="time_expire" Type="datetime" />
+          <Property Name="trade_type" Type="varchar" MaxLength="50" />
+          <Property Name="prepay_id" Type="varchar" MaxLength="100" />
+          <Property Name="transaction_id" Type="varchar" MaxLength="50" />
+          <Property Name="trade_state" Type="varchar" MaxLength="50" />
+          <Property Name="total_fee" Type="int" />
+          <Property Name="time_end" Type="varchar" MaxLength="50" />
+          <Property Name="payType" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="skunew">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="skuId" Type="varchar" MaxLength="50" />
+          <Property Name="skuName" Type="varchar" MaxLength="200" />
+          <Property Name="logo" Type="varchar" MaxLength="200" />
+          <Property Name="status" Type="varchar" MaxLength="50" />
+          <Property Name="saleAttrs" Type="varchar" MaxLength="200" />
+          <Property Name="jdPrice" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="outerId" Type="varchar" MaxLength="50" />
+          <Property Name="barCode" Type="varchar" MaxLength="50" />
+          <Property Name="supplier" Type="varchar" MaxLength="50" />
+          <Property Name="partermodel" Type="varchar" MaxLength="50" />
+          <Property Name="poprice" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="pocurrency" Type="varchar" MaxLength="50" />
+          <Property Name="taxrate" Type="varchar" MaxLength="50" />
+          <Property Name="HScode" Type="varchar" MaxLength="50" />
+          <Property Name="iscrosspro" Type="int" />
+          <Property Name="createdtime" Type="datetime" />
+          <Property Name="modifiedtime" Type="datetime" />
+          <Property Name="creater" Type="varchar" MaxLength="50" />
+          <Property Name="modified" Type="varchar" MaxLength="50" />
+          <Property Name="productID" Type="int" />
+          <Property Name="price130" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="price105" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="Trade">
+          <Key>
+            <PropertyRef Name="tid" />
+          </Key>
+          <Property Name="tid" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="shippingtype" Type="varchar" MaxLength="200" />
+          <Property Name="buyermessage" Type="varchar" MaxLength="1000" />
+          <Property Name="buyermemo" Type="varchar" MaxLength="500" />
+          <Property Name="sellermemo" Type="varchar" MaxLength="2000" />
+          <Property Name="status" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="discountfee" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="adjustfee" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="payment" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="totalfee" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="postfee" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="receivedpayment" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="endtime" Type="datetime" />
+          <Property Name="modified" Type="datetime" />
+          <Property Name="created" Type="datetime" Nullable="false" />
+          <Property Name="paytime" Type="datetime" />
+          <Property Name="alipaywarnmsg" Type="varchar" MaxLength="500" />
+          <Property Name="uid" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="receivername" Type="varchar" MaxLength="200" />
+          <Property Name="receiverstate" Type="varchar" MaxLength="200" />
+          <Property Name="receivercity" Type="varchar" MaxLength="200" />
+          <Property Name="receiverdistrict" Type="varchar" MaxLength="200" />
+          <Property Name="receiveraddress" Type="varchar" MaxLength="200" />
+          <Property Name="receiverzip" Type="varchar" MaxLength="200" />
+          <Property Name="receivermobile" Type="varchar" MaxLength="200" />
+          <Property Name="receiverphone" Type="varchar" MaxLength="200" />
+          <Property Name="consigntime" Type="datetime" />
+          <Property Name="buyeremail" Type="varchar" MaxLength="200" />
+          <Property Name="shopId" Type="int" Nullable="false" />
+          <Property Name="selleralipayno" Type="varchar" MaxLength="200" />
+          <Property Name="sellermobile" Type="varchar" MaxLength="200" />
+          <Property Name="sellerphone" Type="varchar" MaxLength="200" />
+          <Property Name="sellername" Type="varchar" MaxLength="200" />
+          <Property Name="selleremail" Type="varchar" MaxLength="200" />
+          <Property Name="tradefrom" Type="varchar" MaxLength="200" />
+          <Property Name="sellernick" Type="varchar" MaxLength="200" />
+          <Property Name="buyernick" Type="varchar" MaxLength="200" />
+          <Property Name="price" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="num" Type="bigint" />
+          <Property Name="alipayno" Type="varchar" MaxLength="200" />
+          <Property Name="snapshoturl" Type="varchar" MaxLength="200" />
+          <Property Name="snapshot" Type="varchar" MaxLength="200" />
+          <Property Name="tradememo" Type="varchar" MaxLength="800" />
+          <Property Name="buyeralipayno" Type="varchar" MaxLength="200" />
+          <Property Name="invoicename" Type="varchar" MaxLength="200" />
+          <Property Name="IDCard" Type="varchar" MaxLength="50" />
+          <Property Name="payNumber" Type="varchar" MaxLength="100" />
+          <Property Name="payType" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TradeDetail">
+          <Key>
+            <PropertyRef Name="oid" />
+          </Key>
+          <Property Name="oid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tid" Type="varchar" MaxLength="50" />
+          <Property Name="totalfee" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="discountfee" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="adjustfee" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="payment" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="modified" Type="datetime" />
+          <Property Name="status" Type="varchar" MaxLength="200" />
+          <Property Name="refundid" Type="bigint" />
+          <Property Name="numiid" Type="bigint" Nullable="false" />
+          <Property Name="skuid" Type="bigint" />
+          <Property Name="num" Type="bigint" Nullable="false" />
+          <Property Name="title" Type="varchar" MaxLength="200" />
+          <Property Name="price" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="refundstatus" Type="varchar" MaxLength="200" />
+          <Property Name="outeriid" Type="varchar" MaxLength="200" />
+          <Property Name="outerskuid" Type="varchar" MaxLength="200" />
+          <Property Name="endtime" Type="datetime" />
+          <Property Name="consigntime" Type="datetime" />
+          <Property Name="shippingtype" Type="varchar" MaxLength="20" />
+          <Property Name="logisticscompany" Type="varchar" MaxLength="20" />
+          <Property Name="invoiceno" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="b2b_sysModelStoreContainer">
+          <EntitySet Name="itemnew" EntityType="Self.itemnew" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="payOrder" EntityType="Self.payOrder" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="skunew" EntityType="Self.skunew" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Trade" EntityType="Self.Trade" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TradeDetail" EntityType="Self.TradeDetail" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="b2b_sysModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="payOrder">
+          <Key>
+            <PropertyRef Name="tid" />
+          </Key>
+          <Property Name="tid" Type="Int64" Nullable="false" />
+          <Property Name="out_trade_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="time_start" Type="DateTime" Precision="3" />
+          <Property Name="time_expire" Type="DateTime" Precision="3" />
+          <Property Name="trade_type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="prepay_id" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="transaction_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="trade_state" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="total_fee" Type="Int32" />
+          <Property Name="time_end" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="payType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Trade">
+          <Key>
+            <PropertyRef Name="tid" />
+          </Key>
+          <Property Name="tid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="shippingtype" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="buyermessage" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="buyermemo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="sellermemo" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="discountfee" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="adjustfee" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="payment" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="totalfee" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="postfee" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="receivedpayment" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="endtime" Type="DateTime" Precision="3" />
+          <Property Name="modified" Type="DateTime" Precision="3" />
+          <Property Name="created" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="paytime" Type="DateTime" Precision="3" />
+          <Property Name="alipaywarnmsg" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="uid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="receivername" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="receiverstate" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="receivercity" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="receiverdistrict" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="receiveraddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="receiverzip" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="receivermobile" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="receiverphone" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="consigntime" Type="DateTime" Precision="3" />
+          <Property Name="buyeremail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="shopId" Type="Int32" Nullable="false" />
+          <Property Name="selleralipayno" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="sellermobile" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="sellerphone" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="sellername" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="selleremail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="tradefrom" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="sellernick" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="buyernick" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="price" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="num" Type="Int64" />
+          <Property Name="alipayno" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="snapshoturl" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="snapshot" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="tradememo" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+          <Property Name="buyeralipayno" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="invoicename" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="IDCard" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="payNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="payType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TradeDetail">
+          <Key>
+            <PropertyRef Name="oid" />
+          </Key>
+          <Property Name="oid" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="totalfee" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="discountfee" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="adjustfee" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="payment" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="modified" Type="DateTime" Precision="3" />
+          <Property Name="status" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="refundid" Type="Int64" />
+          <Property Name="numiid" Type="Int64" Nullable="false" />
+          <Property Name="skuid" Type="Int64" />
+          <Property Name="num" Type="Int64" Nullable="false" />
+          <Property Name="title" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="price" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="refundstatus" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="outeriid" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="outerskuid" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="endtime" Type="DateTime" Precision="3" />
+          <Property Name="consigntime" Type="DateTime" Precision="3" />
+          <Property Name="shippingtype" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="logisticscompany" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="invoiceno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="b2b_sysEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="payOrder" EntityType="Self.payOrder" />
+          <EntitySet Name="Trade" EntityType="Self.Trade" />
+          <EntitySet Name="TradeDetail" EntityType="Self.TradeDetail" />
+          <EntitySet Name="itemnew" EntityType="b2b_sysModel.itemnew" />
+          <EntitySet Name="skunew" EntityType="b2b_sysModel.skunew" />
+        </EntityContainer>
+        <EntityType Name="itemnew">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="numiid" Type="Int64" />
+          <Property Name="title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="categoryId" Type="Int32" />
+          <Property Name="brandId" Type="Int32" />
+          <Property Name="postageID" Type="Int32" />
+          <Property Name="prostatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="outerid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="barCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="wareLocation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="adWords" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="weight" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="periodDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="props" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="logo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="jdPrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="poPrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="mobileDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="introduction" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="iscrossPro" Type="Int32" />
+          <Property Name="createdtime" Type="DateTime" Precision="3" />
+          <Property Name="modifiedtime" Type="DateTime" Precision="3" />
+          <Property Name="creater" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="modified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="partermodel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="price130" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="price105" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="HDID" Type="Int32" />
+          <Property Name="coefficient" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="skunew">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="skuId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="skuName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="logo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="saleAttrs" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="jdPrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="outerId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="barCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="supplier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="partermodel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="poprice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="pocurrency" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="taxrate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="HScode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="iscrosspro" Type="Int32" />
+          <Property Name="createdtime" Type="DateTime" Precision="3" />
+          <Property Name="modifiedtime" Type="DateTime" Precision="3" />
+          <Property Name="creater" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="modified" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="productID" Type="Int32" />
+          <Property Name="price130" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="price105" Type="Decimal" Precision="18" Scale="2" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="b2b_sysModelStoreContainer" CdmEntityContainer="b2b_sysEntities">
+          <EntitySetMapping Name="payOrder">
+            <EntityTypeMapping TypeName="b2b_sysModel.payOrder">
+              <MappingFragment StoreEntitySet="payOrder">
+                <ScalarProperty Name="tid" ColumnName="tid" />
+                <ScalarProperty Name="out_trade_no" ColumnName="out_trade_no" />
+                <ScalarProperty Name="time_start" ColumnName="time_start" />
+                <ScalarProperty Name="time_expire" ColumnName="time_expire" />
+                <ScalarProperty Name="trade_type" ColumnName="trade_type" />
+                <ScalarProperty Name="prepay_id" ColumnName="prepay_id" />
+                <ScalarProperty Name="transaction_id" ColumnName="transaction_id" />
+                <ScalarProperty Name="trade_state" ColumnName="trade_state" />
+                <ScalarProperty Name="total_fee" ColumnName="total_fee" />
+                <ScalarProperty Name="time_end" ColumnName="time_end" />
+                <ScalarProperty Name="payType" ColumnName="payType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trade">
+            <EntityTypeMapping TypeName="b2b_sysModel.Trade">
+              <MappingFragment StoreEntitySet="Trade">
+                <ScalarProperty Name="tid" ColumnName="tid" />
+                <ScalarProperty Name="shippingtype" ColumnName="shippingtype" />
+                <ScalarProperty Name="buyermessage" ColumnName="buyermessage" />
+                <ScalarProperty Name="buyermemo" ColumnName="buyermemo" />
+                <ScalarProperty Name="sellermemo" ColumnName="sellermemo" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="discountfee" ColumnName="discountfee" />
+                <ScalarProperty Name="adjustfee" ColumnName="adjustfee" />
+                <ScalarProperty Name="payment" ColumnName="payment" />
+                <ScalarProperty Name="totalfee" ColumnName="totalfee" />
+                <ScalarProperty Name="postfee" ColumnName="postfee" />
+                <ScalarProperty Name="receivedpayment" ColumnName="receivedpayment" />
+                <ScalarProperty Name="endtime" ColumnName="endtime" />
+                <ScalarProperty Name="modified" ColumnName="modified" />
+                <ScalarProperty Name="created" ColumnName="created" />
+                <ScalarProperty Name="paytime" ColumnName="paytime" />
+                <ScalarProperty Name="alipaywarnmsg" ColumnName="alipaywarnmsg" />
+                <ScalarProperty Name="uid" ColumnName="uid" />
+                <ScalarProperty Name="receivername" ColumnName="receivername" />
+                <ScalarProperty Name="receiverstate" ColumnName="receiverstate" />
+                <ScalarProperty Name="receivercity" ColumnName="receivercity" />
+                <ScalarProperty Name="receiverdistrict" ColumnName="receiverdistrict" />
+                <ScalarProperty Name="receiveraddress" ColumnName="receiveraddress" />
+                <ScalarProperty Name="receiverzip" ColumnName="receiverzip" />
+                <ScalarProperty Name="receivermobile" ColumnName="receivermobile" />
+                <ScalarProperty Name="receiverphone" ColumnName="receiverphone" />
+                <ScalarProperty Name="consigntime" ColumnName="consigntime" />
+                <ScalarProperty Name="buyeremail" ColumnName="buyeremail" />
+                <ScalarProperty Name="shopId" ColumnName="shopId" />
+                <ScalarProperty Name="selleralipayno" ColumnName="selleralipayno" />
+                <ScalarProperty Name="sellermobile" ColumnName="sellermobile" />
+                <ScalarProperty Name="sellerphone" ColumnName="sellerphone" />
+                <ScalarProperty Name="sellername" ColumnName="sellername" />
+                <ScalarProperty Name="selleremail" ColumnName="selleremail" />
+                <ScalarProperty Name="tradefrom" ColumnName="tradefrom" />
+                <ScalarProperty Name="sellernick" ColumnName="sellernick" />
+                <ScalarProperty Name="buyernick" ColumnName="buyernick" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="num" ColumnName="num" />
+                <ScalarProperty Name="alipayno" ColumnName="alipayno" />
+                <ScalarProperty Name="snapshoturl" ColumnName="snapshoturl" />
+                <ScalarProperty Name="snapshot" ColumnName="snapshot" />
+                <ScalarProperty Name="tradememo" ColumnName="tradememo" />
+                <ScalarProperty Name="buyeralipayno" ColumnName="buyeralipayno" />
+                <ScalarProperty Name="invoicename" ColumnName="invoicename" />
+                <ScalarProperty Name="IDCard" ColumnName="IDCard" />
+                <ScalarProperty Name="payNumber" ColumnName="payNumber" />
+                <ScalarProperty Name="payType" ColumnName="payType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TradeDetail">
+            <EntityTypeMapping TypeName="b2b_sysModel.TradeDetail">
+              <MappingFragment StoreEntitySet="TradeDetail">
+                <ScalarProperty Name="oid" ColumnName="oid" />
+                <ScalarProperty Name="tid" ColumnName="tid" />
+                <ScalarProperty Name="totalfee" ColumnName="totalfee" />
+                <ScalarProperty Name="discountfee" ColumnName="discountfee" />
+                <ScalarProperty Name="adjustfee" ColumnName="adjustfee" />
+                <ScalarProperty Name="payment" ColumnName="payment" />
+                <ScalarProperty Name="modified" ColumnName="modified" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="refundid" ColumnName="refundid" />
+                <ScalarProperty Name="numiid" ColumnName="numiid" />
+                <ScalarProperty Name="skuid" ColumnName="skuid" />
+                <ScalarProperty Name="num" ColumnName="num" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="refundstatus" ColumnName="refundstatus" />
+                <ScalarProperty Name="outeriid" ColumnName="outeriid" />
+                <ScalarProperty Name="outerskuid" ColumnName="outerskuid" />
+                <ScalarProperty Name="endtime" ColumnName="endtime" />
+                <ScalarProperty Name="consigntime" ColumnName="consigntime" />
+                <ScalarProperty Name="shippingtype" ColumnName="shippingtype" />
+                <ScalarProperty Name="logisticscompany" ColumnName="logisticscompany" />
+                <ScalarProperty Name="invoiceno" ColumnName="invoiceno" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="itemnew">
+            <EntityTypeMapping TypeName="b2b_sysModel.itemnew">
+              <MappingFragment StoreEntitySet="itemnew">
+                <ScalarProperty Name="coefficient" ColumnName="coefficient" />
+                <ScalarProperty Name="HDID" ColumnName="HDID" />
+                <ScalarProperty Name="price105" ColumnName="price105" />
+                <ScalarProperty Name="price130" ColumnName="price130" />
+                <ScalarProperty Name="partermodel" ColumnName="partermodel" />
+                <ScalarProperty Name="modified" ColumnName="modified" />
+                <ScalarProperty Name="creater" ColumnName="creater" />
+                <ScalarProperty Name="modifiedtime" ColumnName="modifiedtime" />
+                <ScalarProperty Name="createdtime" ColumnName="createdtime" />
+                <ScalarProperty Name="iscrossPro" ColumnName="iscrossPro" />
+                <ScalarProperty Name="introduction" ColumnName="introduction" />
+                <ScalarProperty Name="mobileDesc" ColumnName="mobileDesc" />
+                <ScalarProperty Name="poPrice" ColumnName="poPrice" />
+                <ScalarProperty Name="jdPrice" ColumnName="jdPrice" />
+                <ScalarProperty Name="logo" ColumnName="logo" />
+                <ScalarProperty Name="props" ColumnName="props" />
+                <ScalarProperty Name="periodDate" ColumnName="periodDate" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="adWords" ColumnName="adWords" />
+                <ScalarProperty Name="wareLocation" ColumnName="wareLocation" />
+                <ScalarProperty Name="barCode" ColumnName="barCode" />
+                <ScalarProperty Name="outerid" ColumnName="outerid" />
+                <ScalarProperty Name="prostatus" ColumnName="prostatus" />
+                <ScalarProperty Name="postageID" ColumnName="postageID" />
+                <ScalarProperty Name="brandId" ColumnName="brandId" />
+                <ScalarProperty Name="categoryId" ColumnName="categoryId" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="numiid" ColumnName="numiid" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="skunew">
+            <EntityTypeMapping TypeName="b2b_sysModel.skunew">
+              <MappingFragment StoreEntitySet="skunew">
+                <ScalarProperty Name="price105" ColumnName="price105" />
+                <ScalarProperty Name="price130" ColumnName="price130" />
+                <ScalarProperty Name="productID" ColumnName="productID" />
+                <ScalarProperty Name="modified" ColumnName="modified" />
+                <ScalarProperty Name="creater" ColumnName="creater" />
+                <ScalarProperty Name="modifiedtime" ColumnName="modifiedtime" />
+                <ScalarProperty Name="createdtime" ColumnName="createdtime" />
+                <ScalarProperty Name="iscrosspro" ColumnName="iscrosspro" />
+                <ScalarProperty Name="HScode" ColumnName="HScode" />
+                <ScalarProperty Name="taxrate" ColumnName="taxrate" />
+                <ScalarProperty Name="pocurrency" ColumnName="pocurrency" />
+                <ScalarProperty Name="poprice" ColumnName="poprice" />
+                <ScalarProperty Name="partermodel" ColumnName="partermodel" />
+                <ScalarProperty Name="supplier" ColumnName="supplier" />
+                <ScalarProperty Name="barCode" ColumnName="barCode" />
+                <ScalarProperty Name="outerId" ColumnName="outerId" />
+                <ScalarProperty Name="jdPrice" ColumnName="jdPrice" />
+                <ScalarProperty Name="saleAttrs" ColumnName="saleAttrs" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="logo" ColumnName="logo" />
+                <ScalarProperty Name="skuName" ColumnName="skuName" />
+                <ScalarProperty Name="skuId" ColumnName="skuId" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -5,7 +5,8 @@ VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BPHB2BWEB", "BPHB2BWEB\", "{CC38CEF0-AED5-41AA-AE8F-3C54310F5633}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{b9abdfbd-627b-4c55-82dd-c40f1b3695ce}|B2BData.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_14416"
 		Debug.AspNetCompiler.PhysicalPath = "BPHB2BWEB\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_14416\"
@@ -25,13 +26,22 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BPHB2BWEB", "BPHB2BWEB\", "
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B2BData", "B2BData\B2BData.csproj", "{B9ABDFBD-627B-4C55-82DD-C40F1B3695CE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{CC38CEF0-AED5-41AA-AE8F-3C54310F5633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CC38CEF0-AED5-41AA-AE8F-3C54310F5633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC38CEF0-AED5-41AA-AE8F-3C54310F5633}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC38CEF0-AED5-41AA-AE8F-3C54310F5633}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{B9ABDFBD-627B-4C55-82DD-C40F1B3695CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9ABDFBD-627B-4C55-82DD-C40F1B3695CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9ABDFBD-627B-4C55-82DD-C40F1B3695CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9ABDFBD-627B-4C55-82DD-C40F1B3695CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
