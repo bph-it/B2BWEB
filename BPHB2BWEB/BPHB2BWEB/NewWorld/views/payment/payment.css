@@ -73,6 +73,7 @@ footer {
     padding: 45px 12px 0 35px;
     height: 98px;
     position: relative;
+    cursor: pointer !important;
 }
 .z-icon {
     font-size: 50px;
@@ -113,6 +114,7 @@ footer {
     color: #fff;
     font-size: 14px;
     background-color: #ff7300;
+    cursor: pointer !important;
 }
 .duoyu {
     display: inline-block;
