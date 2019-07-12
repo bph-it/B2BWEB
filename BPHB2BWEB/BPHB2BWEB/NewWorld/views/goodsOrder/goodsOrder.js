@@ -507,7 +507,7 @@ if(cookie && cookie !== 'null') {
                             datatype  :  "json",
                             success   :   function (data) {
                                 data.forEach(function (val,index) {
-                                    window.location.href='../payment/payment.html?tid='+val.tid+'';
+                                    window.location.href='../payment/payment.aspx?tid='+val.tid+'';
                                 })
                             }
                         })
