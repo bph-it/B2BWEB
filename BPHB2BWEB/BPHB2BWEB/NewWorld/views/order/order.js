@@ -29,7 +29,6 @@ if (cookie && cookie !== 'null') {
                     src.forEach(function (val,index) {
                         html2 = []
                         val.details.forEach(function (val,index){
-                            console.log(val)
                             html3 = `
                             <ul class="f-l">
                                 <li class="member-piclist">
@@ -37,6 +36,7 @@ if (cookie && cookie !== 'null') {
                                         百品汇自营 
                                     </strong>
                                     <div class="cl">
+                                        <a href="../particulars/particulars.html?id=${val.numiid}">
                                         <div class="col01 f-l">
                                             <img src="${val.picurl}" alt="">
                                         </div>
@@ -51,6 +51,7 @@ if (cookie && cookie !== 'null') {
                                         <div class="f-l co104">
                                             <span>${val.num}</span>
                                         </div>
+                                        </a>
                                     </div>
                                 </li>
                             </ul>
@@ -75,7 +76,11 @@ if (cookie && cookie !== 'null') {
                             </div>
         
                             <div class="f-r actions">
-                                <a href="../orderDetails/orderDetails.html?tid=${val.tid}" class="btn-simple">查看订单</a>
+                                <a href="../orderDetails/orderDetails.html?tid=${val.tid}" class="btn-simple-a">查看订单</a>
+                            </div>
+
+                            <div class="f-r actions">
+                                <a href="#" data=${val.tid} class="btn-simple">去付款</a>
                             </div>
                         `
                     html.push(html1)
@@ -97,8 +102,12 @@ if (cookie && cookie !== 'null') {
                 }
             }) 
         })
-
-
+        // 再次购买
+        $(document).on("click",".btn-simple",function () {
+            var tid = $(this).attr('data')
+            console.log(tid)
+            window.location.href='../payment/payment.aspx?tid='+tid+'';
+        })
     }
     order ()
     
