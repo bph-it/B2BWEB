@@ -51,6 +51,20 @@ function hadenum () {
 }
 
 
+// 搜索框
+$(".rw-dropdown-wrapper").keyup(function () {
+    if(event.keyCode ==13){
+        var str = $(this).val()
+        console.log(str , 111)
+        window.location.href = '../../views/searchPage/searchPage.html?id='+str;
+    }
+})
+
+$(".fangda").click(function () {
+    var str = $(".rw-dropdown-wrapper").val()
+    console.log(str , 222)
+    window.location.href = '../../views/searchPage/searchPage.html?id='+str;
+})
 
 // 配合防抖 性能优化
 function zhan () {

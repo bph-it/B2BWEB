@@ -167,81 +167,10 @@ function Category1 (pageNumber) {
 				});
 			});
 
-		}
-	})
-  }
-Category1 ()
-
-
-
-	// 搜索框
-	$(".rw-dropdown-wrapper").keyup(function () {
-		if(event.keyCode ==13){
-			var str = $(this).val()
-			encodeUnicode(str)
-		}
-	})
-
-	$(".fangda").click(function () {
-		var str = $(".rw-dropdown-wrapper").val()
-		encodeUnicode(str)
-	})
-
-	// uincode 编码
-	function encodeUnicode(str) {  
-		console.log (str , '007')
-		var word = encodeURIComponent(str);
-		_mm.request({
-			data:{
-				method  : 'SearchProduct',
-				word    :  word
-			},
-			success  : function (res) {
-				if (res.length == 0) {
-					html1 = `
-						<img class="t-c-f tuwu" src="../../assets/image/bjimg/wu.jpg" alt="">
-
-						<div class="shang t-c-f">
-							商品未上架
-						</div>
-					`
-					$(".c-offerlist").html(html1)
-				}else {
-					html2 = "",
-					res.forEach(function (val , index) {
-						html2 += `
-						<div class="c-offerlist-wrap f-l relative">
-							<a href="../particulars/particulars.html?id=${val.ID}" class="o-image-thumb-container dis-inBlock">
-								<img src="${val.logo}" alt="">
-							</a>
-							<div class="c-offer-info-box">
-								<div class="c-offer-price-con">
-									<span class="c-offer-price"> ￥ </span>
-									<span class="c-offer-price">${val.jdPrice}元</span>
-								</div>
-								<p class="c-offer-prop-b dis-inBlock">
-									${val.title}
-								</p>
-							</div>
-							<div class="c-offer-img-mask-bg absolute t-c-f">库存1962包</div>
-						</div>
-					`
-					})
-					$(".c-offerlist").html(html2)
-					$("#kkpager").addClass("dis-none")
-					// 提示搜索出来的
-					var html3 = `
-						<div class="cha">
-							这是您搜索的结果!
-						</div>
-					`
-					$(".p-condition").html(html3)
-				}
-
-			}
+			}	
 		})
-	}  
-
+	}
+	Category1 ()
 
 }
 Category () 

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜索页</title>
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="../../assets/css/Custom/base.css">
+    <!-- 初始化样式 -->
+    <link rel="stylesheet" href="../../assets/css/Custom/reset.css">
+    <!-- H-ui 插件 -->
+    <link rel="stylesheet" href="../../assets/css/library/H-ui.css">
+    <!-- font-al 字体图标库 -->
+    <link rel="stylesheet" href="../../assets/font/font-al.css">
+    <!-- 外链 css -->
+    <link rel="stylesheet" href="./searchPage.css">
+    <!-- 外链头部 -->
+    <script src="../../public/hade/hade.js"></script>
+</head>
+
+<body>
+    <div id="Category">
+        <!-- 3级导航开始 -->
+        <div class="rw-lst-header-nav">
+            <div class="container">
+                <div class="rw-lst-header-nav-header t-c-f relative">
+                    <span class="rw-lst-header-nav-header-text">零售进货</span>
+                    <!-- 1级菜单 -->
+                    <div class="rw-lst-header-nav-fixed-header absolute">
+                        <ul class="rw-lst-header-nav-first relative">
+                            <li class="first-item">
+                                <span class="f14">运动鞋</span>
+                                <!-- 二级菜单 -->
+                                <div class="absolute rw-lst-header-nav-second">
+                                    <ul class="cl">
+                                        <li class="f-l second-category-item c6">
+                                            <a href="">你好</a>
+                                        </li>
+                                        <li class="f-l second-category-item c6">
+                                            <a href="">你好</a>
+                                        </li>
+                                        <li class="f-l second-category-item c6">
+                                            <a href="">你好</a>
+                                        </li>
+                                        <li class="f-l second-category-item c6">
+                                            <a href="">你好</a>
+                                        </li>
+                                        <li class="f-l second-category-item c6">
+                                            <a href="">你好</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 商品分类页开始 -->
+        <div class="o-layout-main-p-main container"> 
+            <!-- 综合 / 最新 -->
+            <div class="p-condition">
+                <div class="cha">这是您搜索的结果!</div>
+            </div>
+            <!-- 商品列表 -->
+            <div class="p-main-list container">
+                <div class="c-offerlist cl">
+                </div>
+            </div>
+        </div>
+
+        <!-- 分页 -->
+        <div style="width:800px;margin:0 auto;">
+            <div id="kkpager"></div>
+        </div>
+
+        <!-- 公共底部 -->
+        <script src="../../public/footer/footer.js"></script>
+    </div>
+</body>
+
+<!-- 分页插件 -->
+<script src="../../assets/js/kkpager.min.js"></script>
+<!-- ajax 插件 -->
+<script src="../../assets/js/ajax.js"></script>
+<!-- 外链 js -->
+<script src="./searchPage.js"></script>
+
+</html>
