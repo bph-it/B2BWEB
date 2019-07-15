@@ -43,13 +43,14 @@ function hadenum () {
                     hadenu += val.qty
                 })
                 $(".hadenum").html(hadenu)
-
             }
         })
     }else {
         $(".hadenum").html(0)
     }
 }
+
+
 
 // 配合防抖 性能优化
 function zhan () {
@@ -62,7 +63,6 @@ function zhan () {
                 uid :  cookie,
            },
            success :  function (res) {
-               console.log(111)
                if (res.length == 0) {
                 var html1 = `
                     <span class="f12 c6">当前进货单为空，您还未添加任何商品!</span>

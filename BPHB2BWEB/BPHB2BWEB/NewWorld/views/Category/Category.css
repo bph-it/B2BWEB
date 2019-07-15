@@ -160,6 +160,7 @@
 /* 没有东西 */
 .c-offerlist {
     margin-left: -20px;
+    min-height: 580px;
 }
 .tuwu {
     margin-left: 460px;
@@ -349,4 +350,11 @@
 
 #kkpager .infoTextAndGoPageBtnWrap{
 	padding-top:5px;
+}
+
+.cha {
+    font-size: 20px;
+    color: #ccc6c6;
+    font-weight: 550;
+    padding: 5px 15px;
 }

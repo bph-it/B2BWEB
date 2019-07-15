@@ -36,7 +36,7 @@ document.writeln("</div>");
 document.writeln("<div class='rw-lst-header-search-box f-l cl'>");    
 document.writeln("<input type='text' class='rw-dropdown-wrapper' placeholder='输入商品名称或型号'>");     
 document.writeln("<div class='rw-lst-header-search-box-button t-c-f f-r'>");       
-document.writeln("<i class='iconfont fangda'>&#xe69d;</i>");           
+document.writeln("<i class='iconfont c-p fangda'>&#xe69d;</i>");           
 document.writeln("</div>");        
 document.writeln("</div>");   
 document.writeln("<div class='rw-lst-header-search-addcart-box f-l'>");

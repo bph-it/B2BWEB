@@ -78,7 +78,6 @@ function home () {
                     pageNumber: 1,  //多少页
                 },
                 success : function (res) {
-                    console.log(res)
                     var html5 = ""
                     res.products.forEach(function (val,index) {
                         html5 += `
@@ -133,7 +132,6 @@ function home () {
                 $(this).children(".rw-lst-header-nav-second").css("display","block")
                 var parentid = $(this).attr("data-type")
                 // 鼠标移入二级菜单渲染
-                console.log(parentid)
                 _mm.request({
                     data:{
                         method   : "GetCategoy",
