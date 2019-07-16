@@ -42,6 +42,6 @@ if (cookie && cookie !== 'unll') {
     }
     payment ()
 }else {
-    window.location.href = "../denglu/denglu.html";
+    // window.location.href = "../denglu/denglu.html";
 }
 
