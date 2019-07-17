@@ -25,7 +25,7 @@ $(".next-input-large").blur(function () {
         return
     } else if (attr == "password") {
         // 密码必须由6-16个英文字母和数字的字符串组成！
-        var reg=/^[A-Za-z]+[0-9]+[A-Za-z0-9]*|[0-9]+[A-Za-z]+[A-Za-z0-9]*$/g;
+        var reg= /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])[A-Za-z0-9]{8,16}$/;
         if (reg.test(uids)) {
             _this.removeClass("bdred").attr("myAttr","true");
             hint.css("display","none")
