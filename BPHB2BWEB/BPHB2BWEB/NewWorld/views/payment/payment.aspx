@@ -102,7 +102,6 @@
                 </div>
 
                 <div class="l-layout">
-                    <button class="l-button-larger">去付款</button>
                     <asp:Button ID="btnpay" runat="server" Text="去付款" CssClass="l-button-larger" OnClick="btnpay_Click"/>
                 </div>
             </div>
