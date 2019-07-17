@@ -99,7 +99,8 @@ function Category1 (pageNumber) {
 			pageNumber  : pageNumber || 1		    //第几页
 		},
 		success      : function (res) {
-			var _count = Math.ceil(res.count / 8)
+			console.log(res.count , 'caicai')
+			var _count = Math.ceil(res.count / 12)
 			if (res.count !== 0) {
 				html = "",
 				res.products.forEach(function (val,index) {
