@@ -2,8 +2,9 @@ document.writeln("<!DOCTYPE html>");
 document.writeln("<html lang='en'>");
 document.writeln("<head>");
 document.writeln("<meta charset='UTF-8'></meta>");   
-document.writeln("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");   
-document.writeln("<meta http-equiv='X-UA-Compatible' content='ie=edge'>");   
+document.writeln("<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate' />")
+document.writeln("<meta http-equiv='Pragma' content='no-cache' />")
+document.writeln("<meta http-equiv='Expires' content='0' />")
 document.writeln("<title>Document</title>");   
 document.writeln("<link rel='stylesheet' href='../../assets/font/font-al.css'>")
 document.writeln("<link rel='stylesheet' href='../../assets/css/Custom/base.css'>")
@@ -44,7 +45,7 @@ document.writeln("<a href='../../views/shopping/shopping.html' class='rw-lst-hea
 document.writeln("<div class='head absolute'></div>");                    
 document.writeln("<div class='wrap absolute t-c-f'>");
 document.writeln("<i class='iconfont che-q c6 absolute'>&#xe666;</i>")
-document.writeln("<span class='f16 c6'>进货单</span>");                       
+document.writeln("<span class='f16 c6'>采购单</span>");                       
 document.writeln("<span class='num hadenum f14'>0</span>");     
 document.writeln("<div class='absolute next-icon-xl'>")                   
 document.writeln("<span class='f12 c6'>当前进货单为空，您还未添加任何商品</span>")                   

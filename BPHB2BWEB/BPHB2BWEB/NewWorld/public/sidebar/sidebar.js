@@ -1,9 +1,10 @@
 document.writeln("<!DOCTYPE html>")
 document.writeln("<html lang='en'>")
 document.writeln("<head>")
-document.writeln("<meta charset='UTF-8'>")
-document.writeln("<meta name='viewport' content='width=device-width, initial-scale=1.0'>")
-document.writeln("<meta http-equiv='X-UA-Compatible' content='ie=edge'>")
+document.writeln("<meta charset='UTF-8'></meta>");   
+document.writeln("<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate' />")
+document.writeln("<meta http-equiv='Pragma' content='no-cache' />")
+document.writeln("<meta http-equiv='Expires' content='0' />")
 document.writeln("<title>侧边栏</title>")
 document.writeln("<link rel='stylesheet' href='../../assets/css/Custom/base.css'>")
 document.writeln("<link rel='stylesheet' href='../../assets/css/Custom/reset.css'>")
