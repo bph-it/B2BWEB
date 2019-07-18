@@ -186,7 +186,9 @@
 .next-table-cell-wrapper {
     width: 96px;
 }
-
+.next-table-cell-wrapper span {
+    line-height: 30px;
+}
 
 /* 分页 */
 .fenye {
@@ -314,3 +316,73 @@
 .exceltable th,td{
     border:1px solid #bdbdbd;
 }
+
+/* 编辑信息 */
+#table {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.6);
+    z-index: 888;
+}
+#table .modal-dialog {
+    width: 600px;
+    margin: 210px auto;
+    background: #fff;
+    border-radius: 6px;
+}
+#table .modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+}
+#table .close {
+    border: none;
+    background: #fff;
+    font-size: 26px;
+} 
+#table .modal-title {
+    margin-top: 5px;
+}
+#table .modal-body {
+    padding: 15px;
+}
+#table .form-group {
+    margin-bottom: 15px;
+}
+#table label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #666;
+}
+#table .form-control {
+    display: block;
+    width:  545px;
+    height: 24px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#table .modal-footer {
+    padding: 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}
+#table .btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
+}
+

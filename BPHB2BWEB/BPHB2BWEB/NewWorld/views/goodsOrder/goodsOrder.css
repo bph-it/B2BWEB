@@ -1,26 +1,13 @@
 /* header 头部 */
-#hade {
-    height: 117px;
-    border-bottom: 1px solid #DF2211;
-}
-#hade .rw-lst-header .rw-lst-header-bar {
-    width: 1160px;
-}
-#hade  .rw-lst-header-search {
-    width: 1160px;
-}
-#hade .rw-lst-header-search .rw-lst-header-search-box {
-    width: 555px;
-}
-#hade .rw-lst-header-search-box .rw-lst-header-search-box-input {
-    width: 470px;
+#header {
+    width: 1900px !important;
 }
 /* /结束 */
 
 /* 商品订单页 */
 
 #goodsOrder {
-    width: 100%;
+    width: 1900px;
 }
 
 #goodsOrder .screen{
@@ -348,7 +335,7 @@
 
 /* 收货地址 */
 .g-mod-address {
-    padding: 20px 30px
+    padding: 20px 30px;
 }
 .g-sub-header {
     width: 105px;

@@ -26,6 +26,21 @@ $(function(){
         }
         
     });
+    // 查询信息 == 取消
+    $(".btn-primary").click(function () {
+        $("#table").addClass("dis-none")
+    })
+    // 查询信息 == x
+    $(".close").click(function () {
+        $("#table").addClass("dis-none")
+    })
+    // 查询信息
+    $(".see").click(function () {
+        $("#table").removeClass("dis-none")
+    })
+
+
+
 
 
 
