@@ -239,13 +239,23 @@
         </div>
         <!-- 富文本 -->
         <div class="wenb">
-          <strong class="f14">电脑端描述</strong>
+          <span class="f14">电脑端描述</span>
+          <div id="export" class="exc">
+            <a data-type="xls" class="f14" href="javascript:;">导出excel</a>
+          </div>
           <div id="editor">
           </div>
         </div>
         
       </div>
     </div>
+
+    <!-- 导入导出 -->
+    <table id="table2">
+    </table>
+  
+
+
 
   </body>
   <!-- 上传图片插件 -->
@@ -254,7 +264,27 @@
   <script src="../../assets/js/mobileBUGFix.mini.js"></script>
   <!-- 富文本插件 -->
   <script src="../../assets/js/wangEditor.min.js"></script>
+  <!-- 导出excel -->
+  <script src="./FileSaver.js"></script>
+  <!-- 导出excel -->
+  <script src="./tableExport.js"></script>
   <!-- 外链 js  -->
   <script src="./d-business.js"></script>
+  <!-- 导出excel -->
+  <script>  
+    var $exportLink = document.getElementById('export');
+
+    $exportLink.addEventListener('click', function(e){
+
+      e.preventDefault();
+
+      if(e.target.nodeName === "A"){
+        tableExport('table2', '测试测试', e.target.getAttribute('data-type'));
+      }
+
+      
+
+    }, false);
+  </script>
   
 </html>
