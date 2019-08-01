@@ -22,7 +22,7 @@ editor.customConfig.menus = [
     'table',
     'undo',
 ],
-editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
+editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片        
 editor.create()
 
 // =====================上传图片=======================================

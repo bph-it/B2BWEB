@@ -43,6 +43,9 @@ $(document).ready(function () {
                         if(tid == 'zhu') {
                             window.location.href = "../home/home.html";
                             return
+                        }if(tid == 'shang') {
+                            window.location.href = "../d-manage/d-manage.html";
+                            return
                         }else {
                             history.go(-1);
                         }
