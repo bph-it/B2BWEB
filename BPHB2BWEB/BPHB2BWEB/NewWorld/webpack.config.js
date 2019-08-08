@@ -21,7 +21,7 @@ module.exports = {
         order               : './src/views/order/order.js',                         // 9  订单管理
         'shipping-address'  : './src/views/shipping-address/shipping-address.js',   // 10 收货地址
         orderDetails        : './src/views/orderDetails/orderDetails.js',           // 11 查看订单
-        // dBusiness           : './src/views/dBusiness/dBusiness.js',                 // 13 商家中心
+        dBusiness           : './src/views/dBusiness/dBusiness.js',                 // 13 商家中心
         'd-manage'          : './src/views/d-manage/d-manage.js'                    // 14 上架商品管理
     },  
     // 出口文件
@@ -323,21 +323,21 @@ module.exports = {
             }
         }),
         // 打包   dBusiness       商家中心
-        // new HtmlWebpackPlugin({
-        //     template:"./src/views/dBusiness/dBusiness.html",
-        //     filename: './views/dBusiness/dBusiness.html',
-        //     inject:false,
-        //     minify: {
-        //         // 去除多余引号
-        //         removeAttributeQuotes : true,
-        //         // 去除注释
-        //         removeComments : true,
-        //         // 去除空属性
-        //         removeEmptyAttributes : true,
-        //         // 去除空格
-        //         collapseWhitespace : true
-        //     }
-        // }),
+        new HtmlWebpackPlugin({
+            template:"./src/views/dBusiness/dBusiness.html",
+            filename: './views/dBusiness/dBusiness.html',
+            inject:false,
+            minify: {
+                // 去除多余引号
+                removeAttributeQuotes : true,
+                // 去除注释
+                removeComments : true,
+                // 去除空属性
+                removeEmptyAttributes : true,
+                // 去除空格
+                collapseWhitespace : true
+            }
+        }),
         // 打包   d-manage       商家中心
         new HtmlWebpackPlugin({
             template:"./src/views/d-manage/d-manage.html",
