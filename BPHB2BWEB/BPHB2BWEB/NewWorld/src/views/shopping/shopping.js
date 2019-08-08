@@ -1,9 +1,3 @@
-/**
- * Created by Administrator on 2017/5/24.
- */
-// hade 头部 模板
-// 获取购物车
-
 if (cookie && cookie !== 'null') {
     $(document).ready(function () {
         hadenum ()

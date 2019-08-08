@@ -1,17 +1,18 @@
-
+import './shipping-address.css'
+function getParameter(name) { 
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
+    var r = window.location.search.substr(1).match(reg); 
+    if (r!=null) return unescape(r[2]); return null;
+}
 if (cookie && cookie !== 'null') {
-    function getParameter(name) { 
-        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
-        var r = window.location.search.substr(1).match(reg); 
-        if (r!=null) return unescape(r[2]); return null;
-    }
+
     var tid = getParameter('tid')
         
     hadenum ()
 
 
     // ================================地区选择=====================================
-    function province (dizhi,hao) {
+    window.province = function (dizhi,hao) {
         _mm.request({
             data : {
                 method   : 'GetAreaByparentID',

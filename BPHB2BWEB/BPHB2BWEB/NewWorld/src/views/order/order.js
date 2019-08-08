@@ -1,3 +1,4 @@
+import './order.css'
 if (cookie && cookie !== 'null') {
     function order () {
         hadenum ()
@@ -25,11 +26,11 @@ if (cookie && cookie !== 'null') {
                 dataType   : 'json',
                 success    : function (src) {
                     console.log(src)
-                    html = [],
+                    var html = []
                     src.forEach(function (val,index) {
-                        html2 = []
+                        var html2 = []
                         val.details.forEach(function (val,index){
-                            html3 = `
+                            var html3 = `
                             <ul class="f-l">
                                 <li class="member-piclist">
                                     <strong class="shop-title">
@@ -59,7 +60,7 @@ if (cookie && cookie !== 'null') {
                             html2.push(html3)
                         })
         
-                        html1 = `
+                        var html1 = `
                         <div class="member-orders-list">
                         <div class="tit-member-grid cl">
                             <div class="tit-total">

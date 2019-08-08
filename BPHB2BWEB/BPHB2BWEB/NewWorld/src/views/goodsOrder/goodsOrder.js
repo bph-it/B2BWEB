@@ -1,7 +1,7 @@
 // ================================地区选择=====================================
 if(cookie && cookie !== 'null') {
     hadenum ()
-    function provincea (dizhi,hao) {
+    window.provincea = function (dizhi,hao) {
         _mm.request({
             data : {
                 method   : 'GetAreaByparentID',
@@ -318,15 +318,15 @@ if(cookie && cookie !== 'null') {
                 }else if (mobile == '') {
                     $(".ji2").removeClass("dis-none")
                 }else {
-                    datas = {
+                    var datas = {
                         "state"         :  state,           //省
                         "city"          :  city,            //市
                         "district"      :  district,        //区
                         "address"       :  address,         //详细地址
-                        "receiver_name" :  receiver_name,    //收货人
+                        "receiver_name" :  receiver_name,   //收货人
                         "mobile"        :  mobile,          //手机号码
-                        "is_default"    :  true,       //默认是否选择
-                        "uid"           :  cookie,             //用户名
+                        "is_default"    :  true,            //默认是否选择
+                        "uid"           :  cookie,          //用户名
                     }
                 
                     $.ajax({
@@ -357,7 +357,7 @@ if(cookie && cookie !== 'null') {
                 },
                 dataType : "json",
                 success : function (data) {
-                    single = "",
+                    var single = ""
                     data.forEach(function (val,index) {
                         var price = val.price * val.qty
                         var pricex = price.toFixed(2)
@@ -479,6 +479,12 @@ if(cookie && cookie !== 'null') {
                     }
                 }
             )}
+
+
+            var asc =  function () {
+                console.log(123)
+            }
+
             
         //======================================点击提交订单==========================================
         $(".make-order").click(function () {
@@ -519,8 +525,11 @@ if(cookie && cookie !== 'null') {
     }
     
     goodsOrderA ()
+
+
     
 }else {
     window.location.href = "../denglu/denglu.html";
 }
+console.log(provincea)
 

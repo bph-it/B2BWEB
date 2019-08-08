@@ -1,4 +1,5 @@
 // 获取窗口地址
+import './orderDetails.css'
 if (cookie) {
     function order () {
         function getParameter(name) { 
@@ -18,7 +19,7 @@ if (cookie) {
             },
             success : function (src) {
                 console.log(src)
-                html2 = '',
+                var html2 = '',
                 html = `
                     <li class="n-ding n-bx f-l">${src.tid}</li>
                     <li class="n-jin n-bx f-l">￥${src.payment}</li>
@@ -26,12 +27,12 @@ if (cookie) {
                     <li class="n-cao n-bx f-l">-</li>
                 `
                 $('.tid-z').html(html)
-                html5 = `
+                var html5 = `
                   <em>￥${src.payment}</em>
                 `
                 $(".price-z").html(html5)
 
-                html1 = `
+                var html1 = `
                     <li class="f-l">${src.receivername}</li>
                     <li class="f-l">${src.modified}</li>
                     <li class="f-l">${src.receivermobile}</li>

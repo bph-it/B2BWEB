@@ -24,7 +24,7 @@ function Category () {
 						console.log(res)
 						var html1 = ""
 						res.forEach(function (val,index) {
-							html1 += `
+						html1 += `
 							<li class="first-item" data-type="${val.ID}">
 								<span class="f14">${val.cname}</span>
 								<div class="absolute rw-lst-header-nav-second">
@@ -51,9 +51,12 @@ function Category () {
 		})
 		var category = tabulation();  // 创建模块化闭包
 		// 当鼠标移入 展开 / 收起 一级菜单  1 / 2
+		var Timeout
 		$(".rw-lst-header-nav-header").hover(function () {
 			// category.areveal()      //展开  
-			Timeout = setTimeout(function(){category.areveal()},150);
+			Timeout = setTimeout(function(){
+				category.areveal()
+			},150);
 		},function () {
 			clearTimeout(Timeout);
 			category.shut()         //收起  
@@ -102,7 +105,7 @@ function Category1 (pageNumber) {
 			console.log(res.count , 'caicai')
 			var _count = Math.ceil(res.count / 12)
 			if (res.count !== 0) {
-				html = "",
+				var html = ""
 				res.products.forEach(function (val,index) {
 					html += `
 						<div class="c-offerlist-wrap f-l relative">

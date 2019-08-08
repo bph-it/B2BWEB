@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     function getParameter(name) { 
         var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
         var r = window.location.search.substr(1).match(reg); 
@@ -13,23 +12,23 @@ $(document).ready(function () {
         var password = $(".password").val()
         var account  = $(".account").val();
         if(!password) {
-            html = `
+            var html = `
                 <i class="iconfont cuo">&#xe600;</i>
                 请输入密码
             `
             $(".login-title").addClass("J_Message").html(html)
             return
         }else if(!account) {
-            html1 = `
+            var html1 = `
             <i class="iconfont cuo">&#xe600;</i>
             请输入账号
             `
             $(".login-title").addClass("J_Message").html(html1)
             return
         }else {
-            data = {"password" :   password,
-                    "uid"      :   account,
-            },
+            var data = {"password" :   password,
+                        "uid"      :   account,
+                    }
             $.ajax({
                 type :"post",
                 url  :"http://192.168.2.254:9000/interface/B2BAPI.ashx?method=login",
@@ -51,7 +50,7 @@ $(document).ready(function () {
                         }
                         // 存账号信息
                     }else{
-                        html2 = `
+                        var html2 = `
                         <i class="iconfont cuo">&#xe600;</i>
                         账号密码输入错误！
                         `

@@ -1,5 +1,6 @@
 
 // 注册
+import './zhuce.css'
 $(".next-input-large").blur(function () {
     // 获取input属性
     var attr = $(this).attr("data-type")
@@ -148,14 +149,14 @@ $(".next-btn-primary").click(function () {
                     var ispurchase = $('.radioB input:radio:checked').val()
 
                     // 数据
-                    datas = {"uid"           : $uit,
+                    var datas = {"uid"           : $uit,
                             "password"      : $pas,
                             "nick"          : $nic,
                             "companyname"   : $com,
                             "issale"        : issale,
                             "ispurchase"    : ispurchase,
                             "mobile"        : $mod
-                    },
+                    }
                     // 发起请求
                     $.ajax({
                         type :"post",

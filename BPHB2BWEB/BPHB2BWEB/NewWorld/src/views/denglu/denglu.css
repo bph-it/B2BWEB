@@ -1,13 +1,19 @@
+body {
+    height: 100%;
+}
+#logon {
+    height: 63%;
+}
 .ocms-component-member-login-1-0-17 {
-    height: 610px;
+    height: 100%;
     background:url(../../assets/image/bjimg/deng.jpg);
     width: 100%;
     min-width: 1200px;
 }
 .footer {
-    height: 190px;
+    height: 36.8%;
     margin-top: 0;
-    padding-top: 100px !important; 
+    padding: 0 !important;
 }
 .b2b {
     color: #eee !important;
@@ -113,4 +119,7 @@
     color: #6c6c6c;
     margin-right: 5px;
     margin-left: 2px;
+}
+.container-fluid {
+    margin-top: 10%;
 }

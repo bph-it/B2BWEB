@@ -35,7 +35,7 @@ label{
     cursor: pointer;
 }
 label.mark{
-    background: url("../../assets/font/images/mark1.png") no-repeat -1px -1px;
+    background: url("../../assets/image/bjimg/mark1.jpg") no-repeat -1px -1px;
 }
 a:hover{
     color: #ff873e;

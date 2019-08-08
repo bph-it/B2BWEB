@@ -52,8 +52,12 @@ $(document).ready(function () {
     var category = tabulation();  // 创建模块化闭包
 
     // 当鼠标移入 展开 / 收起 一级菜单  1 / 2
+    var Timeout
     $(".rw-lst-header-nav-header").hover(function () {
-        Timeout = setTimeout(function(){category.areveal()},300);
+        // category.areveal()      //展开  
+        Timeout = setTimeout(function(){
+            category.areveal()
+        },150);
     },function () {
         clearTimeout(Timeout);
         category.shut()         //收起  
@@ -102,44 +106,44 @@ _mm.request({
     },
     success : function (res) {
         // 放大镜原图
-        html = `
+        var html = `
             <img src="${res.product.logo}" alt="">
         `
         $(".magnify").before(html)
         // 放大镜器
-        html4 = `
+        var html4 = `
             <img src="${res.product.logo}" alt="" class="absolute">
         `
         $(".bigpic").html(html4)
         // title 标题
-        html5 = `
+        var html5 = `
             <p>${res.product.title}</p>
         `
         $(".o-base-info-detail-title").html(html5)
 
         //海外直邮
-        html7 = `
+        var html7 = `
             <span class="c6 unit-price">${res.product.partermodel}</span>
             <span class="c6 unit-price">${res.product.wareLocation}</span>
         `
         $(".p-peisg").after(html7)
         // 商品详情
         if (res.product.mobileDesc == 'NULL') {
-            html9 = `
+            var html9 = `
                 <div class="c-offerlist cl">
                     <img class="t-c-f tuwu" src="../../assets/image/bjimg/wu.jpg" alt="">
                 </div>
             `
             $(".next-tabs-content").html(html9)
         }else {
-            html9 = `
+            var html9 = `
                 ${res.product.mobileDesc}
             `
             $(".next-tabs-content").html(html9)
         }
 
         //skus 码
-        html8 = ""
+        var html8 = ""
         res.skus.forEach(function (val,index) {
             console.log(111)
             html8 += `
@@ -164,12 +168,12 @@ function particulars2 () {
     var jdPrice = $(".p-main-wrap").attr("data-type")
     console.log(jdPrice)
     if (jdPrice == undefined) {
-        html6 = `
+        var html6 = `
         <span class="font-big">未报价</span>
         `
         $(".font-normal").after(html6)
     }else {
-        html6 = `
+        var html6 = `
         <span class="font-big">${jdPrice}</span>
         `
         $(".font-normal").after(html6)

@@ -65,6 +65,7 @@ function home () {
                         `
                     })
                     $(".product-list-a").html(html3)
+                    $("#loading").addClass("dis-none")
                     home1 ()
                 }
             })

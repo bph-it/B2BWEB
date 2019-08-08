@@ -1,0 +1,117 @@
+/* a 默认样式 */
+a:hover,
+a.active, 
+a:active {
+    color: #ff6b00;
+}
+a {
+    text-emphasis: none;
+}
+
+/*     公用样式
+*==================================================================
+*/
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.t10 {
+    margin-top: 10px;
+}
+
+/* 元素类型 */
+.dis-block {
+    display: block !important;
+}
+.dis-none {
+    display:none !important; 
+}
+.dis-inBlock {
+    display: inline-block !important;
+}
+
+/*定位*/
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+}
+/* 居中 */
+
+.m-c {
+    margin: 0 auto !important;
+}
+
+/* 居中 */
+.takeCenter {
+    margin: 0 auto;
+}
+
+/* 对齐方式 */
+
+.t-c-f {
+    text-align: center !important;
+}
+
+.t-l-f {
+    text-align: left !important;
+}
+
+.t-r-f {
+    text-align: right !important;
+}
+
+/* 鼠标指针样式  */
+
+.c-p {
+    cursor: pointer !important;
+}
+
+.c-d {
+    cursor: default !important;
+}
+
+/* 字体样式 */
+.f12 {
+    font-size: 12px !important;
+}
+
+.f14 {
+    font-size: 14px !important;
+}
+
+.f16 {
+    font-size: 16px !important;
+}
+
+/* 浮动 */
+
+.cl:after,.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}.cl,.clearfix{zoom:1}
+
+.f-l {
+    float: left;
+}
+
+.f-r {
+    float: right;
+}
+
+/* 颜色 */
+.c6 {
+    color: #666;
+}
+
+.bc {
+    height: 600px;
+    background: red;
+}
