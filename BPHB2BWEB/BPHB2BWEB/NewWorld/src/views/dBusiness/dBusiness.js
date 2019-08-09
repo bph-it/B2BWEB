@@ -1,5 +1,4 @@
 // =====================富文本=======================================
-import './dBusiness.css'
 var E = window.wangEditor
 var editor = new E('#editor')
 // 或者 var editor = new E( document.getElementById('editor') )

@@ -13,6 +13,42 @@
 #shipping-address {
     margin-top: 140px;
 }
+.dialog {
+    width: 400px;
+    height: 200px;
+    background: #fff;
+}
+.dialog_top {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.dialog_body {
+    padding: 25px;
+}
+.dialog_bottom span input:nth-child(1) {
+    border: none;
+    background: #52a0e5;
+    color: #fff;
+    padding: 7px 12px;
+    border: 1px solid #52a0e5;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+.dialog_bottom span input:nth-child(2) {
+    border: none;
+    background: #fff;
+    color: #3c3c3c;
+    padding: 7px 12px;
+    border: 1px solid #d9d9d9;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+.dialog_main {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
 html,body {
     height: 0 !important;
 }

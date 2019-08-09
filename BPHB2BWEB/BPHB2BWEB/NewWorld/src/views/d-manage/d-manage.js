@@ -1,6 +1,4 @@
 //===============================================分页插件================================
-import './d-manage.css'
-
 $('#excel-file').change(function(e) {
     var files = e.target.files;
 

@@ -1,5 +1,4 @@
 // 获取窗口地址
-import './payment.css'
 function getParameter(name) { 
     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); 
     var r = window.location.search.substr(1).match(reg); 

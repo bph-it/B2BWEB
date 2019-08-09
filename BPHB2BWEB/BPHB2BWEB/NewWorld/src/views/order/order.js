@@ -1,4 +1,3 @@
-import './order.css'
 if (cookie && cookie !== 'null') {
     function order () {
         hadenum ()

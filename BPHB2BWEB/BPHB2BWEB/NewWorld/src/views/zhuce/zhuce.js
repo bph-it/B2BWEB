@@ -1,6 +1,5 @@
 
 // 注册
-import './zhuce.css'
 $(".next-input-large").blur(function () {
     // 获取input属性
     var attr = $(this).attr("data-type")

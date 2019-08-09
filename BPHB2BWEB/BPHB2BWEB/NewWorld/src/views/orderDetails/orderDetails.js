@@ -1,5 +1,4 @@
 // 获取窗口地址
-import './orderDetails.css'
 if (cookie) {
     function order () {
         function getParameter(name) { 

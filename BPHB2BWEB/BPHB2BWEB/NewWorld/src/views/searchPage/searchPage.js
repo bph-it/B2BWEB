@@ -1,4 +1,3 @@
-import './searchPage.css'
 function Category () {
     //===============================================获取路径================================
         function getParameter(name) {
