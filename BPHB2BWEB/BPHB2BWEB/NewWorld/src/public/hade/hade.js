@@ -1,18 +1,11 @@
-document.writeln("<!DOCTYPE html>");
-document.writeln("<html lang='en'>");
+
 document.writeln("<head>");
-document.writeln("<meta charset='UTF-8'></meta>");   
-document.writeln("<meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate' />")
-document.writeln("<meta http-equiv='Pragma' content='no-cache' />")
-document.writeln("<meta http-equiv='Expires' content='0' />")
-document.writeln("<title>Document</title>");   
 document.writeln("<link rel='stylesheet' href='../../assets/font/font-al.css'>")
 document.writeln("<link rel='stylesheet' href='../../assets/css/Custom/base.css'>")
 document.writeln("<link rel='stylesheet' href='../../assets/css/Custom/reset.css'>")
 document.writeln("<link rel='stylesheet' href='../../public/hade/hade.css'>")
 document.writeln("</head>");
-document.writeln("<body>");
-document.writeln("<header id='header'>");  
+document.writeln("<header id='header'>");
 document.writeln("<div class='rw-lst-header'>");      
 document.writeln("<div class='rw-lst-header-bar-container'>");            
 document.writeln("<div class='container cl'>");        
@@ -58,9 +51,7 @@ document.writeln("</div>");
 document.writeln("<div class='rw-lst-header-nav'></div>");          
 document.writeln("</div>");      
 document.writeln("</header>");  
-document.writeln("</body>");
 document.writeln("<script src='../../assets/js/jquery.js'></script>")
 document.writeln("<script src='../../assets/js/cookie.js'></script>")
 document.writeln("<script src='../../assets/js/ajax.js'></script>")
 document.writeln("<script src='../../public/hade/hadex.js'></script>")
-document.writeln("</html>");
